@@ -9,6 +9,7 @@
         stepsPosition();
         spotsPosition();
         bindUI();
+        goToStep(0);
     };
 
     var buildUI = function() {
@@ -84,7 +85,11 @@
             // And scroll to the current step
             $ui.scrollTo( $uis.steps.eq(currentStep) , scrollDuration);            
             // Remove current class
-            $uis.steps.removeClass("js-current").eq(currentStep).addClass("js-current");
+            $uis.steps.removeClass("js-current js-animate").eq(currentStep).addClass("js-current");
+            // Add the entrance animation after the scroll
+            setTimeout(function() {
+                $uis.steps.eq(currentStep).addClass("js-animate");
+            }, scrollDuration)
         }
     };
 

@@ -49,7 +49,17 @@ app.configure(function(){
       if(spot.style) style.push(spot.style)
 
       return style.join(";");
-    } 
+    },
+    spotClass: function(spot) {
+      var klass = [];
+      if(spot.class) klass.push(spot.class);
+      if(spot.animation) {
+        klass.push("animated");        
+        klass.push("do-"+spot.animation);
+      }
+
+      return klass.join(" ");
+    }    
   });
 
   // Add context helpers

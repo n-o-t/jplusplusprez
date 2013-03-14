@@ -1,6 +1,7 @@
 @import "./vendor/bootstrap/reset.less";
 @import "./vendor/bootstrap/variables.less";
 @import "./vendor/bootstrap/mixins.less";
+@import "./vendor/animations.less";
 @import "./tools.less";
 
 body {
@@ -83,6 +84,7 @@ body {
             }
         }
         
+
         .spot {
             cursor:pointer;
             background:inherit;
@@ -103,6 +105,81 @@ body {
             &.pink {
                 background:fade(@pink, 60%);
             }
+
         }
+
+
+        .spot.animated { display:none; }
+        &.js-animate .spot.animated {
+            display:block;
+            //Attention seekers
+            &.do-flash { .animation(flash 1s) }
+            &.do-bounce { .animation(bounce 1s) }
+            &.do-shake { .animation(shake 1s) }
+            &.do-tada { .animation(tada 1s) }
+            &.do-swing { .animation(swing 1s) }
+            &.do-wobble { .animation(wobble 1s) }
+            &.do-wiggle { .animation(wiggle 1s) }
+            &.do-pulse { .animation(pulse 1s) }
+            // Flippers (currently Webkit, Firefox, & IE10 only)
+            &.do-flip { .animation(flip 1s) }
+            &.do-flipInX { .animation(flipInX 1s) }
+            &.do-flipOutX { .animation(flipOutX 1s) }
+            &.do-flipInY { .animation(flipInY 1s) }
+            &.do-flipOutY { .animation(flipOutY 1s) }
+            // Fading entrances
+            &.do-fadeIn { .animation(fadeIn 1s) }
+            &.do-fadeInUp { .animation(fadeInUp 1s) }
+            &.do-fadeInDown { .animation(fadeInDown 1s) }
+            &.do-fadeInLeft { .animation(fadeInLeft 1s) }
+            &.do-fadeInRight { .animation(fadeInRight 1s) }
+            &.do-fadeInUpBig { .animation(fadeInUpBig 1s) }
+            &.do-fadeInDownBig { .animation(fadeInDownBig 1s) }
+            &.do-fadeInLeftBig { .animation(fadeInLeftBig 1s) }
+            &.do-fadeInRightBig { .animation(fadeInRightBig 1s) }
+            // Fading exits
+            &.do-fadeOut { .animation(fadeOut 1s) }
+            &.do-fadeOutUp { .animation(fadeOutUp 1s) }
+            &.do-fadeOutDown { .animation(fadeOutDown 1s) }
+            &.do-fadeOutLeft { .animation(fadeOutLeft 1s) }
+            &.do-fadeOutRight { .animation(fadeOutRight 1s) }
+            &.do-fadeOutUpBig { .animation(fadeOutUpBig 1s) }
+            &.do-fadeOutDownBig { .animation(fadeOutDownBig 1s) }
+            &.do-fadeOutLeftBig { .animation(fadeOutLeftBig 1s) }
+            &.do-fadeOutRightBig { .animation(fadeOutRightBig 1s) }
+            // Bouncing entrances
+            &.do-bounceIn { .animation(bounceIn 1s) }
+            &.do-bounceInDown { .animation(bounceInDown 1s) }
+            &.do-bounceInUp { .animation(bounceInUp 1s) }
+            &.do-bounceInLeft { .animation(bounceInLeft 1s) }
+            &.do-bounceInRight { .animation(bounceInRight 1s) }
+            // Bouncing exits
+            &.do-bounceOut { .animation(bounceOut 1s) }
+            &.do-bounceOutDown { .animation(bounceOutDown 1s) }
+            &.do-bounceOutUp { .animation(bounceOutUp 1s) }
+            &.do-bounceOutLeft { .animation(bounceOutLeft 1s) }
+            &.do-bounceOutRight { .animation(bounceOutRight 1s) }
+            // Rotating entrances
+            &.do-rotateIn { .animation(rotateIn 1s) }
+            &.do-rotateInDownLeft { .animation(rotateInDownLeft 1s) }
+            &.do-rotateInDownRight { .animation(rotateInDownRight 1s) }
+            &.do-rotateInUpLeft { .animation(rotateInUpLeft 1s) }
+            &.do-rotateInUpRight { .animation(rotateInUpRight 1s) }
+            // Rotating exits
+            &.do-rotateOut { .animation(rotateOut 1s) }
+            &.do-rotateOutDownLeft { .animation(rotateOutDownLeft 1s) }
+            &.do-rotateOutDownRight { .animation(rotateOutDownRight 1s) }
+            &.do-rotateOutUpLeft { .animation(rotateOutUpLeft 1s) }
+            &.do-rotateOutUpRight { .animation(rotateOutUpRight 1s) }
+            // Lightspeed
+            &.do-lightSpeedIn { .animation(lightSpeedIn 1s) }
+            &.do-lightSpeedOut { .animation(lightSpeedOut 1s) }
+            // Specials
+            &.do-hinge { .animation(hinge 1s) }
+            &.do-rollIn { .animation(rollIn 1s) }
+            &.do-rollOut { .animation(rollOut 1s) }
+        }
+
+
     }
 }
