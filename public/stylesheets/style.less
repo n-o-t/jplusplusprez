@@ -109,8 +109,10 @@ body {
         }
 
 
-        .spot.animated { display:none; }
-        &.js-animate .spot.animated {
+        .spot.hidden-first { display:none; }
+        &.js-current .spot { display:block; }
+        &.js-current .spot.animated { display:none; }
+        &.js-current.js-animate .spot.animated {
             display:block;
             //Attention seekers
             &.do-flash { .animation(flash 1s) }

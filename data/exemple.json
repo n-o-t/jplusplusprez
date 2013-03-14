@@ -32,8 +32,8 @@
                 "html": "Lorem ipsum dolor si amet"
             },
             {
-                "top": "17.8%",
-                "left": "34.4166%",
+                "top": "52.2%",
+                "left": "43.1666%",
                 "width": "70px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "pink"
@@ -48,7 +48,8 @@
                 "width": "100px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "red",
-                "animation": "rotateInDownLeft "
+                "animation": "rotateInDownLeft",
+                "hidden-first": true
             },
             {
                 "top": "24%",
