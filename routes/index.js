@@ -25,13 +25,21 @@ var routePage = function(req, res) {
     // Data file path
     var data = path.join(dataDir, dataName);
 
-    // Do the template exist ?
-    if(! fs.existsSync(tpl)  ) return res.send(404, "Template file not found.");
     // Do the data file exist ?
     if(! fs.existsSync(data)  ) return res.send(404, "Data file not found.");
     
     // Render the page template
-    res.render(path.join(tplDir, req.params.page), { data: require(data), page: req.params.page });        
+    res.render(
+        path.join(
+            tplDir,
+            // Use the default template if needed 
+            fs.existsSync(tpl) ? req.params.page : "default"
+        ), 
+        { 
+            data: require(data), 
+            page: req.params.page 
+        }
+    );        
 };
 
 
@@ -54,7 +62,7 @@ var editSpotPosition = function(req, res) {
     // Edit the data
     data[step].spots[spot].top  = req.query.top;
     data[step].spots[spot].left = req.query.left;
-    
+
     var dataString = JSON.stringify(data, null, 4);
     // Mades it persistent
     fs.writeFile(dataPath, dataString);
