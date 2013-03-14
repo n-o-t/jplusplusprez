@@ -54,14 +54,6 @@ app.configure(function(){
       var klass = [];
       // Spot classes
       if(spot.class) klass.push(spot.class);
-      // Should we hide the spot before sliding to the step ?
-      if(spot["hidden-first"]) klass.push("hidden-first");
-      // Do the spot contain an animation
-      if(spot.animation) {
-        klass.push("animated");        
-        klass.push("do-"+spot.animation);
-      }
-
       return klass.join(" ");
     }    
   });

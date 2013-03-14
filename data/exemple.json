@@ -16,7 +16,7 @@
                     "alt": "flow"
                 },
                 "class": "shadow red",
-                "animation": "fadeInUpBig"
+                "entrance": "zoomIn"
             }
         ]
     },
@@ -25,40 +25,39 @@
         "name": "Lorem ipsum dolor si amet",
         "spots": [
             {
-                "top": "49%",
-                "left": "49.1666%",
+                "top": "40%",
+                "left": "78.3333%",
                 "width": "100px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "red",
-                "hidden-first": true
+                "entrance": "left"
             },
             {
-                "top": "36%",
-                "left": "42%",
+                "top": "35%",
+                "left": "70.9166%",
                 "width": "50px",
                 "html": "Lorem ipsum dolor si amet",
-                "style": "border:1px solid white;",
-                "class": "red"
+                "class": "red",
+                "entrance": "right",
+                "queue": true
             },
             {
-                "top": "30.6%",
-                "left": "39.75%",
+                "top": "25.2%",
+                "left": "74.9166%",
                 "width": "20px",
                 "html": "Lorem ipsum dolor si amet",
-                "class": "yellow"
+                "class": "yellow",
+                "entrance": "down",
+                "queue": true
             },
             {
-                "top": "31.2%",
-                "left": "39.25%",
-                "width": "20px",
-                "html": "Lorem ipsum dolor si amet"
-            },
-            {
-                "top": "41.8%",
-                "left": "45.1666%",
+                "top": "20.4%",
+                "left": "70%",
                 "width": "70px",
                 "html": "Lorem ipsum dolor si amet",
-                "class": "yellow"
+                "class": "yellow",
+                "entrance": "zoomIn",
+                "queue": true
             }
         ]
     },
@@ -67,38 +66,39 @@
         "name": "YOLO1",
         "spots": [
             {
-                "top": "40.8%",
-                "left": "19.0833%",
+                "top": "48.8%",
+                "left": "24.5833%",
+                "width": "400px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "red",
+                "entrance": "zoomOut"
+            },
+            {
+                "top": "48%",
+                "left": "44%",
+                "width": "300px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "pink",
+                "entrance": "zoomOut",
+                "queue": true
+            },
+            {
+                "top": "46.8%",
+                "left": "58.75%",
+                "width": "200px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "green",
+                "entrance": "zoomOut",
+                "queue": true
+            },
+            {
+                "top": "47.2%",
+                "left": "67.8333%",
                 "width": "100px",
                 "html": "Lorem ipsum dolor si amet",
-                "class": "red"
-            },
-            {
-                "top": "10.4%",
-                "left": "24.4166%",
-                "width": "50px",
-                "html": "Lorem ipsum dolor si amet",
-                "style": "border:1px solid white;"
-            },
-            {
-                "top": "5%",
-                "left": "29.9166%",
-                "width": "20px",
-                "html": "Lorem ipsum dolor si amet",
-                "class": "yellow"
-            },
-            {
-                "top": "6.6%",
-                "left": "27.5833%",
-                "width": "20px",
-                "html": "Lorem ipsum dolor si amet"
-            },
-            {
-                "top": "21.4%",
-                "left": "21%",
-                "width": "70px",
-                "html": "Lorem ipsum dolor si amet",
-                "class": "pink"
+                "class": "yellow",
+                "entrance": "zoomOut",
+                "queue": true
             }
         ]
     },
