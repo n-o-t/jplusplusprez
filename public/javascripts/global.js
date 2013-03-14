@@ -10,6 +10,8 @@
         spotsPosition();
         bindUI();
         goToStep(0);
+        // Remove loading overlay
+        $("body").removeClass("js-loading");
     };
 
     var buildUI = function() {

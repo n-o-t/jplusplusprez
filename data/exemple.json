@@ -5,8 +5,8 @@
         "no-index": true,
         "spots": [
             {
-                "top": "68.8%",
-                "left": "11.8333%",
+                "top": "65.2%",
+                "left": "12.6666%",
                 "width": "200px",
                 "height": "auto",
                 "title": "Lorem ipsum",
@@ -16,8 +16,7 @@
                     "alt": "flow"
                 },
                 "class": "shadow red",
-                "animation": "fadeInUpBig",
-                "hidden-first": true                
+                "animation": "fadeInUpBig"
             }
         ]
     },

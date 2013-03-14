@@ -8,6 +8,7 @@
 @zIndexTail    : @zIndexPicture+10;
 @zIndexSpot    : @zIndexTail+10;
 @zIndexNav     : @zIndexSpot+10;
+@zIndexLoading : @zIndexNav+10;
 
 body {
   padding: 50px;
@@ -53,6 +54,16 @@ body {
     
     margin-left:1200px/-2px;
     margin-top:500px/-2px;
+    
+    .js-loading &:after {
+        content:"";
+        position:absolute;
+        top:0; bottom:0;
+        left:0; right:0;
+        z-index:@zIndexLoading;
+        background:white;
+        display:block;
+    }
     
     nav {
         
