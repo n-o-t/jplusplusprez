@@ -23,6 +23,8 @@ $(function() {
             $this.css("left", left);
             $this.css("top", top);
 
+            // Print positions
+            console.log(left, top)
 
             // Send the value to update the json
             $.getJSON("/"+page+"/"+step+"/"+spot, {left: left, top: top}, console.log)
