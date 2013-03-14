@@ -1,0 +1,157 @@
+[
+    {
+        "picture": "http://placehold.it/1200x500",
+        "spots": [
+            {
+                "top": "48%",
+                "left": "12.3333%",
+                "width": "100px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "red"
+            },
+            {
+                "top": "49.6%",
+                "left": "44.3333%",
+                "width": "50px",
+                "html": "Lorem ipsum dolor si amet",
+                "style": "border:1px solid white;"
+            },
+            {
+                "top": "54.4%",
+                "left": "58.1666%",
+                "width": "20px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "yellow"
+            },
+            {
+                "top": "49.8%",
+                "left": "47.5833%",
+                "width": "20px",
+                "html": "Lorem ipsum dolor si amet"
+            },
+            {
+                "top": "49.4%",
+                "left": "39.5%",
+                "width": "70px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "pink"
+            }
+        ]
+    },
+    {
+        "spots": [
+            {
+                "top": "68.2%",
+                "left": "39.5833%",
+                "width": "100px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "red"
+            },
+            {
+                "top": "33%",
+                "left": "48%",
+                "width": "50px",
+                "html": "Lorem ipsum dolor si amet",
+                "style": "border:1px solid white;",
+                "class": "red"
+            },
+            {
+                "top": "70%",
+                "left": "60%",
+                "width": "20px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "yellow"
+            },
+            {
+                "top": "16.6324%",
+                "left": "35.4675%",
+                "width": "20px",
+                "html": "Lorem ipsum dolor si amet"
+            },
+            {
+                "top": "34.8%",
+                "left": "24.1666%",
+                "width": "70px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "yellow"
+            }
+        ]
+    },
+    {
+        "spots": [
+            {
+                "top": "50%",
+                "left": "50%",
+                "width": "100px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "red"
+            },
+            {
+                "top": "20%",
+                "left": "40%",
+                "width": "50px",
+                "html": "Lorem ipsum dolor si amet",
+                "style": "border:1px solid white;"
+            },
+            {
+                "top": "80%",
+                "left": "60%",
+                "width": "20px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "yellow"
+            },
+            {
+                "top": "10%",
+                "left": "40%",
+                "width": "20px",
+                "html": "Lorem ipsum dolor si amet"
+            },
+            {
+                "top": "70%",
+                "left": "10%",
+                "width": "70px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "pink"
+            }
+        ]
+    },
+    {
+        "spots": [
+            {
+                "top": "20%",
+                "left": "20%",
+                "width": "100px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "red"
+            },
+            {
+                "top": "50%",
+                "left": "80%",
+                "width": "50px",
+                "html": "Lorem ipsum dolor si amet",
+                "style": "border:1px solid white;",
+                "class": "red"
+            },
+            {
+                "top": "70%",
+                "left": "60%",
+                "width": "20px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "yellow"
+            },
+            {
+                "top": "90%",
+                "left": "10%",
+                "width": "20px",
+                "html": "Lorem ipsum dolor si amet"
+            },
+            {
+                "top": "10%",
+                "left": "40%",
+                "width": "70px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "yellow"
+            }
+        ]
+    }
+]

@@ -1,0 +1,13 @@
+extends ../base
+
+block content
+
+    each step, stepKey in data
+        .step.exemple(data-step=stepKey, data-page=page)           
+            if step.picture
+                img(src=step.picture).step-background
+            each spot, spotKey in step.spots
+                .spot(style=spotStyle(spot), class=spot.class, data-html=spot.html, data-spot=spotKey, data-step=stepKey)                                
+                    if spot.picture
+                        img(src=spot.picture).spot-background
+                

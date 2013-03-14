@@ -1,0 +1,108 @@
+@import "./vendor/bootstrap/reset.less";
+@import "./vendor/bootstrap/variables.less";
+@import "./vendor/bootstrap/mixins.less";
+@import "./tools.less";
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#old-browser {
+    z-index:500;
+    
+    position:fixed !important;
+    position:absolute;
+    top:0; bottom:0;    
+    right:0; left:0;
+    
+    background:white;
+    padding:10%;
+    overflow:hidden;
+    
+    display:none;
+    .lt-ie8 & { display:block; }
+}
+
+body {
+    overflow:hidden;
+    background:@grayLighter;
+}
+
+#container {    
+
+
+    @zIndexPicture : 10;
+    @zIndexTail    : @zIndexPicture+10;
+    @zIndexSpot    : @zIndexTail+10;
+
+    overflow:hidden;
+    
+    position:absolute;
+    top:50%;
+    left:50%;
+    
+    width:1200px;
+    height:500px;
+    
+    margin-left:1200px/-2px;
+    margin-top:500px/-2px;
+
+    .box-shadow(  0 0 0 20px white );
+    
+    .step {
+        position:absolute;
+        top:0; 
+        left:0;
+        width:100%;
+        min-height:100%;
+        background:fade(@black, 60%);
+        
+        .spot-background, .step-background {
+            min-width:100%;
+            max-width:none;
+            min-height:none;
+            max-height:none;
+            position:relative;
+            z-index:@zIndexPicture;
+        }
+        
+        &.exemple {
+            &:after {
+                content:"";
+                position: absolute;
+                top:50%;
+                right:0;
+                left:0;
+                border-top:10px dashed fade(@black, 60%);
+                z-index:@zIndexTail;
+            }
+        }
+        
+        .spot {
+            cursor:pointer;
+            background:inherit;
+            position:absolute; 
+            z-index:@zIndexSpot;
+            .border-radius(50%);
+            .transition(~"all 0.4s, top left bottom right 0");
+            .box-shadow(0 5px 5px 0 fade(@black, 50%) );
+            
+            &.red {
+                background:fade(@red, 60%);
+            }
+
+            &.yellow {
+                background:fade(@yellow, 60%);
+            }
+
+            &.pink {
+                background:fade(@pink, 60%);
+            }
+        }
+    }
+}
