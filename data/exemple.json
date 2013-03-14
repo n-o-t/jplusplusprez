@@ -1,122 +1,86 @@
 [
     {
         "picture": "http://placehold.it/1200x500",
-        "spots": [
-            {
-                "top": "81.2%",
-                "left": "83.6666%",
-                "width": "100px",
-                "html": "Lorem ipsum dolor si amet",
-                "class": "red",
-                "animation": "shake"
-            },
-            {
-                "top": "64.4%",
-                "left": "29.5833%",
-                "width": "50px",
-                "html": "Lorem ipsum dolor si amet",
-                "style": "border:1px solid white;"
-            },
-            {
-                "top": "24%",
-                "left": "11.5833%",
-                "width": "20px",
-                "html": "Lorem ipsum dolor si amet",
-                "class": "yellow",
-                "animation": "bounce"
-            },
-            {
-                "top": "26.6%",
-                "left": "57.0833%",
-                "width": "20px",
-                "html": "Lorem ipsum dolor si amet"
-            },
-            {
-                "top": "52.2%",
-                "left": "43.1666%",
-                "width": "70px",
-                "html": "Lorem ipsum dolor si amet",
-                "class": "pink"
-            }
-        ]
+        "name": "YOLO1",
+        "no-index": true,
+        "spots": []
     },
     {
+        "picture": "http://placehold.it/1200x500",
+        "name": "Lorem ipsum dolor si amet",
         "spots": [
             {
-                "top": "58%",
-                "left": "42.6666%",
+                "top": "49%",
+                "left": "49.1666%",
                 "width": "100px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "red",
-                "animation": "rotateInDownLeft",
                 "hidden-first": true
             },
             {
-                "top": "24%",
-                "left": "69.5%",
+                "top": "36%",
+                "left": "42%",
                 "width": "50px",
                 "html": "Lorem ipsum dolor si amet",
                 "style": "border:1px solid white;",
-                "class": "red",
-                "animation": "rotateInDownLeft "
-            },
-            {
-                "top": "67.4%",
-                "left": "59.3333%",
-                "width": "20px",
-                "html": "Lorem ipsum dolor si amet",
-                "class": "yellow",
-                "animation": "rotateInDownLeft "
-            },
-            {
-                "top": "16.6324%",
-                "left": "35.4675%",
-                "width": "20px",
-                "html": "Lorem ipsum dolor si amet",
-                "animation": "rotateInDownLeft "
-            },
-            {
-                "top": "46.2%",
-                "left": "19.5833%",
-                "width": "70px",
-                "html": "Lorem ipsum dolor si amet",
-                "class": "yellow",
-                "animation": "rotateInDownLeft "
-            }
-        ]
-    },
-    {
-        "spots": [
-            {
-                "top": "50%",
-                "left": "50%",
-                "width": "100px",
-                "html": "Lorem ipsum dolor si amet",
                 "class": "red"
             },
             {
-                "top": "20%",
-                "left": "40%",
-                "width": "50px",
-                "html": "Lorem ipsum dolor si amet",
-                "style": "border:1px solid white;"
-            },
-            {
-                "top": "80%",
-                "left": "60%",
+                "top": "32.8%",
+                "left": "40.25%",
                 "width": "20px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "yellow"
             },
             {
-                "top": "10%",
-                "left": "40%",
+                "top": "31.2%",
+                "left": "39.25%",
                 "width": "20px",
                 "html": "Lorem ipsum dolor si amet"
             },
             {
-                "top": "70%",
-                "left": "10%",
+                "top": "41.8%",
+                "left": "45.1666%",
+                "width": "70px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "yellow"
+            }
+        ]
+    },
+    {
+        "picture": "http://placehold.it/1200x500",
+        "name": "YOLO1",
+        "spots": [
+            {
+                "top": "40.8%",
+                "left": "19.0833%",
+                "width": "100px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "red"
+            },
+            {
+                "top": "10.4%",
+                "left": "24.4166%",
+                "width": "50px",
+                "html": "Lorem ipsum dolor si amet",
+                "style": "border:1px solid white;"
+            },
+            {
+                "top": "5%",
+                "left": "29.9166%",
+                "width": "20px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "yellow"
+            },
+            {
+                "top": "6.6%",
+                "left": "27.5833%",
+                "width": "20px",
+                "html": "Lorem ipsum dolor si amet"
+            },
+            {
+                "top": "21.4%",
+                "left": "21%",
                 "width": "70px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "pink"
@@ -124,17 +88,19 @@
         ]
     },
     {
+        "picture": "http://placehold.it/1200x500",
+        "name": "YOLO1",
         "spots": [
             {
-                "top": "20%",
-                "left": "20%",
+                "top": "69.6%",
+                "left": "36.1666%",
                 "width": "100px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "red"
             },
             {
-                "top": "50%",
-                "left": "80%",
+                "top": "70.4%",
+                "left": "53.0833%",
                 "width": "50px",
                 "html": "Lorem ipsum dolor si amet",
                 "style": "border:1px solid white;",
@@ -142,20 +108,20 @@
             },
             {
                 "top": "70%",
-                "left": "60%",
+                "left": "59.25%",
                 "width": "20px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "yellow"
             },
             {
-                "top": "90%",
-                "left": "10%",
+                "top": "70.2%",
+                "left": "63.8333%",
                 "width": "20px",
                 "html": "Lorem ipsum dolor si amet"
             },
             {
-                "top": "10%",
-                "left": "40%",
+                "top": "69.6%",
+                "left": "45.25%",
                 "width": "70px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "yellow"

@@ -3871,7 +3871,10 @@ body {
   overflow: hidden;
   background: #eeeeee;
 }
-#container {
+#overflow {
+  -webkit-box-shadow: 0 0 0 20px #ffffff;
+  -moz-box-shadow: 0 0 0 20px #ffffff;
+  box-shadow: 0 0 0 20px #ffffff;
   overflow: hidden;
   position: absolute;
   top: 50%;
@@ -3880,9 +3883,100 @@ body {
   height: 500px;
   margin-left: -600px;
   margin-top: -250px;
-  -webkit-box-shadow: 0 0 0 20px #ffffff;
-  -moz-box-shadow: 0 0 0 20px #ffffff;
-  box-shadow: 0 0 0 20px #ffffff;
+}
+#overflow nav ul.steps {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 40;
+  padding: 0;
+  margin: 0;
+}
+#overflow nav ul.steps li {
+  margin: 0;
+  padding: 0;
+  clear: right;
+  list-style: none;
+}
+#overflow nav ul.steps li a {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  background: black;
+  color: white;
+  display: block;
+  float: right;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
+}
+#overflow nav ul.steps li a .wrapper {
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  float: left;
+}
+#overflow nav ul.steps li a:hover .wrapper {
+  max-width: 300px;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+#overflow nav ul.arrows {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#overflow nav ul.arrows .previous,
+#overflow nav ul.arrows .next {
+  position: absolute;
+  z-index: 40;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  color: black;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  background: white;
+  cursor: pointer;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+}
+#overflow nav ul.arrows .previous {
+  left: 0;
+  -webkit-border-radius: 0 25px 25px 0;
+  -moz-border-radius: 0 25px 25px 0;
+  border-radius: 0 25px 25px 0;
+}
+.js-first #overflow nav ul.arrows .previous {
+  left: -50px;
+}
+#overflow nav ul.arrows .next {
+  right: 0;
+  -webkit-border-radius: 25px 0 0 25px;
+  -moz-border-radius: 25px 0 0 25px;
+  border-radius: 25px 0 0 25px;
+}
+.js-first #overflow nav ul.arrows .next,
+.js-last #overflow nav ul.arrows .next {
+  right: -50px;
+}
+#container {
+  overflow: hidden;
+  position: relative;
+  width: 1200px;
+  height: 500px;
 }
 #container .step {
   position: absolute;
@@ -3935,398 +4029,404 @@ body {
 #container .step .spot.pink {
   background: rgba(195, 50, 95, 0.6);
 }
-#container .step .spot.animated {
+#container .step .spot.hidden-first {
   display: none;
 }
-#container .step.js-animate .spot.animated {
+#container .step.js-current .spot {
   display: block;
 }
-#container .step.js-animate .spot.animated.do-flash {
+#container .step.js-current .spot.animated {
+  display: none;
+}
+#container .step.js-current.js-animate .spot.animated {
+  display: block;
+}
+#container .step.js-current.js-animate .spot.animated.do-flash {
   animation: flash 1s;
   -moz-animation: flash 1s;
   -webkit-animation: flash 1s;
   -o-animation: flash 1s;
   -ms-animation: flash 1s;
 }
-#container .step.js-animate .spot.animated.do-bounce {
+#container .step.js-current.js-animate .spot.animated.do-bounce {
   animation: bounce 1s;
   -moz-animation: bounce 1s;
   -webkit-animation: bounce 1s;
   -o-animation: bounce 1s;
   -ms-animation: bounce 1s;
 }
-#container .step.js-animate .spot.animated.do-shake {
+#container .step.js-current.js-animate .spot.animated.do-shake {
   animation: shake 1s;
   -moz-animation: shake 1s;
   -webkit-animation: shake 1s;
   -o-animation: shake 1s;
   -ms-animation: shake 1s;
 }
-#container .step.js-animate .spot.animated.do-tada {
+#container .step.js-current.js-animate .spot.animated.do-tada {
   animation: tada 1s;
   -moz-animation: tada 1s;
   -webkit-animation: tada 1s;
   -o-animation: tada 1s;
   -ms-animation: tada 1s;
 }
-#container .step.js-animate .spot.animated.do-swing {
+#container .step.js-current.js-animate .spot.animated.do-swing {
   animation: swing 1s;
   -moz-animation: swing 1s;
   -webkit-animation: swing 1s;
   -o-animation: swing 1s;
   -ms-animation: swing 1s;
 }
-#container .step.js-animate .spot.animated.do-wobble {
+#container .step.js-current.js-animate .spot.animated.do-wobble {
   animation: wobble 1s;
   -moz-animation: wobble 1s;
   -webkit-animation: wobble 1s;
   -o-animation: wobble 1s;
   -ms-animation: wobble 1s;
 }
-#container .step.js-animate .spot.animated.do-wiggle {
+#container .step.js-current.js-animate .spot.animated.do-wiggle {
   animation: wiggle 1s;
   -moz-animation: wiggle 1s;
   -webkit-animation: wiggle 1s;
   -o-animation: wiggle 1s;
   -ms-animation: wiggle 1s;
 }
-#container .step.js-animate .spot.animated.do-pulse {
+#container .step.js-current.js-animate .spot.animated.do-pulse {
   animation: pulse 1s;
   -moz-animation: pulse 1s;
   -webkit-animation: pulse 1s;
   -o-animation: pulse 1s;
   -ms-animation: pulse 1s;
 }
-#container .step.js-animate .spot.animated.do-flip {
+#container .step.js-current.js-animate .spot.animated.do-flip {
   animation: flip 1s;
   -moz-animation: flip 1s;
   -webkit-animation: flip 1s;
   -o-animation: flip 1s;
   -ms-animation: flip 1s;
 }
-#container .step.js-animate .spot.animated.do-flipInX {
+#container .step.js-current.js-animate .spot.animated.do-flipInX {
   animation: flipInX 1s;
   -moz-animation: flipInX 1s;
   -webkit-animation: flipInX 1s;
   -o-animation: flipInX 1s;
   -ms-animation: flipInX 1s;
 }
-#container .step.js-animate .spot.animated.do-flipOutX {
+#container .step.js-current.js-animate .spot.animated.do-flipOutX {
   animation: flipOutX 1s;
   -moz-animation: flipOutX 1s;
   -webkit-animation: flipOutX 1s;
   -o-animation: flipOutX 1s;
   -ms-animation: flipOutX 1s;
 }
-#container .step.js-animate .spot.animated.do-flipInY {
+#container .step.js-current.js-animate .spot.animated.do-flipInY {
   animation: flipInY 1s;
   -moz-animation: flipInY 1s;
   -webkit-animation: flipInY 1s;
   -o-animation: flipInY 1s;
   -ms-animation: flipInY 1s;
 }
-#container .step.js-animate .spot.animated.do-flipOutY {
+#container .step.js-current.js-animate .spot.animated.do-flipOutY {
   animation: flipOutY 1s;
   -moz-animation: flipOutY 1s;
   -webkit-animation: flipOutY 1s;
   -o-animation: flipOutY 1s;
   -ms-animation: flipOutY 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeIn {
+#container .step.js-current.js-animate .spot.animated.do-fadeIn {
   animation: fadeIn 1s;
   -moz-animation: fadeIn 1s;
   -webkit-animation: fadeIn 1s;
   -o-animation: fadeIn 1s;
   -ms-animation: fadeIn 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeInUp {
+#container .step.js-current.js-animate .spot.animated.do-fadeInUp {
   animation: fadeInUp 1s;
   -moz-animation: fadeInUp 1s;
   -webkit-animation: fadeInUp 1s;
   -o-animation: fadeInUp 1s;
   -ms-animation: fadeInUp 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeInDown {
+#container .step.js-current.js-animate .spot.animated.do-fadeInDown {
   animation: fadeInDown 1s;
   -moz-animation: fadeInDown 1s;
   -webkit-animation: fadeInDown 1s;
   -o-animation: fadeInDown 1s;
   -ms-animation: fadeInDown 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeInLeft {
+#container .step.js-current.js-animate .spot.animated.do-fadeInLeft {
   animation: fadeInLeft 1s;
   -moz-animation: fadeInLeft 1s;
   -webkit-animation: fadeInLeft 1s;
   -o-animation: fadeInLeft 1s;
   -ms-animation: fadeInLeft 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeInRight {
+#container .step.js-current.js-animate .spot.animated.do-fadeInRight {
   animation: fadeInRight 1s;
   -moz-animation: fadeInRight 1s;
   -webkit-animation: fadeInRight 1s;
   -o-animation: fadeInRight 1s;
   -ms-animation: fadeInRight 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeInUpBig {
+#container .step.js-current.js-animate .spot.animated.do-fadeInUpBig {
   animation: fadeInUpBig 1s;
   -moz-animation: fadeInUpBig 1s;
   -webkit-animation: fadeInUpBig 1s;
   -o-animation: fadeInUpBig 1s;
   -ms-animation: fadeInUpBig 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeInDownBig {
+#container .step.js-current.js-animate .spot.animated.do-fadeInDownBig {
   animation: fadeInDownBig 1s;
   -moz-animation: fadeInDownBig 1s;
   -webkit-animation: fadeInDownBig 1s;
   -o-animation: fadeInDownBig 1s;
   -ms-animation: fadeInDownBig 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeInLeftBig {
+#container .step.js-current.js-animate .spot.animated.do-fadeInLeftBig {
   animation: fadeInLeftBig 1s;
   -moz-animation: fadeInLeftBig 1s;
   -webkit-animation: fadeInLeftBig 1s;
   -o-animation: fadeInLeftBig 1s;
   -ms-animation: fadeInLeftBig 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeInRightBig {
+#container .step.js-current.js-animate .spot.animated.do-fadeInRightBig {
   animation: fadeInRightBig 1s;
   -moz-animation: fadeInRightBig 1s;
   -webkit-animation: fadeInRightBig 1s;
   -o-animation: fadeInRightBig 1s;
   -ms-animation: fadeInRightBig 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeOut {
+#container .step.js-current.js-animate .spot.animated.do-fadeOut {
   animation: fadeOut 1s;
   -moz-animation: fadeOut 1s;
   -webkit-animation: fadeOut 1s;
   -o-animation: fadeOut 1s;
   -ms-animation: fadeOut 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeOutUp {
+#container .step.js-current.js-animate .spot.animated.do-fadeOutUp {
   animation: fadeOutUp 1s;
   -moz-animation: fadeOutUp 1s;
   -webkit-animation: fadeOutUp 1s;
   -o-animation: fadeOutUp 1s;
   -ms-animation: fadeOutUp 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeOutDown {
+#container .step.js-current.js-animate .spot.animated.do-fadeOutDown {
   animation: fadeOutDown 1s;
   -moz-animation: fadeOutDown 1s;
   -webkit-animation: fadeOutDown 1s;
   -o-animation: fadeOutDown 1s;
   -ms-animation: fadeOutDown 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeOutLeft {
+#container .step.js-current.js-animate .spot.animated.do-fadeOutLeft {
   animation: fadeOutLeft 1s;
   -moz-animation: fadeOutLeft 1s;
   -webkit-animation: fadeOutLeft 1s;
   -o-animation: fadeOutLeft 1s;
   -ms-animation: fadeOutLeft 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeOutRight {
+#container .step.js-current.js-animate .spot.animated.do-fadeOutRight {
   animation: fadeOutRight 1s;
   -moz-animation: fadeOutRight 1s;
   -webkit-animation: fadeOutRight 1s;
   -o-animation: fadeOutRight 1s;
   -ms-animation: fadeOutRight 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeOutUpBig {
+#container .step.js-current.js-animate .spot.animated.do-fadeOutUpBig {
   animation: fadeOutUpBig 1s;
   -moz-animation: fadeOutUpBig 1s;
   -webkit-animation: fadeOutUpBig 1s;
   -o-animation: fadeOutUpBig 1s;
   -ms-animation: fadeOutUpBig 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeOutDownBig {
+#container .step.js-current.js-animate .spot.animated.do-fadeOutDownBig {
   animation: fadeOutDownBig 1s;
   -moz-animation: fadeOutDownBig 1s;
   -webkit-animation: fadeOutDownBig 1s;
   -o-animation: fadeOutDownBig 1s;
   -ms-animation: fadeOutDownBig 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeOutLeftBig {
+#container .step.js-current.js-animate .spot.animated.do-fadeOutLeftBig {
   animation: fadeOutLeftBig 1s;
   -moz-animation: fadeOutLeftBig 1s;
   -webkit-animation: fadeOutLeftBig 1s;
   -o-animation: fadeOutLeftBig 1s;
   -ms-animation: fadeOutLeftBig 1s;
 }
-#container .step.js-animate .spot.animated.do-fadeOutRightBig {
+#container .step.js-current.js-animate .spot.animated.do-fadeOutRightBig {
   animation: fadeOutRightBig 1s;
   -moz-animation: fadeOutRightBig 1s;
   -webkit-animation: fadeOutRightBig 1s;
   -o-animation: fadeOutRightBig 1s;
   -ms-animation: fadeOutRightBig 1s;
 }
-#container .step.js-animate .spot.animated.do-bounceIn {
+#container .step.js-current.js-animate .spot.animated.do-bounceIn {
   animation: bounceIn 1s;
   -moz-animation: bounceIn 1s;
   -webkit-animation: bounceIn 1s;
   -o-animation: bounceIn 1s;
   -ms-animation: bounceIn 1s;
 }
-#container .step.js-animate .spot.animated.do-bounceInDown {
+#container .step.js-current.js-animate .spot.animated.do-bounceInDown {
   animation: bounceInDown 1s;
   -moz-animation: bounceInDown 1s;
   -webkit-animation: bounceInDown 1s;
   -o-animation: bounceInDown 1s;
   -ms-animation: bounceInDown 1s;
 }
-#container .step.js-animate .spot.animated.do-bounceInUp {
+#container .step.js-current.js-animate .spot.animated.do-bounceInUp {
   animation: bounceInUp 1s;
   -moz-animation: bounceInUp 1s;
   -webkit-animation: bounceInUp 1s;
   -o-animation: bounceInUp 1s;
   -ms-animation: bounceInUp 1s;
 }
-#container .step.js-animate .spot.animated.do-bounceInLeft {
+#container .step.js-current.js-animate .spot.animated.do-bounceInLeft {
   animation: bounceInLeft 1s;
   -moz-animation: bounceInLeft 1s;
   -webkit-animation: bounceInLeft 1s;
   -o-animation: bounceInLeft 1s;
   -ms-animation: bounceInLeft 1s;
 }
-#container .step.js-animate .spot.animated.do-bounceInRight {
+#container .step.js-current.js-animate .spot.animated.do-bounceInRight {
   animation: bounceInRight 1s;
   -moz-animation: bounceInRight 1s;
   -webkit-animation: bounceInRight 1s;
   -o-animation: bounceInRight 1s;
   -ms-animation: bounceInRight 1s;
 }
-#container .step.js-animate .spot.animated.do-bounceOut {
+#container .step.js-current.js-animate .spot.animated.do-bounceOut {
   animation: bounceOut 1s;
   -moz-animation: bounceOut 1s;
   -webkit-animation: bounceOut 1s;
   -o-animation: bounceOut 1s;
   -ms-animation: bounceOut 1s;
 }
-#container .step.js-animate .spot.animated.do-bounceOutDown {
+#container .step.js-current.js-animate .spot.animated.do-bounceOutDown {
   animation: bounceOutDown 1s;
   -moz-animation: bounceOutDown 1s;
   -webkit-animation: bounceOutDown 1s;
   -o-animation: bounceOutDown 1s;
   -ms-animation: bounceOutDown 1s;
 }
-#container .step.js-animate .spot.animated.do-bounceOutUp {
+#container .step.js-current.js-animate .spot.animated.do-bounceOutUp {
   animation: bounceOutUp 1s;
   -moz-animation: bounceOutUp 1s;
   -webkit-animation: bounceOutUp 1s;
   -o-animation: bounceOutUp 1s;
   -ms-animation: bounceOutUp 1s;
 }
-#container .step.js-animate .spot.animated.do-bounceOutLeft {
+#container .step.js-current.js-animate .spot.animated.do-bounceOutLeft {
   animation: bounceOutLeft 1s;
   -moz-animation: bounceOutLeft 1s;
   -webkit-animation: bounceOutLeft 1s;
   -o-animation: bounceOutLeft 1s;
   -ms-animation: bounceOutLeft 1s;
 }
-#container .step.js-animate .spot.animated.do-bounceOutRight {
+#container .step.js-current.js-animate .spot.animated.do-bounceOutRight {
   animation: bounceOutRight 1s;
   -moz-animation: bounceOutRight 1s;
   -webkit-animation: bounceOutRight 1s;
   -o-animation: bounceOutRight 1s;
   -ms-animation: bounceOutRight 1s;
 }
-#container .step.js-animate .spot.animated.do-rotateIn {
+#container .step.js-current.js-animate .spot.animated.do-rotateIn {
   animation: rotateIn 1s;
   -moz-animation: rotateIn 1s;
   -webkit-animation: rotateIn 1s;
   -o-animation: rotateIn 1s;
   -ms-animation: rotateIn 1s;
 }
-#container .step.js-animate .spot.animated.do-rotateInDownLeft {
+#container .step.js-current.js-animate .spot.animated.do-rotateInDownLeft {
   animation: rotateInDownLeft 1s;
   -moz-animation: rotateInDownLeft 1s;
   -webkit-animation: rotateInDownLeft 1s;
   -o-animation: rotateInDownLeft 1s;
   -ms-animation: rotateInDownLeft 1s;
 }
-#container .step.js-animate .spot.animated.do-rotateInDownRight {
+#container .step.js-current.js-animate .spot.animated.do-rotateInDownRight {
   animation: rotateInDownRight 1s;
   -moz-animation: rotateInDownRight 1s;
   -webkit-animation: rotateInDownRight 1s;
   -o-animation: rotateInDownRight 1s;
   -ms-animation: rotateInDownRight 1s;
 }
-#container .step.js-animate .spot.animated.do-rotateInUpLeft {
+#container .step.js-current.js-animate .spot.animated.do-rotateInUpLeft {
   animation: rotateInUpLeft 1s;
   -moz-animation: rotateInUpLeft 1s;
   -webkit-animation: rotateInUpLeft 1s;
   -o-animation: rotateInUpLeft 1s;
   -ms-animation: rotateInUpLeft 1s;
 }
-#container .step.js-animate .spot.animated.do-rotateInUpRight {
+#container .step.js-current.js-animate .spot.animated.do-rotateInUpRight {
   animation: rotateInUpRight 1s;
   -moz-animation: rotateInUpRight 1s;
   -webkit-animation: rotateInUpRight 1s;
   -o-animation: rotateInUpRight 1s;
   -ms-animation: rotateInUpRight 1s;
 }
-#container .step.js-animate .spot.animated.do-rotateOut {
+#container .step.js-current.js-animate .spot.animated.do-rotateOut {
   animation: rotateOut 1s;
   -moz-animation: rotateOut 1s;
   -webkit-animation: rotateOut 1s;
   -o-animation: rotateOut 1s;
   -ms-animation: rotateOut 1s;
 }
-#container .step.js-animate .spot.animated.do-rotateOutDownLeft {
+#container .step.js-current.js-animate .spot.animated.do-rotateOutDownLeft {
   animation: rotateOutDownLeft 1s;
   -moz-animation: rotateOutDownLeft 1s;
   -webkit-animation: rotateOutDownLeft 1s;
   -o-animation: rotateOutDownLeft 1s;
   -ms-animation: rotateOutDownLeft 1s;
 }
-#container .step.js-animate .spot.animated.do-rotateOutDownRight {
+#container .step.js-current.js-animate .spot.animated.do-rotateOutDownRight {
   animation: rotateOutDownRight 1s;
   -moz-animation: rotateOutDownRight 1s;
   -webkit-animation: rotateOutDownRight 1s;
   -o-animation: rotateOutDownRight 1s;
   -ms-animation: rotateOutDownRight 1s;
 }
-#container .step.js-animate .spot.animated.do-rotateOutUpLeft {
+#container .step.js-current.js-animate .spot.animated.do-rotateOutUpLeft {
   animation: rotateOutUpLeft 1s;
   -moz-animation: rotateOutUpLeft 1s;
   -webkit-animation: rotateOutUpLeft 1s;
   -o-animation: rotateOutUpLeft 1s;
   -ms-animation: rotateOutUpLeft 1s;
 }
-#container .step.js-animate .spot.animated.do-rotateOutUpRight {
+#container .step.js-current.js-animate .spot.animated.do-rotateOutUpRight {
   animation: rotateOutUpRight 1s;
   -moz-animation: rotateOutUpRight 1s;
   -webkit-animation: rotateOutUpRight 1s;
   -o-animation: rotateOutUpRight 1s;
   -ms-animation: rotateOutUpRight 1s;
 }
-#container .step.js-animate .spot.animated.do-lightSpeedIn {
+#container .step.js-current.js-animate .spot.animated.do-lightSpeedIn {
   animation: lightSpeedIn 1s;
   -moz-animation: lightSpeedIn 1s;
   -webkit-animation: lightSpeedIn 1s;
   -o-animation: lightSpeedIn 1s;
   -ms-animation: lightSpeedIn 1s;
 }
-#container .step.js-animate .spot.animated.do-lightSpeedOut {
+#container .step.js-current.js-animate .spot.animated.do-lightSpeedOut {
   animation: lightSpeedOut 1s;
   -moz-animation: lightSpeedOut 1s;
   -webkit-animation: lightSpeedOut 1s;
   -o-animation: lightSpeedOut 1s;
   -ms-animation: lightSpeedOut 1s;
 }
-#container .step.js-animate .spot.animated.do-hinge {
+#container .step.js-current.js-animate .spot.animated.do-hinge {
   animation: hinge 1s;
   -moz-animation: hinge 1s;
   -webkit-animation: hinge 1s;
   -o-animation: hinge 1s;
   -ms-animation: hinge 1s;
 }
-#container .step.js-animate .spot.animated.do-rollIn {
+#container .step.js-current.js-animate .spot.animated.do-rollIn {
   animation: rollIn 1s;
   -moz-animation: rollIn 1s;
   -webkit-animation: rollIn 1s;
   -o-animation: rollIn 1s;
   -ms-animation: rollIn 1s;
 }
-#container .step.js-animate .spot.animated.do-rollOut {
+#container .step.js-current.js-animate .spot.animated.do-rollOut {
   animation: rollOut 1s;
   -moz-animation: rollOut 1s;
   -webkit-animation: rollOut 1s;

@@ -15,13 +15,19 @@
     var buildUI = function() {
         $ui = $("#container");
         $uis = {
-            steps: $ui.find(".step"),
-            spots: $ui.find(".spot")
+            steps:    $ui.find(".step"),
+            spots:    $ui.find(".spot"),
+            navitem:  $("#overflow .to-step"),
+            previous: $("#overflow nav .arrows .previous"),
+            next:     $("#overflow nav .arrows .next")
         };
     };
 
     var bindUI = function() {
         $uis.steps.on("click", ".spot", showSpot);
+        $uis.navitem.on("click", navitemClick);
+        $uis.previous.on("click", previousStep);
+        $uis.next.on("click", nextStep);
         $(window).keydown(keyboardNav);
         $(window).resize(resize);
     };
@@ -90,8 +96,18 @@
             setTimeout(function() {
                 $uis.steps.eq(currentStep).addClass("js-animate");
             }, scrollDuration)
-        }
+            // Add a class to the body
+            var $body = $("body");
+            // Is this the first step ?
+            $body.toggleClass("js-first", currentStep === 0);
+            // Is this the last step ?
+            $body.toggleClass("js-last", currentStep === $uis.steps.length-1);
+        }        
     };
+
+    var navitemClick = function() {             
+        goToStep( $(this).data("step") );
+    }
 
     var resize = function() {
         stepsPosition();

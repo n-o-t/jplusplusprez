@@ -4,6 +4,11 @@
 @import "./vendor/animations.less";
 @import "./tools.less";
 
+@zIndexPicture : 10;
+@zIndexTail    : @zIndexPicture+10;
+@zIndexSpot    : @zIndexTail+10;
+@zIndexNav     : @zIndexSpot+10;
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -34,15 +39,11 @@ body {
     background:@grayLighter;
 }
 
-#container {    
 
+#overflow {    
 
-    @zIndexPicture : 10;
-    @zIndexTail    : @zIndexPicture+10;
-    @zIndexSpot    : @zIndexTail+10;
-
+    .box-shadow(  0 0 0 20px white );
     overflow:hidden;
-    
     position:absolute;
     top:50%;
     left:50%;
@@ -52,8 +53,98 @@ body {
     
     margin-left:1200px/-2px;
     margin-top:500px/-2px;
+    
+    nav {
+        
+        ul.steps {
 
-    .box-shadow(  0 0 0 20px white );
+            position:absolute;
+            right:0;
+            top:20px;
+            z-index:@zIndexNav;
+            
+            padding:0;
+            margin:0;            
+            
+            li {
+                margin:0;
+                padding:0;
+                clear:right;
+                list-style:none;                
+                
+                a {                    
+                    padding:5px 10px;
+                    margin-bottom:10px;
+                    background:black;
+                    color:white;
+                    display:block;
+                    float:right;
+                    cursor:pointer;
+                    overflow:hidden;
+                    .border-radius(10px 0 0 10px);
+                    
+                    .wrapper {
+                        .transition(0.7s);
+                        .opacity(0);
+                        max-width:0;
+                        overflow:hidden;
+                        white-space:nowrap;            
+                        display:block;
+                        float:left;            
+                    }
+
+                    &:hover .wrapper {
+                        max-width:300px;
+                        .opacity(100);
+                    }
+                }                
+            }
+        }
+
+        ul.arrows {
+            list-style:none;
+            padding:0;
+            margin:0;
+            
+            .previous, .next {
+                position:absolute;
+                z-index:@zIndexNav;
+                top:50%;
+                width:50px;
+                height:50px;
+                margin-top:-25px;
+                color:black;
+                font-size:30px;
+                line-height:50px;
+                text-align:center;
+                background:white; 
+                cursor:pointer;  
+                .transition(0.7s);             
+            }
+
+            .previous {
+                left:0;
+                .border-radius(0 25px 25px 0);                
+                .js-first & { left:-50px; }
+            }
+
+            .next {
+                right:0;
+                .border-radius(25px 0 0 25px);
+                .js-first &, .js-last & { right:-50px; }
+            }
+
+        }
+    }
+}
+
+#container {    
+
+    overflow:hidden;
+    
+    position:relative;
+    width:1200px;
+    height:500px;    
     
     .step {
         position:absolute;

@@ -1,0 +1,14 @@
+nav
+    ul.steps
+        each step, stepKey in data
+            if step["no-index"] != true
+                li
+                    a.to-step(data-step=stepKey)
+                        span.wrapper=step.name
+                        i.left10=stepKey
+
+    ul.arrows
+        li
+            a.previous(title="Précendent") &larr;
+        li
+            a.next(title="Suivant") &rarr; 

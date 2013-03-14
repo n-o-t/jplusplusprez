@@ -18,15 +18,18 @@ html.no-js
     block stylesheets
     link(rel='stylesheet', href='/stylesheets/style.css')    
 
-  body
+  body(class=page)
 
 
     #old-browser
         h4 Votre navigateur <strong>est trop ancien</strong>
         p <a href="http://browsehappy.com/">Mettez à jour votre navigateur</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">installez Google Chrome Frame</a> pour accéder à cette page.
 
-    #container
-        block content
+    
+    #overflow
+        include widget/menu.jade
+        #container
+            block content
             
 
     script(src="/javascripts/vendor/modernizr.custom.js", type="text/javascript")
