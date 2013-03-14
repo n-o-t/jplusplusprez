@@ -163,7 +163,7 @@ body {
             z-index:@zIndexPicture;
         }
         
-        &.exemple {
+        .exemple & {
             &:after {
                 content:"";
                 position: absolute;
@@ -178,12 +178,17 @@ body {
 
         .spot {
             cursor:pointer;
-            background:inherit;
+            background:transparent;
             position:absolute; 
             z-index:@zIndexSpot;
-            .border-radius(50%);
-            .transition(~"all 0.4s, top left bottom right 0");
-            .box-shadow(0 5px 5px 0 fade(@black, 50%) );
+            
+            &.circle {                
+                .border-radius(50%);
+            }
+
+            &.shadow {                
+                .box-shadow(0 5px 5px 0 fade(@black, 50%) );
+            }
             
             &.red {
                 background:fade(@red, 60%);
@@ -197,6 +202,10 @@ body {
                 background:fade(@pink, 60%);
             }
 
+            h3, h4 {
+                margin-top:0;
+                margin-bottom:0.2em;
+            }
         }
 
 

@@ -7,7 +7,11 @@ block content
             if step.picture
                 img(src=step.picture).step-background
             each spot, spotKey in step.spots
-                .spot(style=spotStyle(spot), class=spotClass(spot), data-html=spot.html, data-spot=spotKey, data-step=stepKey)                                
-                    if spot.picture
-                        img(src=spot.picture).spot-background
+                .spot(style=spotStyle(spot), class=spotClass(spot), data-html=spot.html, data-spot=spotKey, data-step=stepKey)  
+                    if spot["title"]
+                        h3=spot["title"]
+                    if spot["sub-title"]
+                        h4=spot["sub-title"]                      
+                    if spot["picture"]
+                        img(src=spot["picture"]["src"], alt=spot["picture"]["alt"]).spot-background
                 

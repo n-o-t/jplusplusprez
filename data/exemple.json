@@ -3,7 +3,23 @@
         "picture": "http://placehold.it/1200x500",
         "name": "YOLO1",
         "no-index": true,
-        "spots": []
+        "spots": [
+            {
+                "top": "68.8%",
+                "left": "11.8333%",
+                "width": "200px",
+                "height": "auto",
+                "title": "Lorem ipsum",
+                "sub-title": "dolor si amet",
+                "picture": {
+                    "src": "http://placehold.it/200x200",
+                    "alt": "flow"
+                },
+                "class": "shadow red",
+                "animation": "fadeInUpBig",
+                "hidden-first": true                
+            }
+        ]
     },
     {
         "picture": "http://placehold.it/1200x500",

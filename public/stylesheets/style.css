@@ -3995,7 +3995,7 @@ body {
   position: relative;
   z-index: 10;
 }
-#container .step.exemple:after {
+.exemple #container .step:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -4006,16 +4006,16 @@ body {
 }
 #container .step .spot {
   cursor: pointer;
-  background: inherit;
+  background: transparent;
   position: absolute;
   z-index: 30;
+}
+#container .step .spot.circle {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  -webkit-transition: all 0.4s, top left bottom right 0;
-  -moz-transition: all 0.4s, top left bottom right 0;
-  -o-transition: all 0.4s, top left bottom right 0;
-  transition: all 0.4s, top left bottom right 0;
+}
+#container .step .spot.shadow {
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
@@ -4028,6 +4028,11 @@ body {
 }
 #container .step .spot.pink {
   background: rgba(195, 50, 95, 0.6);
+}
+#container .step .spot h3,
+#container .step .spot h4 {
+  margin-top: 0;
+  margin-bottom: 0.2em;
 }
 #container .step .spot.hidden-first {
   display: none;
