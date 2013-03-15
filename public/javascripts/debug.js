@@ -30,4 +30,6 @@ $(function() {
             $.getJSON("/"+page+"/"+step+"/"+spot, {left: left, top: top}, console.log)
         }
     });
+
+
 })
