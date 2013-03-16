@@ -14,7 +14,7 @@
             },
             {                
                 "background": "http://placehold.it/600x500/fff/000/",
-                "background-direction": "right top",
+                "background-direction": "left bottom",
                 "background-speed": 10,
                 "top": "50%",
                 "left": "75%",
