@@ -54,8 +54,8 @@
             steps:    $ui.find(".step"),
             spots:    $ui.find(".spot"),
             navitem:  $("#overflow .to-step"),
-            previous: $("#overflow nav .arrows .previous"),
-            next:     $("#overflow nav .arrows .next")
+            previous: $("#overflow .nav .arrows .previous"),
+            next:     $("#overflow .nav .arrows .next")
         };
     };
 
@@ -247,7 +247,7 @@
                     if( ! isNaN(direction) ) {
                         
                         var radian = direction * Math.PI / 180.0;
-                        
+
                         var x0 = $spot.css("backgroundPositionX"),
                             y0 = $spot.css("backgroundPositionY");
 

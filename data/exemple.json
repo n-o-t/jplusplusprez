@@ -6,7 +6,7 @@
             {                
                 "background": "http://placehold.it/600x500/fff/00f/",
                 "background-direction": "left",
-                "background-speed": 10,
+                "background-speed": 5,
                 "top": "50%",
                 "left": "25%",
                 "width":"50%",
@@ -15,7 +15,7 @@
             {                
                 "background": "http://placehold.it/600x500/fff/0f0/",
                 "background-direction": 180,
-                "background-speed": 10,
+                "background-speed": 5,
                 "top": "50%",
                 "left": "75%",
                 "width":"50%",

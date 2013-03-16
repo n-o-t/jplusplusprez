@@ -420,7 +420,7 @@ a {
   overflow: hidden;
   display: none;
 }
-.lt-ie8 #old-browser {
+.lt-ie7 #old-browser {
   display: block;
 }
 body {
@@ -454,7 +454,7 @@ body {
   background: white;
   display: block;
 }
-#overflow nav ul.steps {
+#overflow .nav ul.steps {
   position: absolute;
   right: 0;
   top: 20px;
@@ -462,13 +462,13 @@ body {
   padding: 0;
   margin: 0;
 }
-#overflow nav ul.steps li {
+#overflow .nav ul.steps li {
   margin: 0;
   padding: 0;
   clear: right;
   list-style: none;
 }
-#overflow nav ul.steps li a {
+#overflow .nav ul.steps li a {
   padding: 5px 10px;
   margin-bottom: 10px;
   background: black;
@@ -481,7 +481,7 @@ body {
   -moz-border-radius: 10px 0 0 10px;
   border-radius: 10px 0 0 10px;
 }
-#overflow nav ul.steps li a .wrapper {
+#overflow .nav ul.steps li a .wrapper {
   -webkit-transition: 0.7s;
   -moz-transition: 0.7s;
   -o-transition: 0.7s;
@@ -494,18 +494,18 @@ body {
   display: block;
   float: left;
 }
-#overflow nav ul.steps li a:hover .wrapper {
+#overflow .nav ul.steps li a:hover .wrapper {
   max-width: 300px;
   opacity: 1;
   filter: alpha(opacity=100);
 }
-#overflow nav ul.arrows {
+#overflow .nav ul.arrows {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-#overflow nav ul.arrows .previous,
-#overflow nav ul.arrows .next {
+#overflow .nav ul.arrows .previous,
+#overflow .nav ul.arrows .next {
   position: absolute;
   z-index: 40;
   top: 50%;
@@ -523,23 +523,23 @@ body {
   -o-transition: 0.7s;
   transition: 0.7s;
 }
-#overflow nav ul.arrows .previous {
+#overflow .nav ul.arrows .previous {
   left: 0;
   -webkit-border-radius: 0 25px 25px 0;
   -moz-border-radius: 0 25px 25px 0;
   border-radius: 0 25px 25px 0;
 }
-.js-first #overflow nav ul.arrows .previous {
+.js-first #overflow .nav ul.arrows .previous {
   left: -50px;
 }
-#overflow nav ul.arrows .next {
+#overflow .nav ul.arrows .next {
   right: 0;
   -webkit-border-radius: 25px 0 0 25px;
   -moz-border-radius: 25px 0 0 25px;
   border-radius: 25px 0 0 25px;
 }
-.js-first #overflow nav ul.arrows .next,
-.js-last #overflow nav ul.arrows .next {
+.js-first #overflow .nav ul.arrows .next,
+.js-last #overflow .nav ul.arrows .next {
   right: -50px;
 }
 #container {
