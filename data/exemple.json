@@ -22,19 +22,12 @@
                 "height":"100%"
             },
             {
-                "top": "63.6%",
-                "left": "12.4166%",
-                "width": "200px",
-                "height": "auto",
-                "title": "Lorem ipsum",
-                "sub-title": "dolor si amet",
-                "picture": {
-                    "src": "http://placehold.it/200x200",
-                    "alt": "flow"
-                },
-                "class": "shadow red",
-                "entrance": "zoomOut"
-            }
+                "width": "100px",
+                "top":  "50%",
+                "left":  "50%",
+                "class": "red",
+                "href": "#step=1"
+            }            
         ]
     },
     {        

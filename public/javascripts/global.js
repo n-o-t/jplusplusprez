@@ -112,17 +112,23 @@
     };    
 
     var previousStep = function() {
-        goToStep(currentStep  - 1);
+        changeStepHash(1*currentStep - 1);
     };
 
     var nextStep = function() {
-        goToStep(currentStep  + 1);
+        changeStepHash(1*currentStep + 1);
     };
+
+    var changeStepHash = function(step) {        
+        if(step >= 0 && step < $uis.steps.length) {
+            location.hash = "#step=" + step;
+        }        
+    }
 
     var goToStep = function(step) {
         if(step >= 0 && step < $uis.steps.length) {
             // Update the current step id
-            currentStep = step;            
+            currentStep = 1*step;            
             // Prevent scroll queing
             jQuery.scrollTo.window().queue([]).stop();
             // And scroll to the current step
