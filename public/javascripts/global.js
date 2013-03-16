@@ -47,6 +47,8 @@
         $("body").removeClass("js-loading");
         // Read the step from the hash
         readStepFromHash();
+        // Activate fast click to avoid tap delay on touch screen
+        new FastClick(document.body);
     };
 
     var buildUI = function() {
