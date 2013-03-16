@@ -70,6 +70,7 @@ Every spot object can follow this options:
 
 Name | Type | Description | Exemple |
 ---- | ---- | ---- | ---- |
+href | String | Href value of the hotspot. Can be an URL or an anchor. | "#step=1"
 top | String | Top position of the spot from the top-left corner of the step. | "10%"
 left | String | Left position of the spot from the top-left corner of the step. | "20%"
 width | String | Width of the spot. | "100px"
