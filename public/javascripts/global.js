@@ -43,9 +43,10 @@
         stepsPosition();
         spotsPosition();
         bindUI();
-        goToStep(0);
         // Remove loading overlay
         $("body").removeClass("js-loading");
+        // Read the step from the hash
+        readStepFromHash();
     };
 
     var buildUI = function() {
@@ -61,11 +62,11 @@
 
     var bindUI = function() {
         $uis.steps.on("click", ".spot", showSpot);
-        $uis.navitem.on("click", navitemClick);
         $uis.previous.on("click", previousStep);
         $uis.next.on("click", nextStep);
         $(window).keydown(keyboardNav);
         $(window).resize(resize);
+        $(window).hashchange(readStepFromHash);
     };
 
     var stepsPosition = function() {        
@@ -143,10 +144,6 @@
         }        
     };
 
-    var navitemClick = function() {             
-        goToStep( $(this).data("step") );
-    }
-
     var doEntranceAnimations = function() {
         // Launch hotspot background animations
         doSpotAnimations();
@@ -212,7 +209,7 @@
 
                 // Reset background position
                 $(spot).css("background-position", "0 0");
-                
+
                 // Clear existing request animation frame
                 if( spot[requestField] ) window.cancelAnimationFrame( spot[requestField] );
 
@@ -282,6 +279,28 @@
     var resize = function() {
         stepsPosition();
     };
+
+    var readStepFromHash = function() {
+        // Just go to step directcly
+        goToStep( getHashParams().step || 0 );
+    }
+
+
+    // @src http://stackoverflow.com/questions/4197591/parsing-url-hash-fragment-identifier-with-javascript#comment10274416_7486972
+    function getHashParams() {
+
+        var hashParams = {};
+        var e,
+            a = /\+/g,  // Regex for replacing addition symbol with a space
+            r = /([^&;=]+)=?([^&;]*)/g,
+            d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+            q = window.location.hash.substring(1);
+
+        while (e = r.exec(q))
+           hashParams[d(e[1])] = d(e[2]);
+
+        return hashParams;
+    }
 
 
     $(window).load(init);

@@ -3,7 +3,7 @@
         each step, stepKey in data
             if step["no-index"] != true
                 li
-                    a.to-step(data-step=stepKey)
+                    a.to-step(href="#step="+stepKey)
                         span.wrapper=step.name
                         i.left10=stepKey
 
