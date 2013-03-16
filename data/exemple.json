@@ -1,9 +1,26 @@
 [
     {
-        "picture": "http://placehold.it/1200x500",
         "name": "YOLO1",
         "no-index": true,
         "spots": [
+            {                
+                "background": "http://placehold.it/600x500/fff/000/",
+                "background-direction": "right top",
+                "background-speed": 10,
+                "top": "50%",
+                "left": "25%",
+                "width":"50%",
+                "height":"100%"
+            },
+            {                
+                "background": "http://placehold.it/600x500/fff/000/",
+                "background-direction": "right top",
+                "background-speed": 10,
+                "top": "50%",
+                "left": "75%",
+                "width":"50%",
+                "height":"100%"
+            },
             {
                 "top": "63.6%",
                 "left": "12.4166%",
@@ -20,7 +37,7 @@
             }
         ]
     },
-    {
+    {        
         "picture": "http://placehold.it/1200x500",
         "name": "Lorem ipsum dolor si amet",
         "spots": [

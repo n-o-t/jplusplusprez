@@ -5,8 +5,8 @@
     var scrollDuration = 300;
     var defaultAnimationDelay = 300; 
 
-    // Aniamations patterns
-    var animations = {
+    // Entrance animations patterns
+    var entrance = {
         fadeIn: {            
             from: { opacity:0 },
             to: { opacity:1 }
@@ -136,8 +136,10 @@
             $body.toggleClass("js-last", currentStep === $uis.steps.length-1);
             // Hides element with entrance
             $uis.steps.eq(currentStep).find(".spot[data-entrance] .js-animation-wrapper").addClass("hidden");
+            // Clear all spot animations
+            clearSpotAnimations();
             // Add the entrance animation after the scroll
-            setTimeout(doStepAnimations, scrollDuration)
+            setTimeout(doEntranceAnimations, scrollDuration)
         }        
     };
 
@@ -145,9 +147,11 @@
         goToStep( $(this).data("step") );
     }
 
-    var doStepAnimations = function() {
+    var doEntranceAnimations = function() {
+        // Launch hotspot background animations
+        doSpotAnimations();
         // Find the current step
-        var $step = $uis.steps.filter(".js-current");
+        var $step = $uis.steps.filter(".js-current");        
         // Number of element behind before animate the entrance
         var queue = 0;
         // Find spots with animated entrance
@@ -159,7 +163,7 @@
 
             // Get the animation key of the given element
             var animationKey = $elem.data("entrance"),
-                   animation = animations[animationKey];
+                   animation = entrance[animationKey];
 
             // If the animation exist
             if(animation != undefined) {
@@ -180,6 +184,79 @@
             }
         });
     }
+
+    var clearSpotAnimations = function() {
+        $uis.spots.each(function(i, spot) {
+            var $spot = $(spot);
+            if( $spot.d ) {
+                window.cancelAnimationFrame( $spot.d );
+                delete($spot.d)
+            }
+        })
+    }
+
+    var doSpotAnimations = function() {
+        // Find the current step
+        var $step = $uis.steps.filter(".js-current"),
+        // Find its spots
+           $spots = $step.find(".spot");
+
+        // On each spot, create an animation
+        $spots.each(function(i, spot) {
+
+            var     data = $(spot).data(),
+            requestField = "d";
+
+            // Is there a background and an animation on it
+            if( data["background"] && data["backgroundDirection"] ) {
+
+                // Clear existing request animation frame
+                if( spot[requestField] ) window.cancelAnimationFrame( spot[requestField] );
+
+                var requestParams = closureAnimation(spot, requestField, renderSpotAnimation);
+                // Add animation frame with a closure function
+                spot[requestField] = window.requestAnimationFrame( requestParams );
+            }
+        });
+
+    };
+
+    var renderSpotAnimation = function(spot) {
+        var  $spot = $(spot),
+              data = $spot.data(),
+        directions = data["backgroundDirection"].split(" "),
+             speed = data["backgroundSpeed"] || 3;
+
+        // Allow several animation
+        $(directions).each(function(i, direction) {            
+            switch( direction ) {
+                case "left":
+                    $spot.css("backgroundPositionX", "-=" + speed);
+                    break;
+                case "right":
+                    $spot.css("backgroundPositionX", "+=" + speed);
+                    break;
+                case "top":
+                    $spot.css("backgroundPositionY", "-=" + speed);
+                    break;
+                case "bottom":
+                    $spot.css("backgroundPositionY", "+=" + speed);
+                    break;
+            }
+        })
+    };
+
+    var closureAnimation = function(elem, requestField, func) {
+        return function() {
+            // Continue to the next frame            
+            if( elem[requestField] ) {                
+                // Add animation frame with a closure function
+                elem[requestField] = window.requestAnimationFrame( closureAnimation(elem, requestField, func) );
+            }
+            // Apply the animation render
+            func(elem);
+        }
+    };
 
     var resize = function() {
         stepsPosition();

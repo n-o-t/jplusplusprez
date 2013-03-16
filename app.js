@@ -36,6 +36,13 @@ app.configure(function(){
    ************************************/   
   // Register helpers for use in view's
   app.locals({    
+    stepStyle: function(step) {
+      var style = [];
+      // Add style
+      if(step.style) style.push(step.style)
+
+      return style.join(";");
+    },
     spotStyle: function(spot) {
       
       var style = [];
@@ -44,7 +51,12 @@ app.configure(function(){
       style.push("left:"   + (spot.left || 0) );
       // Add size
       style.push("width:"  + (spot.width  || "auto") );      
-      style.push("height:" + (spot.height || spot.width || "auto") ); // Square by default
+      style.push("height:" + (spot.height || spot.width || "auto") ); // Square by default      
+      // Add background
+      if(spot.background) {
+        style.push("background-image: url(" + spot.background + ")");
+        style.push("background-repeat: repeat");
+      }      
       // Add style
       if(spot.style) style.push(spot.style)
 
