@@ -210,6 +210,9 @@
             // Is there a background and an animation on it
             if( data["background"] && data["backgroundDirection"] != undefined) {
 
+                // Reset background position
+                $(spot).css("background-position", "0 0");
+                
                 // Clear existing request animation frame
                 if( spot[requestField] ) window.cancelAnimationFrame( spot[requestField] );
 
@@ -242,7 +245,8 @@
                 case "bottom":
                     $spot.css("backgroundPositionY", "+=" + speed);
                     break;
-                default:                    // We receive a number,
+                default:                   
+                    // We receive a number,
                     // we interpret it as a direction degree
                     if( ! isNaN(direction) ) {
                         
