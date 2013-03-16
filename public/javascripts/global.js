@@ -208,7 +208,7 @@
             requestField = "d";
 
             // Is there a background and an animation on it
-            if( data["background"] && data["backgroundDirection"] ) {
+            if( data["background"] && data["backgroundDirection"] != undefined) {
 
                 // Clear existing request animation frame
                 if( spot[requestField] ) window.cancelAnimationFrame( spot[requestField] );
@@ -224,11 +224,11 @@
     var renderSpotAnimation = function(spot) {
         var  $spot = $(spot),
               data = $spot.data(),
-        directions = data["backgroundDirection"].split(" "),
+        directions = ("" + data["backgroundDirection"] ).split(" "),
              speed = data["backgroundSpeed"] || 3;
 
         // Allow several animation
-        $(directions).each(function(i, direction) {            
+        $(directions).each(function(i, direction) {   
             switch( direction ) {
                 case "left":
                     $spot.css("backgroundPositionX", "-=" + speed);
@@ -241,6 +241,23 @@
                     break;
                 case "bottom":
                     $spot.css("backgroundPositionY", "+=" + speed);
+                    break;
+                default:                    // We receive a number,
+                    // we interpret it as a direction degree
+                    if( ! isNaN(direction) ) {
+                        
+                        var radian = direction * Math.PI / 180.0;
+                        
+                        var x0 = $spot.css("backgroundPositionX"),
+                            y0 = $spot.css("backgroundPositionY");
+
+                        var x = speed * Math.cos(radian),
+                            y = speed * Math.sin(radian);
+
+                        $spot.css("backgroundPositionX", "+=" + x);
+                        $spot.css("backgroundPositionY", "+=" + y);
+
+                    }
                     break;
             }
         })

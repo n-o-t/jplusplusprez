@@ -4,8 +4,8 @@
         "no-index": true,
         "spots": [
             {                
-                "background": "http://placehold.it/600x500/fff/000/",
-                "background-direction": "right top",
+                "background": "http://placehold.it/600x500/fff/00f/",
+                "background-direction": "left",
                 "background-speed": 10,
                 "top": "50%",
                 "left": "25%",
@@ -13,8 +13,8 @@
                 "height":"100%"
             },
             {                
-                "background": "http://placehold.it/600x500/fff/000/",
-                "background-direction": "left bottom",
+                "background": "http://placehold.it/600x500/fff/0f0/",
+                "background-direction": 180,
                 "background-speed": 10,
                 "top": "50%",
                 "left": "75%",
