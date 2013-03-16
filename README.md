@@ -50,58 +50,7 @@ Such as a configuration file, the JSON file must fit to the following structure 
     }
 ]
 ```
-# Ile-de-France Interactive 
-## Installation
-### Software dependencies
-To make this project up and running, you need:
 
-* **Node** 0.8.7
-* **NPM** 1.1.32
-
-
-### Dependencies
-This project is build at the top of the pleasant [Node Package Manager](http://npmjs.org/). To download and set up the whole dependancies three, simply run from the project's root directory :
-
-    $ npm install
-
-### Environment variables
-The following environment variables can be use with the highest priority :
-
-* **PORT** defines the port to listen to (ex: *80*);
-* **NODE_ENV** defines the runing mode (ex: *development*, *production*, etc);
-
-## Run
-To launch the server (once the installation is complete), just run from the root of the project:
-
-```
-$ node app.js
-```
-
-## Create a page
-### Create a JSON file
-To exist, every page must have a corresponding JSON file in the ```/data``` directory. For instance, the */exemple.html* is related to the file ```/data/exemple.json```.
-
-### JSON file structure
-Such as a configuration file, the JSON file must fit to the following structure :
-
-```javascript
-// An array detailing every steps
-[
-    // Step configuration
-    {        
-        "name": "name of the step",
-        "spots": [ 
-            // Spot configuration
-            {
-                "top":  "0%",
-                "left": "50%",
-                // ...
-            }
-        ],
-        // ...
-    }
-]
-```
 <a name="steps"/>
 ### Step configuration
 Every step object can follow this options:
