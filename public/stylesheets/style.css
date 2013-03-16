@@ -404,10 +404,6 @@ textarea {
 .tj {
   text-align: justify;
 }
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 a {
   color: #00B7FF;
 }
@@ -428,7 +424,10 @@ a {
   display: block;
 }
 body {
+  margin: 0;
+  padding: 0;
   overflow: hidden;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: #eeeeee;
 }
 #overflow {
@@ -546,8 +545,8 @@ body {
 #container {
   overflow: hidden;
   position: relative;
-  width: 1200px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
 }
 #container .step {
   position: absolute;
@@ -560,7 +559,7 @@ body {
 #container .step .spot-background,
 #container .step .step-background {
   min-width: 100%;
-  max-width: none;
+  max-width: 100%;
   min-height: none;
   max-height: none;
   position: relative;

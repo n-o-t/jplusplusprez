@@ -9,10 +9,8 @@
 @zIndexNav     : @zIndexSpot+10;
 @zIndexLoading : @zIndexNav+10;
 
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+@containerWidth  : 1200px;
+@containerHeight : 500px;
 
 a {
   color: #00B7FF;
@@ -35,7 +33,10 @@ a {
 }
 
 body {
+    margin:0;
+    padding:0;
     overflow:hidden;
+    font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
     background:@grayLighter;
 }
 
@@ -48,11 +49,11 @@ body {
     top:50%;
     left:50%;
     
-    width:1200px;
-    height:500px;
+    width:@containerWidth;
+    height:@containerHeight;
     
-    margin-left:1200px/-2px;
-    margin-top:500px/-2px;
+    margin-left:@containerWidth/-2px;
+    margin-top:@containerHeight/-2px;
     
     .js-loading &:after {
         content:"";
@@ -153,8 +154,8 @@ body {
     overflow:hidden;
     
     position:relative;
-    width:1200px;
-    height:500px;    
+    width:100%;
+    height:100%;    
     
     .step {
         position:absolute;
@@ -166,7 +167,7 @@ body {
         
         .spot-background, .step-background {
             min-width:100%;
-            max-width:none;
+            max-width:100%;
             min-height:none;
             max-height:none;
             position:relative;

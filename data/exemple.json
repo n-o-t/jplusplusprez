@@ -5,8 +5,8 @@
         "no-index": true,
         "spots": [
             {
-                "top": "55.8%",
-                "left": "14.3333%",
+                "top": "63.6%",
+                "left": "12.4166%",
                 "width": "200px",
                 "height": "auto",
                 "title": "Lorem ipsum",
@@ -16,7 +16,7 @@
                     "alt": "flow"
                 },
                 "class": "shadow red",
-                "entrance": "zoomIn"
+                "entrance": "zoomOut"
             }
         ]
     },
@@ -107,23 +107,23 @@
         "name": "YOLO1",
         "spots": [
             {
-                "top": "69.6%",
-                "left": "36.1666%",
+                "top": "50.8%",
+                "left": "51.4166%",
                 "width": "100px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "red"
             },
             {
-                "top": "70.4%",
-                "left": "53.0833%",
+                "top": "51.4%",
+                "left": "51.3333%",
                 "width": "50px",
                 "html": "Lorem ipsum dolor si amet",
                 "style": "border:1px solid white;",
                 "class": "red"
             },
             {
-                "top": "70%",
-                "left": "59.25%",
+                "top": "51.8%",
+                "left": "51.25%",
                 "width": "20px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "yellow"
@@ -135,8 +135,8 @@
                 "html": "Lorem ipsum dolor si amet"
             },
             {
-                "top": "69.6%",
-                "left": "45.25%",
+                "top": "50.8%",
+                "left": "51.25%",
                 "width": "70px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "yellow"
