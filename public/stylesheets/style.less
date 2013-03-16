@@ -97,6 +97,7 @@ body {
                     .wrapper {
                         .transition(0.7s);
                         .opacity(0);
+                        width:0;
                         max-width:0;
                         overflow:hidden;
                         white-space:nowrap;            
@@ -105,6 +106,7 @@ body {
                     }
 
                     &:hover .wrapper {
+                        width:auto;
                         max-width:300px;
                         .opacity(100);
                     }
@@ -209,19 +211,19 @@ body {
             }
             
             &.red .js-animation-wrapper {
-                background:fade(@red, 60%);
+                background:lighten(@red, 20%);
             }
 
             &.yellow .js-animation-wrapper {
-                background:fade(@yellow, 60%);
+                background:lighten(@yellow, 20%);
             }
 
             &.pink .js-animation-wrapper {
-                background:fade(@pink, 60%);
+                background:lighten(@pink, 20%);
             }
             
             &.green .js-animation-wrapper {
-                background:fade(@green, 60%);
+                background:lighten(@green, 20%);
             }
 
             h3, h4 {

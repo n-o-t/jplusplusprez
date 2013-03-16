@@ -488,6 +488,7 @@ body {
   transition: 0.7s;
   opacity: 0;
   filter: alpha(opacity=0);
+  width: 0;
   max-width: 0;
   overflow: hidden;
   white-space: nowrap;
@@ -495,6 +496,7 @@ body {
   float: left;
 }
 #overflow .nav ul.steps li a:hover .wrapper {
+  width: auto;
   max-width: 300px;
   opacity: 1;
   filter: alpha(opacity=100);
@@ -599,16 +601,16 @@ body {
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 #container .step .spot.red .js-animation-wrapper {
-  background: rgba(207, 6, 9, 0.6);
+  background: #fa4144;
 }
 #container .step .spot.yellow .js-animation-wrapper {
-  background: rgba(255, 196, 13, 0.6);
+  background: #ffdd73;
 }
 #container .step .spot.pink .js-animation-wrapper {
-  background: rgba(195, 50, 95, 0.6);
+  background: #de7d9b;
 }
 #container .step .spot.green .js-animation-wrapper {
-  background: rgba(70, 165, 70, 0.6);
+  background: #86cb86;
 }
 #container .step .spot h3,
 #container .step .spot h4 {
