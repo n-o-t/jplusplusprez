@@ -85,6 +85,7 @@ queue | Boolean | If true, the spot wait the end of the previous spot's entrance
 background | String | URL to an image file to display as background of the step |
 background-direction | String, Number | Animate the background into that direction in a loop. Can be a number to specify a dicrection in degree. | "left", 90, "top left", etc
 background-speed | Number | Distance in pixels to run through at each animation step. 3 by default. | 10
+background-frequency | Number | Animation step frequency in millisecond. 0 by default. | 200
 
 
 <a name="entrances"/>
