@@ -1,3 +1,13 @@
+#= require vendor/underscore-min.js
+#= require vendor/jquery-1.7.1.min.js
+#= require vendor/fastclick.js
+#= require vendor/jquery-hashchange.js
+#= require vendor/jquery.transform2d.js
+#= require vendor/jquery.animate-enhanced.min.js
+#= require vendor/jquery.scrollTo.min.js
+#= require vendor/bgpos.js
+#= require vendor/rAF.js
+
 (($, window) ->
   $ui = $uis = null
   currentStep = 0
