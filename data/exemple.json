@@ -30,7 +30,8 @@
                 "background": "http://atomicrobotdesign.com/blog_media/sprite_movement/images/gb_walk.png",
                 "background-speed": 104,
                 "background-direction": "left",
-                "background-frequency": 200
+                "background-frequency": 200,
+                "entrance": "zoomOut"
             }
         ]
     },

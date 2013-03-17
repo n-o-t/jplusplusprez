@@ -1,13 +1,35 @@
-#= require vendor/underscore-min.js
+# Dependancies
+
+# Well, it's jQuery! 
 #= require vendor/jquery-1.7.1.min.js
+
+# Improve the touch experience by removing the tap delay
 #= require vendor/fastclick.js
+
+# Helper to bind the hash change event
 #= require vendor/jquery-hashchange.js
+
+# Allow jQuery to animate 2D transformations
 #= require vendor/jquery.transform2d.js
+
+# Imrpove the jQuery animate method by using CSS3 transitions when possible
 #= require vendor/jquery.animate-enhanced.min.js
+
+# Add the scrollTo method to jQuery
 #= require vendor/jquery.scrollTo.min.js
+
+# Add a better support for background position within the CSS method
 #= require vendor/bgpos.js
+
+# Patch the requestAnimationFrame function for better compatibility
 #= require vendor/rAF.js
 
+
+###*
+ * Page object
+ * @param  {Object} $      jQuery object
+ * @param  {Object} window Window object
+###
 (($, window) ->
   $ui = $uis = null
   currentStep = 0
@@ -77,21 +99,26 @@
         transform: "scale(1)"
         opacity: 1
 
+
+  ###*
+   * Initializrs the page 
+  ###
   init = ->
     buildUI()
     stepsPosition()
     spotsPosition()
-    bindUI()
-    
+    bindUI()    
     # Remove loading overlay
-    $("body").removeClass "js-loading"
-    
+    $("body").removeClass "js-loading"    
     # Read the step from the hash
-    readStepFromHash()
-    
+    readStepFromHash()    
     # Activate fast click to avoid tap delay on touch screen
     new FastClick(document.body)
 
+  ###*
+   * Gets every jquery shortcuts
+   * @return {Object} Main page container
+  ###
   buildUI = ->
     $ui = $("#container")
     $uis =
@@ -100,7 +127,12 @@
       navitem: $("#overflow .to-step")
       previous: $("#overflow .nav .arrows .previous")
       next: $("#overflow .nav .arrows .next")
+    return $ui
 
+  ###*
+   * Bind javascript event on page elements
+   * @return {Object} jQuest window ibject
+  ###
   bindUI = ->
     $uis.steps.on "click", ".spot", showSpot
     $uis.previous.on "click", previousStep
@@ -109,6 +141,10 @@
     $(window).resize resize
     $(window).hashchange readStepFromHash
 
+  ###*
+   * Position every steps in the container
+   * @return {Array} Steps list
+  ###
   stepsPosition = ->
     $uis.steps.each (i, step) ->
       $step = $(step)
@@ -118,7 +154,10 @@
         $previousStep = $uis.steps.eq(i - 1)
         $step.css "left", $previousStep.position().left + $previousStep.width()
 
-
+  ###*
+   * Position every spots in each steps
+   * @return {Array} Spots list
+  ###
   spotsPosition = ->
     
     # Add a negative margin on each spot
@@ -128,41 +167,64 @@
       $spot.css "margin-left", $spot.outerWidth() / -2
       $spot.css "margin-top", $spot.outerHeight() / -2
 
-
+  ###*
+   * TODO: open a contextual popin when clicking on a spot
+   * @param  {Object} event Click event
+   * @return {[type]}       [description]
+  ###
   showSpot = (event) ->
     $this = $(this)
     alert $this.data("html")  if $this.data("html")
 
+  ###*
+   * Bind the keyboard keydown event to navigate through the page
+   * @param  {Object} event Keydown event
+   * @return {Object}       Keydown event
+  ###
   keyboardNav = (event) ->
-    switch event.keyCode
-      
+    switch event.keyCode      
       # Left and up
-      when 37
-        previousStep()
-      when 38
-        previousStep()
-      
+      when 37, 38 then previousStep()      
       # Right and down
-      when 39
-        nextStep()
-      when 40
-        nextStep()
-      
+      when 39, 40 then nextStep()      
       # Stop here for the other keys
-      else
-        return
+      else return event
     event.preventDefault()
 
+  ###*
+   * Go to the previous step
+   * @return {Number} New current step number
+  ###
   previousStep = ->
     changeStepHash 1 * currentStep - 1
 
+  ###*
+   * Go to the next step
+   * @return {Number} New current step number
+  ###
   nextStep = ->
     changeStepHash 1 * currentStep + 1
 
-  changeStepHash = (step) ->
+  ###*
+   * Change the URL hash to fit to the given step
+   * @param  {Number} step Target step
+   * @return {String}      New location hash
+  ###
+  changeStepHash = (step=0) ->
     location.hash = "#step=" + step  if step >= 0 and step < $uis.steps.length
 
-  goToStep = (step) ->
+  ###*
+   * Just go to step directcly
+   * @return {Number} New step number
+  ###
+  readStepFromHash = -> goToStep getHashParams().step or 0
+
+  ###*
+   * Slide to the given step
+   * @param  {Number} step New current step number
+   * @return {Number}      New current step number
+  ###
+  goToStep = (step=0) ->
     if step >= 0 and step < $uis.steps.length      
       # Update the current step id
       currentStep = 1 * step      
@@ -184,7 +246,11 @@
       clearSpotAnimations()      
       # Add the entrance animation after the scroll
       setTimeout doEntranceAnimations, scrollDuration
+    return currentStep
 
+  ###*
+   * Set step animations
+  ###
   doEntranceAnimations = ->    
     # Launch hotspot background animations
     doSpotAnimations()    
@@ -219,6 +285,10 @@
         , delay * queue)
 
 
+  ###*
+   * Clear every spots animations
+   * @return {Array} Spots list
+  ###
   clearSpotAnimations = ->
     $uis.spots.each (i, spot) ->
       $spot = $(spot)
@@ -226,9 +296,11 @@
         window.cancelAnimationFrame $spot.d
         delete ($spot.d)
 
-
-  doSpotAnimations = ->
-    
+  ###*
+   * Trigger spots background animations in the current step
+   * @return {Array} List of the spots
+  ###
+  doSpotAnimations = ->    
     # Find the current step
     $step = $uis.steps.filter(".js-current")    
     # Find its spots
@@ -249,7 +321,11 @@
         # Add animation frame with a closure function
         spot[requestField] = window.requestAnimationFrame(requestParams)
 
-
+  ###*
+   * Process spot rendering
+   * @param  {Object} spot Spot html element
+   * @return {Array}       Directions array
+  ###
   renderSpotAnimation = (spot) ->
     $spot = $(spot)
     data = $spot.data()
@@ -274,8 +350,7 @@
           $spot.css "backgroundPositionY", "-=" + speed
         when "bottom"
           $spot.css "backgroundPositionY", "+=" + speed
-        else
-          
+        else          
           # We receive a number,
           # we interpret it as a direction degree
           unless isNaN(direction)
@@ -287,7 +362,12 @@
             $spot.css "backgroundPositionX", "+=" + x
             $spot.css "backgroundPositionY", "+=" + y
 
-
+  ###*
+   * Closure function to execute the given function within the receive element
+   * @param  {Object}   elem         HTML element
+   * @param  {String}   requestField Name of the field into elem where record the animation frame 
+   * @param  {Function} func         Callback function of the animation
+  ###
   closureAnimation = (elem, requestField, func) ->
     ->
       # Continue to the next frame                  
@@ -296,15 +376,17 @@
       # Apply the animation render
       func elem
 
-
+  ###*
+   * Bind the windows rezie event
+  ###
   resize = -> stepsPosition()
 
-  # Just go to step directcly
-  readStepFromHash = -> goToStep getHashParams().step or 0
-    
-
-  
-  # @src http://stackoverflow.com/questions/4197591/parsing-url-hash-fragment-identifier-with-javascript#comment10274416_7486972
+  ###*
+   * Read the parameters into the location hash using the following format:
+   * /#foo=2&bar=3
+   * @copyright http://stackoverflow.com/questions/4197591/parsing-url-hash-fragment-identifier-with-javascript#comment10274416_7486972
+   * @return {Object} Data object]
+  ###
   getHashParams = ->
     hashParams = {}
     e = undefined
@@ -317,6 +399,7 @@
     hashParams[d(e[1])] = d(e[2])  while e = r.exec(q)
     hashParams
 
+  # When the window is completely loaded, launch the page !
   $(window).load init
 
 ) jQuery, window
