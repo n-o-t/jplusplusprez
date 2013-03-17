@@ -1,5 +1,4 @@
-# Dependancies
-
+# Dependencies
 # Well, it's jQuery! 
 #= require vendor/jquery-1.7.1.min.js
 
@@ -25,11 +24,6 @@
 #= require vendor/rAF.js
 
 
-###*
- * Page object
- * @param  {Object} $      jQuery object
- * @param  {Object} window Window object
-###
 (($, window) ->
   $ui = $uis = null
   currentStep = 0
