@@ -28,8 +28,7 @@ app.configure(function(){
   }));
 
   app.use(require('coffee-middleware')({
-    src: __dirname+'/public',    
-    compress: true
+    src: __dirname+'/public'
   }));
 
   app.use(express.static(path.join(__dirname, 'public')));
