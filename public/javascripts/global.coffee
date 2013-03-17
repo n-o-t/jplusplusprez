@@ -9,6 +9,7 @@
     fadeIn:
       from:
         opacity: 0
+
       to:
         opacity: 1
 
@@ -16,6 +17,7 @@
       from:
         top: 100
         opacity: 0
+
       to:
         top: 0
         opacity: 1
@@ -24,6 +26,7 @@
       from:
         top: -100
         opacity: 0
+
       to:
         top: 0
         opacity: 1
@@ -32,6 +35,7 @@
       from:
         left: 100
         opacity: 0
+
       to:
         left: 0
         opacity: 1
@@ -40,6 +44,7 @@
       from:
         left: -100
         opacity: 0
+
       to:
         left: 0
         opacity: 1
@@ -48,6 +53,7 @@
       from:
         transform: "scale(0)"
         opacity: 0
+
       to:
         transform: "scale(1)"
         opacity: 1
@@ -56,6 +62,7 @@
       from:
         transform: "scale(2)"
         opacity: 0
+
       to:
         transform: "scale(1)"
         opacity: 1
