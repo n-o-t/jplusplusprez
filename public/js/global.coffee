@@ -163,81 +163,58 @@
     location.hash = "#step=" + step  if step >= 0 and step < $uis.steps.length
 
   goToStep = (step) ->
-    if step >= 0 and step < $uis.steps.length
-      
+    if step >= 0 and step < $uis.steps.length      
       # Update the current step id
-      currentStep = 1 * step
-      
+      currentStep = 1 * step      
       # Prevent scroll queing
-      jQuery.scrollTo.window().queue([]).stop()
-      
+      jQuery.scrollTo.window().queue([]).stop()      
       # And scroll to the current step
-      $ui.scrollTo $uis.steps.eq(currentStep), scrollDuration
-      
+      $ui.scrollTo $uis.steps.eq(currentStep), scrollDuration      
       # Remove current class
-      $uis.steps.removeClass("js-current").eq(currentStep).addClass "js-current"
-      
+      $uis.steps.removeClass("js-current").eq(currentStep).addClass "js-current"      
       # Add a class to[] the body
-      $body = $("body")
-      
+      $body = $("body")      
       # Is this the first step ?
-      $body.toggleClass "js-first", currentStep is 0
-      
+      $body.toggleClass "js-first", currentStep is 0      
       # Is this the last step ?
       $body.toggleClass "js-last", currentStep is $uis.steps.length - 1
-      
       # Hides element with entrance
-      $uis.steps.eq(currentStep).find(".spot[data-entrance] .js-animation-wrapper").addClass "hidden"
-      
+      $uis.steps.eq(currentStep).find(".spot[data-entrance] .js-animation-wrapper").addClass "hidden"      
       # Clear all spot animations
-      clearSpotAnimations()
-      
+      clearSpotAnimations()      
       # Add the entrance animation after the scroll
       setTimeout doEntranceAnimations, scrollDuration
 
-  doEntranceAnimations = ->
-    
+  doEntranceAnimations = ->    
     # Launch hotspot background animations
-    doSpotAnimations()
-    
+    doSpotAnimations()    
     # Find the current step
-    $step = $uis.steps.filter(".js-current")
-    
+    $step = $uis.steps.filter(".js-current")    
     # Number of element behind before animate the entrance
-    queue = 0
-    
+    queue = 0    
     # Find spots with animated entrance
     $step.find(".spot[data-entrance]").each (i, elem) ->
-      $elem = $(elem)
-      
+      $elem = $(elem)      
       # Works on an animation wrapper
-      $wrapper = $elem.find(".js-animation-wrapper")
-      
+      $wrapper = $elem.find(".js-animation-wrapper")      
       # Get the animation key of the given element
       animationKey = $elem.data("entrance")
-      animation = entrance[animationKey]
-      
+      animation = entrance[animationKey]      
+
       # If the animation exist
-      unless animation is `undefined`
-        
+      unless animation is `undefined`        
         # Set the original style with visible element
-        $wrapper.stop().css(animation.from).removeClass "hidden"
-        
+        $wrapper.stop().css(animation.from).removeClass "hidden"        
         # Take the default delay or the current animation one
-        delay = animation.delay or defaultAnimationDelay
-        
+        delay = animation.delay or defaultAnimationDelay        
         # If there is a queue
-        queue++  if $elem.data("queue")
-        
+        queue++  if $elem.data("queue")        
         # Clear existing timeout
-        clearTimeout $wrapper.t  if $wrapper.t
-        
+        clearTimeout $wrapper.t  if $wrapper.t        
         # Wait a delay...
-        $wrapper.t = setTimeout(->
-          
+        $wrapper.t = setTimeout(->          
           # ...before animate the wrapper
-          $wrapper.animate animation.to, delay
-        
+          $wrapper.animate animation.to, delay        
         # ...and increase the queue
         , delay * queue)
 
@@ -253,8 +230,7 @@
   doSpotAnimations = ->
     
     # Find the current step
-    $step = $uis.steps.filter(".js-current")
-    
+    $step = $uis.steps.filter(".js-current")    
     # Find its spots
     $spots = $step.find(".spot")
     
@@ -264,15 +240,12 @@
       requestField = "d"
       
       # Is there a background and an animation on it
-      if data["background"] and data["backgroundDirection"] isnt `undefined`
-        
+      if data["background"] and data["backgroundDirection"] isnt `undefined`        
         # Reset background position
-        $(spot).css "background-position", "0 0"
-        
+        $(spot).css "background-position", "0 0"        
         # Clear existing request animation frame
         window.cancelAnimationFrame spot[requestField]  if spot[requestField]
-        requestParams = closureAnimation(spot, requestField, renderSpotAnimation)
-        
+        requestParams = closureAnimation(spot, requestField, renderSpotAnimation)        
         # Add animation frame with a closure function
         spot[requestField] = window.requestAnimationFrame(requestParams)
 
@@ -280,9 +253,16 @@
   renderSpotAnimation = (spot) ->
     $spot = $(spot)
     data = $spot.data()
-    directions = ("" + data["backgroundDirection"]).split(" ")
-    speed = data["backgroundSpeed"] or 3
+    directions = ("" + data.backgroundDirection).split(" ")
+    speed = data.backgroundSpeed or 3
+    lastRAF = spot.lastRAF or 0
     
+    # Skip this render if its too early
+    return false if new Date().getTime() - lastRAF < (data.backgroundFrequency or 0)
+
+    # Set the time of the last animation
+    spot.lastRAF = new Date().getTime()
+
     # Allow several animation
     $(directions).each (i, direction) ->
       switch direction
@@ -310,22 +290,18 @@
 
   closureAnimation = (elem, requestField, func) ->
     ->
-      
-      # Continue to the next frame            
-      
+      # Continue to the next frame                  
       # Add animation frame with a closure function
-      elem[requestField] = window.requestAnimationFrame(closureAnimation(elem, requestField, func))  if elem[requestField]
-      
+      elem[requestField] = window.requestAnimationFrame(closureAnimation(elem, requestField, func))  if elem[requestField]      
       # Apply the animation render
       func elem
 
-  resize = ->
-    stepsPosition()
 
-  readStepFromHash = ->
+  resize = -> stepsPosition()
+
+  # Just go to step directcly
+  readStepFromHash = -> goToStep getHashParams().step or 0
     
-    # Just go to step directcly
-    goToStep getHashParams().step or 0
 
   
   # @src http://stackoverflow.com/questions/4197591/parsing-url-hash-fragment-identifier-with-javascript#comment10274416_7486972
@@ -342,4 +318,5 @@
     hashParams
 
   $(window).load init
+
 ) jQuery, window

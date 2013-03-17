@@ -3,34 +3,38 @@
         "name": "YOLO1",
         "no-index": true,
         "spots": [
-            {                
+            {
                 "background": "http://placehold.it/600x500/fff/00f/",
                 "background-direction": "right",
                 "background-speed": 5,
                 "top": "50%",
                 "left": "25%",
-                "width":"50%",
-                "height":"100%"
+                "width": "50%",
+                "height": "100%"
             },
-            {                
+            {
                 "background": "http://placehold.it/600x500/fff/0f0/",
                 "background-direction": 180,
                 "background-speed": 5,
                 "top": "50%",
                 "left": "75%",
-                "width":"50%",
-                "height":"100%"
+                "width": "50%",
+                "height": "100%"
             },
             {
-                "width": "100px",
-                "top":  "50%",
-                "left":  "50%",
-                "class": "red",
-                "href": "#step=1"
-            }            
+                "width": "104px",
+                "height": "150PX",
+                "top": "83.2%",
+                "left": "4.9166%",
+                "href": "#step=1",
+                "background": "http://atomicrobotdesign.com/blog_media/sprite_movement/images/gb_walk.png",
+                "background-speed": 104,
+                "background-direction": "left",
+                "background-frequency": 200
+            }
         ]
     },
-    {        
+    {
         "picture": "http://placehold.it/1200x500",
         "name": "Lorem ipsum dolor si amet",
         "spots": [

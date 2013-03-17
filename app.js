@@ -22,8 +22,7 @@ app.configure(function(){
   app.use(express.methodOverride());
 
   app.use(require('connect-assets')({
-    src: __dirname+'/public',
-    build: true
+    src: __dirname+'/public'
   }));
 
   app.use(express.static(path.join(__dirname, 'public')));
