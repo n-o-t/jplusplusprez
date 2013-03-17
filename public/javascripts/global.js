@@ -1,316 +1,292 @@
-;(function($, window) {
+(function() {
 
-    var $ui = $uis = null;
-    var currentStep = 0;
-    var scrollDuration = 300;
-    var defaultAnimationDelay = 300; 
-
-    // Entrance animations patterns
-    var entrance = {
-        fadeIn: {            
-            from: { opacity:0 },
-            to: { opacity:1 }
+  (function($, window) {
+    var $ui, $uis, bindUI, buildUI, changeStepHash, clearSpotAnimations, closureAnimation, currentStep, defaultAnimationDelay, doEntranceAnimations, doSpotAnimations, entrance, getHashParams, goToStep, init, keyboardNav, nextStep, previousStep, readStepFromHash, renderSpotAnimation, resize, scrollDuration, showSpot, spotsPosition, stepsPosition;
+    $ui = $uis = null;
+    currentStep = 0;
+    scrollDuration = 300;
+    defaultAnimationDelay = 300;
+    entrance = {
+      fadeIn: {
+        from: {
+          opacity: 0
         },
-        up: {
-            from: { top: 100, opacity: 0 },
-            to: { top: 0,   opacity: 1 }
-        },
-        down: {
-            from: { top: -100, opacity: 0 },
-            to: { top: 0,   opacity: 1 }
-        },
-        left: {
-            from: { left: 100, opacity: 0 },
-            to: { left: 0,   opacity: 1 }
-        },
-        right: {
-            from: { left: -100, opacity: 0 },
-            to: { left: 0,   opacity: 1 }
-        },
-        zoomIn: {
-            from: { transform: "scale(0)", opacity: 0 },
-            to: { transform: "scale(1)",  opacity: 1 }
-        },
-        zoomOut: {
-            from: { transform: "scale(2)", opacity: 0 },
-            to: { transform: "scale(1)",  opacity: 1 }
+        to: {
+          opacity: 1
         }
-    };
-
-
-    var init = function() {        
-        buildUI();       
-        stepsPosition();
-        spotsPosition();
-        bindUI();
-        // Remove loading overlay
-        $("body").removeClass("js-loading");
-        // Read the step from the hash
-        readStepFromHash();
-        // Activate fast click to avoid tap delay on touch screen
-        new FastClick(document.body);
-    };
-
-    var buildUI = function() {
-        $ui = $("#container");
-        $uis = {
-            steps:    $ui.find(".step"),
-            spots:    $ui.find(".spot"),
-            navitem:  $("#overflow .to-step"),
-            previous: $("#overflow .nav .arrows .previous"),
-            next:     $("#overflow .nav .arrows .next")
-        };
-    };
-
-    var bindUI = function() {
-        $uis.steps.on("click", ".spot", showSpot);
-        $uis.previous.on("click", previousStep);
-        $uis.next.on("click", nextStep);
-        $(window).keydown(keyboardNav);
-        $(window).resize(resize);
-        $(window).hashchange(readStepFromHash);
-    };
-
-    var stepsPosition = function() {        
-        $uis.steps.each(function(i, step) {
-            var $step = $(step);            
-            // Do not position the first step
-            if(i > 0) {
-                var $previousStep = $uis.steps.eq(i-1);
-                $step.css("left", $previousStep.position().left + $previousStep.width() );
-            }
-        });
-    };
-
-    var spotsPosition = function() {
-        // Add a negative margin on each spot
-        // (position the spot from its center)
-        $uis.spots.each(function(i, spot) {
-            var $spot = $(spot);   
-            $spot.css("margin-left", $spot.outerWidth()/-2 );
-            $spot.css("margin-top", $spot.outerHeight()/-2 );
-        });
-    };
-
-    var showSpot = function(event) {
-        var $this = $(this);        
-        if( $this.data("html") ) {
-            alert( $this.data("html") )
+      },
+      up: {
+        from: {
+          top: 100,
+          opacity: 0
+        },
+        to: {
+          top: 0,
+          opacity: 1
         }
-    };
-
-    var keyboardNav = function(event) {            
-        switch(event.keyCode) {
-            // Left and up
-            case 37: previousStep(); break;
-            case 38: previousStep(); break;
-            // Right and down
-            case 39: nextStep(); break;     
-            case 40: nextStep(); break;            
-            // Stop here for the other keys
-            default: return;
+      },
+      down: {
+        from: {
+          top: -100,
+          opacity: 0
+        },
+        to: {
+          top: 0,
+          opacity: 1
         }
-        event.preventDefault();
-    };    
-
-    var previousStep = function() {
-        changeStepHash(1*currentStep - 1);
-    };
-
-    var nextStep = function() {
-        changeStepHash(1*currentStep + 1);
-    };
-
-    var changeStepHash = function(step) {        
-        if(step >= 0 && step < $uis.steps.length) {
-            location.hash = "#step=" + step;
-        }        
-    }
-
-    var goToStep = function(step) {
-        if(step >= 0 && step < $uis.steps.length) {
-            // Update the current step id
-            currentStep = 1*step;            
-            // Prevent scroll queing
-            jQuery.scrollTo.window().queue([]).stop();
-            // And scroll to the current step
-            $ui.scrollTo( $uis.steps.eq(currentStep) , scrollDuration);            
-            // Remove current class
-            $uis.steps.removeClass("js-current").eq(currentStep).addClass("js-current");
-            // Add a class to[] the body
-            var $body = $("body");
-            // Is this the first step ?
-            $body.toggleClass("js-first", currentStep === 0);
-            // Is this the last step ?
-            $body.toggleClass("js-last", currentStep === $uis.steps.length-1);
-            // Hides element with entrance
-            $uis.steps.eq(currentStep).find(".spot[data-entrance] .js-animation-wrapper").addClass("hidden");
-            // Clear all spot animations
-            clearSpotAnimations();
-            // Add the entrance animation after the scroll
-            setTimeout(doEntranceAnimations, scrollDuration)
-        }        
-    };
-
-    var doEntranceAnimations = function() {
-        // Launch hotspot background animations
-        doSpotAnimations();
-        // Find the current step
-        var $step = $uis.steps.filter(".js-current");        
-        // Number of element behind before animate the entrance
-        var queue = 0;
-        // Find spots with animated entrance
-        $step.find(".spot[data-entrance]").each(function(i, elem) {
-            
-            var $elem = $(elem),
-            // Works on an animation wrapper
-             $wrapper = $elem.find(".js-animation-wrapper");
-
-            // Get the animation key of the given element
-            var animationKey = $elem.data("entrance"),
-                   animation = entrance[animationKey];
-
-            // If the animation exist
-            if(animation != undefined) {
-                // Set the original style with visible element
-                $wrapper.stop().css(animation.from).removeClass("hidden")
-                // Take the default delay or the current animation one
-                var delay = animation.delay || defaultAnimationDelay
-                // If there is a queue
-                if( $elem.data("queue") ) queue++;                
-                // Clear existing timeout
-                if( $wrapper.t ) clearTimeout( $wrapper.t );
-                // Wait a delay...
-                $wrapper.t = setTimeout(function() {                        
-                    // ...before animate the wrapper
-                    $wrapper.animate(animation.to, delay) 
-                // ...and increase the queue
-                }, delay*queue);
-            }
-        });
-    }
-
-    var clearSpotAnimations = function() {
-        $uis.spots.each(function(i, spot) {
-            var $spot = $(spot);
-            if( $spot.d ) {
-                window.cancelAnimationFrame( $spot.d );
-                delete($spot.d)
-            }
-        })
-    }
-
-    var doSpotAnimations = function() {
-        // Find the current step
-        var $step = $uis.steps.filter(".js-current"),
-        // Find its spots
-           $spots = $step.find(".spot");
-
-        // On each spot, create an animation
-        $spots.each(function(i, spot) {
-
-            var     data = $(spot).data(),
-            requestField = "d";
-
-            // Is there a background and an animation on it
-            if( data["background"] && data["backgroundDirection"] != undefined) {
-
-                // Reset background position
-                $(spot).css("background-position", "0 0");
-
-                // Clear existing request animation frame
-                if( spot[requestField] ) window.cancelAnimationFrame( spot[requestField] );
-
-                var requestParams = closureAnimation(spot, requestField, renderSpotAnimation);
-                // Add animation frame with a closure function
-                spot[requestField] = window.requestAnimationFrame( requestParams );
-            }
-        });
-
-    };
-
-    var renderSpotAnimation = function(spot) {
-        var  $spot = $(spot),
-              data = $spot.data(),
-        directions = ("" + data["backgroundDirection"] ).split(" "),
-             speed = data["backgroundSpeed"] || 3;
-
-        // Allow several animation
-        $(directions).each(function(i, direction) {   
-            switch( direction ) {
-                case "left":
-                    $spot.css("backgroundPositionX", "-=" + speed);
-                    break;
-                case "right":
-                    $spot.css("backgroundPositionX", "+=" + speed);
-                    break;
-                case "top":
-                    $spot.css("backgroundPositionY", "-=" + speed);
-                    break;
-                case "bottom":
-                    $spot.css("backgroundPositionY", "+=" + speed);
-                    break;
-                default:                   
-                    // We receive a number,
-                    // we interpret it as a direction degree
-                    if( ! isNaN(direction) ) {
-                        
-                        var radian = direction * Math.PI / 180.0;
-
-                        var x0 = $spot.css("backgroundPositionX"),
-                            y0 = $spot.css("backgroundPositionY");
-
-                        var x = speed * Math.cos(radian),
-                            y = speed * Math.sin(radian);
-
-                        $spot.css("backgroundPositionX", "+=" + x);
-                        $spot.css("backgroundPositionY", "+=" + y);
-
-                    }
-                    break;
-            }
-        })
-    };
-
-    var closureAnimation = function(elem, requestField, func) {
-        return function() {
-            // Continue to the next frame            
-            if( elem[requestField] ) {                
-                // Add animation frame with a closure function
-                elem[requestField] = window.requestAnimationFrame( closureAnimation(elem, requestField, func) );
-            }
-            // Apply the animation render
-            func(elem);
+      },
+      left: {
+        from: {
+          left: 100,
+          opacity: 0
+        },
+        to: {
+          left: 0,
+          opacity: 1
         }
+      },
+      right: {
+        from: {
+          left: -100,
+          opacity: 0
+        },
+        to: {
+          left: 0,
+          opacity: 1
+        }
+      },
+      zoomIn: {
+        from: {
+          transform: "scale(0)",
+          opacity: 0
+        },
+        to: {
+          transform: "scale(1)",
+          opacity: 1
+        }
+      },
+      zoomOut: {
+        from: {
+          transform: "scale(2)",
+          opacity: 0
+        },
+        to: {
+          transform: "scale(1)",
+          opacity: 1
+        }
+      }
     };
-
-    var resize = function() {
-        stepsPosition();
+    init = function() {
+      buildUI();
+      stepsPosition();
+      spotsPosition();
+      bindUI();
+      $("body").removeClass("js-loading");
+      readStepFromHash();
+      return new FastClick(document.body);
     };
+    buildUI = function() {
+      $ui = $("#container");
+      return $uis = {
+        steps: $ui.find(".step"),
+        spots: $ui.find(".spot"),
+        navitem: $("#overflow .to-step"),
+        previous: $("#overflow .nav .arrows .previous"),
+        next: $("#overflow .nav .arrows .next")
+      };
+    };
+    bindUI = function() {
+      $uis.steps.on("click", ".spot", showSpot);
+      $uis.previous.on("click", previousStep);
+      $uis.next.on("click", nextStep);
+      $(window).keydown(keyboardNav);
+      $(window).resize(resize);
+      return $(window).hashchange(readStepFromHash);
+    };
+    stepsPosition = function() {
+      return $uis.steps.each(function(i, step) {
+        var $previousStep, $step;
+        $step = $(step);
+        if (i > 0) {
+          $previousStep = $uis.steps.eq(i - 1);
+          return $step.css("left", $previousStep.position().left + $previousStep.width());
+        }
+      });
+    };
+    spotsPosition = function() {
+      return $uis.spots.each(function(i, spot) {
+        var $spot;
+        $spot = $(spot);
+        $spot.css("margin-left", $spot.outerWidth() / -2);
+        return $spot.css("margin-top", $spot.outerHeight() / -2);
+      });
+    };
+    showSpot = function(event) {
+      var $this;
+      $this = $(this);
+      if ($this.data("html")) {
+        return alert($this.data("html"));
+      }
+    };
+    keyboardNav = function(event) {
+      switch (event.keyCode) {
+        case 37:
+          previousStep();
+          break;
+        case 38:
+          previousStep();
+          break;
+        case 39:
+          nextStep();
+          break;
+        case 40:
+          nextStep();
+          break;
+        default:
+          return;
+      }
+      return event.preventDefault();
+    };
+    previousStep = function() {
+      return changeStepHash(1 * currentStep - 1);
+    };
+    nextStep = function() {
+      return changeStepHash(1 * currentStep + 1);
+    };
+    changeStepHash = function(step) {
+      if (step >= 0 && step < $uis.steps.length) {
+        return location.hash = "#step=" + step;
+      }
+    };
+    goToStep = function(step) {
+      var $body;
+      if (step >= 0 && step < $uis.steps.length) {
+        currentStep = 1 * step;
+        jQuery.scrollTo.window().queue([]).stop();
+        $ui.scrollTo($uis.steps.eq(currentStep), scrollDuration);
+        $uis.steps.removeClass("js-current").eq(currentStep).addClass("js-current");
+        $body = $("body");
+        $body.toggleClass("js-first", currentStep === 0);
+        $body.toggleClass("js-last", currentStep === $uis.steps.length - 1);
+        $uis.steps.eq(currentStep).find(".spot[data-entrance] .js-animation-wrapper").addClass("hidden");
+        clearSpotAnimations();
+        return setTimeout(doEntranceAnimations, scrollDuration);
+      }
+    };
+    doEntranceAnimations = function() {
+      var $step, queue;
+      doSpotAnimations();
+      $step = $uis.steps.filter(".js-current");
+      queue = 0;
+      return $step.find(".spot[data-entrance]").each(function(i, elem) {
+        var $elem, $wrapper, animation, animationKey, delay;
+        $elem = $(elem);
+        $wrapper = $elem.find(".js-animation-wrapper");
+        animationKey = $elem.data("entrance");
+        animation = entrance[animationKey];
+        if (animation !== undefined) {
+          $wrapper.stop().css(animation.from).removeClass("hidden");
+          delay = animation.delay || defaultAnimationDelay;
+          if ($elem.data("queue")) {
+            queue++;
+          }
+          if ($wrapper.t) {
+            clearTimeout($wrapper.t);
+          }
+          return $wrapper.t = setTimeout(function() {
+            return $wrapper.animate(animation.to, delay);
+          }, delay * queue);
+        }
+      });
+    };
+    clearSpotAnimations = function() {
+      return $uis.spots.each(function(i, spot) {
+        var $spot;
+        $spot = $(spot);
+        if ($spot.d) {
+          window.cancelAnimationFrame($spot.d);
+          return delete $spot.d;
+        }
+      });
+    };
+    doSpotAnimations = function() {
+      var $spots, $step;
+      $step = $uis.steps.filter(".js-current");
+      $spots = $step.find(".spot");
+      return $spots.each(function(i, spot) {
+        var data, requestField, requestParams;
+        data = $(spot).data();
+        requestField = "d";
+        if (data["background"] && data["backgroundDirection"] !== undefined) {
+          $(spot).css("background-position", "0 0");
+          if (spot[requestField]) {
+            window.cancelAnimationFrame(spot[requestField]);
+          }
+          requestParams = closureAnimation(spot, requestField, renderSpotAnimation);
+          return spot[requestField] = window.requestAnimationFrame(requestParams);
+        }
+      });
+    };
+    renderSpotAnimation = function(spot) {
+      var $spot, data, directions, speed;
+      $spot = $(spot);
+      data = $spot.data();
+      directions = ("" + data["backgroundDirection"]).split(" ");
+      speed = data["backgroundSpeed"] || 3;
+      return $(directions).each(function(i, direction) {
+        var radian, x, x0, y, y0;
+        switch (direction) {
+          case "left":
+            return $spot.css("backgroundPositionX", "-=" + speed);
+          case "right":
+            return $spot.css("backgroundPositionX", "+=" + speed);
+          case "top":
+            return $spot.css("backgroundPositionY", "-=" + speed);
+          case "bottom":
+            return $spot.css("backgroundPositionY", "+=" + speed);
+          default:
+            if (!isNaN(direction)) {
+              radian = direction * Math.PI / 180.0;
+              x0 = $spot.css("backgroundPositionX");
+              y0 = $spot.css("backgroundPositionY");
+              x = speed * Math.cos(radian);
+              y = speed * Math.sin(radian);
+              $spot.css("backgroundPositionX", "+=" + x);
+              return $spot.css("backgroundPositionY", "+=" + y);
+            }
+        }
+      });
+    };
+    closureAnimation = function(elem, requestField, func) {
+      return function() {
+        if (elem[requestField]) {
+          elem[requestField] = window.requestAnimationFrame(closureAnimation(elem, requestField, func));
+        }
+        return func(elem);
+      };
+    };
+    resize = function() {
+      return stepsPosition();
+    };
+    readStepFromHash = function() {
+      return goToStep(getHashParams().step || 0);
+    };
+    getHashParams = function() {
+      var a, d, e, hashParams, q, r;
+      hashParams = {};
+      e = void 0;
+      a = /\+/g;
+      r = /([^&;=]+)=?([^&;]*)/g;
+      d = function(s) {
+        return decodeURIComponent(s.replace(a, " "));
+      };
+      q = window.location.hash.substring(1);
+      while (e = r.exec(q)) {
+        hashParams[d(e[1])] = d(e[2]);
+      }
+      return hashParams;
+    };
+    return $(window).load(init);
+  })(jQuery, window);
 
-    var readStepFromHash = function() {
-        // Just go to step directcly
-        goToStep( getHashParams().step || 0 );
-    }
-
-
-    // @src http://stackoverflow.com/questions/4197591/parsing-url-hash-fragment-identifier-with-javascript#comment10274416_7486972
-    function getHashParams() {
-
-        var hashParams = {};
-        var e,
-            a = /\+/g,  // Regex for replacing addition symbol with a space
-            r = /([^&;=]+)=?([^&;]*)/g,
-            d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
-            q = window.location.hash.substring(1);
-
-        while (e = r.exec(q))
-           hashParams[d(e[1])] = d(e[2]);
-
-        return hashParams;
-    }
-
-
-    $(window).load(init);
-
-})(jQuery, window)
+}).call(this);
