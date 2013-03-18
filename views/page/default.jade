@@ -11,6 +11,8 @@ block content
             if step.picture
                 img(src=step.picture).step-background
             each spot, spotKey in step.spots
+                unless step["no-title"] 
+                    h2!=step.name
                 a.spot(
                     style=spotStyle(spot), 
                     class=spotClass(spot), 
@@ -18,6 +20,7 @@ block content
                     data-html=spot.html, 
                     data-spot=spotKey, 
                     data-step=stepKey, 
+                    data-origin=spot.origin, 
                     data-entrance=spot.entrance, 
                     data-background=spot.background, 
                     data-background-direction=spot["background-direction"], 

@@ -158,8 +158,9 @@
     # (position the spot from its center)
     $uis.spots.each (i, spot) ->
       $spot = $(spot)
-      $spot.css "margin-left", $spot.outerWidth() / -2
-      $spot.css "margin-top", $spot.outerHeight() / -2
+      if $spot.data("origin") == "center" 
+        $spot.css "margin-left", $spot.outerWidth() / -2
+        $spot.css "margin-top", $spot.outerHeight() / -2
 
   ###*
    * TODO: open a contextual popin when clicking on a spot
@@ -228,7 +229,7 @@
       $ui.scrollTo $uis.steps.eq(currentStep), scrollDuration      
       # Remove current class
       $uis.steps.removeClass("js-current").eq(currentStep).addClass "js-current"      
-      # Add a class to[] the body
+      # Add a class to the body
       $body = $("body")      
       # Is this the first step ?
       $body.toggleClass "js-first", currentStep is 0      

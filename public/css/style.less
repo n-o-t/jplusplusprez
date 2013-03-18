@@ -6,11 +6,12 @@
 @zIndexPicture : 10;
 @zIndexTail    : @zIndexPicture+10;
 @zIndexSpot    : @zIndexTail+10;
+@zIndexTitle   : @zIndexSpot+10;
 @zIndexNav     : @zIndexSpot+10;
 @zIndexLoading : @zIndexNav+10;
 
-@containerWidth  : 1200px;
-@containerHeight : 500px;
+@containerWidth  : 940px;
+@containerHeight : 600px;
 
 a {
   color: #00B7FF;
@@ -36,14 +37,15 @@ body {
     margin:0;
     padding:0;
     overflow:hidden;
-    font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px Arial, "Lucida Grande", Helvetica, sans-serif;
     background:@grayLighter;
+    color:#404040;    
 }
 
 
 #overflow {    
 
-    .box-shadow(  0 0 0 20px white );
+    .box-shadow(  0 0 0 10px white );
     overflow:hidden;
     position:absolute;
     top:50%;
@@ -168,6 +170,22 @@ body {
         min-height:100%;
         background:fade(@black, 60%);
         
+        h2 {
+            position:absolute;
+            left:0;
+            top:0;
+            z-index:@zIndexTitle;    
+            font-size: 38px;
+            font-weight: bold;
+            letter-spacing: -2px;
+            line-height: 40px;
+            margin: 20px;
+            
+            strong {
+                color:@red;
+            }
+        }
+        
         .spot-background, .step-background {
             min-width:100%;
             max-width:100%;
@@ -189,7 +207,6 @@ body {
             }
         }
         
-
         .spot {
             background:transparent;
             position:absolute; 

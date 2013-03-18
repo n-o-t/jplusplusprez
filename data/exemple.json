@@ -2,41 +2,43 @@
     {
         "name": "YOLO1",
         "no-index": true,
+        "no-title": true,
         "spots": [
             {
-                "background": "http://placehold.it/600x500/fff/00f/",
+                "background": "http://placehold.it/470x600/fff/00f/",
                 "background-direction": "right",
                 "background-speed": 5,
                 "top": "50%",
                 "left": "25%",
                 "width": "50%",
-                "height": "100%"
+                "height": "100%",
+                "origin": "center"
             },
             {
-                "background": "http://placehold.it/600x500/fff/0f0/",
+                "background": "http://placehold.it/470x600/fff/0f0/",
                 "background-direction": 180,
                 "background-speed": 5,
                 "top": "50%",
                 "left": "75%",
                 "width": "50%",
-                "height": "100%"
+                "height": "100%",
+                "origin": "center"
             },
             {
                 "width": "104px",
                 "height": "150PX",
-                "top": "82.4%",
-                "left": "4.6666%",
+                "top": "37.3333%",
+                "left": "44.3617%",
                 "href": "#step=1",
                 "background": "http://atomicrobotdesign.com/blog_media/sprite_movement/images/gb_walk.png",
                 "background-speed": 104,
                 "background-direction": "left",
-                "background-frequency": 200,
-                "entrance": "zoomOut"
+                "background-frequency": 200
             }
         ]
     },
     {
-        "picture": "http://placehold.it/1200x500",
+        "picture": "http://placehold.it/940x600",
         "name": "Lorem ipsum dolor si amet",
         "spots": [
             {
@@ -45,7 +47,8 @@
                 "width": "100px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "red",
-                "entrance": "left"
+                "entrance": "left",
+                "origin": "center"
             },
             {
                 "top": "35%",
@@ -54,7 +57,8 @@
                 "html": "Lorem ipsum dolor si amet",
                 "class": "red",
                 "entrance": "right",
-                "queue": true
+                "queue": true,
+                "origin": "center"
             },
             {
                 "top": "25.2%",
@@ -63,7 +67,8 @@
                 "html": "Lorem ipsum dolor si amet",
                 "class": "yellow",
                 "entrance": "down",
-                "queue": true
+                "queue": true,
+                "origin": "center"
             },
             {
                 "top": "20.4%",
@@ -72,12 +77,13 @@
                 "html": "Lorem ipsum dolor si amet",
                 "class": "yellow",
                 "entrance": "zoomIn",
-                "queue": true
+                "queue": true,
+                "origin": "center"
             }
         ]
     },
     {
-        "picture": "http://placehold.it/1200x500",
+        "picture": "http://placehold.it/940x600",
         "name": "YOLO1",
         "spots": [
             {
@@ -86,7 +92,8 @@
                 "width": "400px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "red",
-                "entrance": "zoomOut"
+                "entrance": "zoomOut",
+                "origin": "center"
             },
             {
                 "top": "48%",
@@ -95,7 +102,8 @@
                 "html": "Lorem ipsum dolor si amet",
                 "class": "pink",
                 "entrance": "zoomOut",
-                "queue": true
+                "queue": true,
+                "origin": "center"
             },
             {
                 "top": "46.8%",
@@ -104,7 +112,8 @@
                 "html": "Lorem ipsum dolor si amet",
                 "class": "green",
                 "entrance": "zoomOut",
-                "queue": true
+                "queue": true,
+                "origin": "center"
             },
             {
                 "top": "47.2%",
@@ -113,12 +122,13 @@
                 "html": "Lorem ipsum dolor si amet",
                 "class": "yellow",
                 "entrance": "zoomOut",
-                "queue": true
+                "queue": true,
+                "origin": "center"
             }
         ]
     },
     {
-        "picture": "http://placehold.it/1200x500",
+        "picture": "http://placehold.it/940x600",
         "name": "YOLO1",
         "spots": [
             {
@@ -126,7 +136,8 @@
                 "left": "51.4166%",
                 "width": "100px",
                 "html": "Lorem ipsum dolor si amet",
-                "class": "red"
+                "class": "red",
+                "origin": "center"
             },
             {
                 "top": "51.4%",
@@ -134,27 +145,31 @@
                 "width": "50px",
                 "html": "Lorem ipsum dolor si amet",
                 "style": "border:1px solid white;",
-                "class": "red"
+                "class": "red",
+                "origin": "center"
             },
             {
                 "top": "51.8%",
                 "left": "51.25%",
                 "width": "20px",
                 "html": "Lorem ipsum dolor si amet",
-                "class": "yellow"
+                "class": "yellow",
+                "origin": "center"
             },
             {
                 "top": "70.2%",
                 "left": "63.8333%",
                 "width": "20px",
-                "html": "Lorem ipsum dolor si amet"
+                "html": "Lorem ipsum dolor si amet",
+                "origin": "center"
             },
             {
-                "top": "50.8%",
-                "left": "51.25%",
+                "top": "31.8%",
+                "left": "51.4166%",
                 "width": "70px",
                 "html": "Lorem ipsum dolor si amet",
-                "class": "yellow"
+                "class": "yellow",
+                "origin": "center"
             }
         ]
     }
