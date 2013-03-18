@@ -7,14 +7,24 @@
 @zIndexTail    : @zIndexPicture+10;
 @zIndexSpot    : @zIndexTail+10;
 @zIndexTitle   : @zIndexSpot+10;
-@zIndexNav     : @zIndexSpot+10;
+@zIndexNav     : @zIndexTitle+10;
 @zIndexLoading : @zIndexNav+10;
 
 @containerWidth  : 940px;
 @containerHeight : 600px;
 
-a {
-  color: #00B7FF;
+
+body {
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    font: 14px arial, "Lucida Grande", Helvetica, sans-serif;
+    background:@grayLighter;
+    color:#404040;    
+    
+    a {
+      color: #00B7FF;
+    }
 }
 
 #old-browser {
@@ -32,16 +42,6 @@ a {
     display:none;
     .lt-ie7 & { display:block; }
 }
-
-body {
-    margin:0;
-    padding:0;
-    overflow:hidden;
-    font: 14px Arial, "Lucida Grande", Helvetica, sans-serif;
-    background:@grayLighter;
-    color:#404040;    
-}
-
 
 #overflow {    
 
@@ -83,35 +83,47 @@ body {
                 margin:0;
                 padding:0;
                 clear:right;
-                list-style:none;                
+                list-style:none;  
+                font-size:18px;  
+                line-height:30px;            
                 
-                a {                    
-                    padding:5px 10px;
+                a {                                                            
+                    padding:0;
+                    padding-right:10px;
                     margin-bottom:10px;
-                    background:black;
+                    background:rgba(102,102,102, 0.7);
+                    .no-rgba & { background:rgb(102,102,102); }
                     color:white;
                     display:block;
+                    height:30px;
+                    font-weight:bold;
                     float:right;
                     cursor:pointer;
                     text-decoration:none;
                     overflow:hidden;
-                    .border-radius(10px 0 0 10px);
+                    .border-radius(30px 0 0 30px);
                     
                     .wrapper {
-                        .transition(0.7s);
+                        .transition(max-width 0.7s);
                         .opacity(0);
                         width:0;
                         max-width:0;
                         overflow:hidden;
                         white-space:nowrap;            
                         display:block;
-                        float:left;            
+                        float:left;        
+                        padding-left:0px;    
                     }
 
                     &:hover .wrapper {
                         width:auto;
-                        max-width:300px;
+                        max-width:600px;
+                        padding-left:10px;
                         .opacity(100);
+                    }
+
+                    html body &.active {
+                        background:#404040;
                     }
                 }                
             }
@@ -126,28 +138,31 @@ body {
                 position:absolute;
                 z-index:@zIndexNav;
                 top:50%;
-                width:50px;
-                height:50px;
-                margin-top:-25px;
+                width:60px;
+                height:74px;
+                margin-top:-74px/2px;
                 color:black;
                 font-size:30px;
                 line-height:50px;
                 text-align:center;
                 background:white; 
                 cursor:pointer;  
-                .transition(0.7s);             
+                background:no-repeat center -80px;
+                .hide-text();              
+                               
+                &:hover { background-position:center -160px; }
             }
 
             .previous {
-                left:0;
-                .border-radius(0 25px 25px 0);                
-                .js-first & { left:-50px; }
+                left:-1px;
+                background-image:url("/img/btn_prev.png");
+                .js-first &, .js-first &:hover { background-position:0 0; }
             }
 
             .next {
                 right:0;
-                .border-radius(25px 0 0 25px);
-                .js-first &, .js-last & { right:-50px; }
+                background-image:url("/img/btn_next.png");
+                .js-last &, .js-last &:hover { background-position:0 0; }
             }
 
         }

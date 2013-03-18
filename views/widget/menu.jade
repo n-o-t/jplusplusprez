@@ -1,11 +1,10 @@
 .nav
     ul.steps
-        each step, stepKey in data
-            if step["no-index"] != true
-                li
-                    a.to-step(href="#step="+stepKey)
-                        span.wrapper=step.name
-                        i.left10=stepKey
+        each step, stepKey in data            
+            li(class=(step["no-index"] ? "hidden":""))
+                a.to-step(href="#step="+stepKey)
+                    span.wrapper=strip_tags(step.name)
+                    i.left10=stepKey
 
     ul.arrows
         li
