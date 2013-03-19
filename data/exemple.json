@@ -28,8 +28,8 @@
                 "class": "red",
                 "width": "100%",
                 "height": "100%",
-                "top": 0,
-                "left": 0,
+                "top": "-50%",
+                "left": "-50%",
                 "style": "opacity:0.25;",
                 "entrance": "down right",
                 "entrance-duration": 1000
@@ -38,8 +38,8 @@
                 "class": "green",
                 "width": "100%",
                 "height": "100%",
-                "top": 0,
-                "left": 0,
+                "top": "-50%",
+                "left": "50%",
                 "style": "opacity:0.25;",
                 "entrance": "down left",
                 "entrance-duration": 1000
@@ -48,8 +48,8 @@
                 "class": "yellow",
                 "width": "100%",
                 "height": "100%",
-                "top": 0,
-                "left": 0,
+                "top": "50%",
+                "left": "-50%",
                 "style": "opacity:0.25;",
                 "entrance": "up right",
                 "entrance-duration": 1000
@@ -58,8 +58,8 @@
                 "class": "pink",
                 "width": "100%",
                 "height": "100%",
-                "top": 0,
-                "left": 0,
+                "top": "50%",
+                "left": "50%",
                 "style": "opacity:0.25;",
                 "entrance": "up left",
                 "entrance-duration": 1000
