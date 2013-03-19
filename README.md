@@ -80,7 +80,8 @@ sub-title | String  | Sub-title of the spot, display bellow the title. | "Happy 
 picture | Object | A picture to dispay bellow the sub-title. Taken to properties: ```src```and ```alt``` |
 style | String | Inline CSS to apply to the current spot. | "font-size:17px; color: red"
 class | String | One or serveral space-separated classes to put on the spot. | "purr"
-entrance | String | Animates the entrance of the spot when a step the get the focus. See also [#entrances](Entrance animation) | "zoomIn", "left", etc
+entrance | String | Animates the entrance of the spot when a step the get the focus. See also [#entrances](Entrance animation) | "zoomIn", "left down", etc
+entrance-delay | Integer | Duration of the entrance animation. Default to 300. | 1000
 queue | Boolean | If true, the spot wait the end of the previous spot's entrance to appear. |
 background | String | URL to an image file to display as background of the step |
 background-direction | String, Number | Animate the background into that direction in a loop. Can be a number to specify a dicrection in degree. | "left", 90, "top left", etc
@@ -94,10 +95,10 @@ To animate the entrance of a spot, you can use one or several of the following a
 
 Name | Description
 ---- | ----
-left | Sliding to the left with fading
-right | Sliding to the right with fading
-up | Sliding to the top with fading
-down | Sliding to the bottom with fading
-zoomIn | Zoom in (getting bigger) with fading
-zoomOut | Zoom out (getting smaller) with fading
+left | Sliding to the left
+right | Sliding to the right
+up | Sliding to the top
+down | Sliding to the bottom
+zoomIn | Zoom in (getting bigger)
+zoomOut | Zoom out (getting smaller)
 fadeIn | Fading entrance
