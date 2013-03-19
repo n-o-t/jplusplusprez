@@ -29,76 +29,13 @@
   currentStep = 0
   scrollDuration = 300
   defaultAnimationDelay = 300
-  
-  # Entrance animations patterns
-  entrance =
-    fadeIn:
-      from:
-        opacity: 0
-
-      to:
-        opacity: 1
-
-    up:
-      from:
-        top: 100
-        opacity: 0
-
-      to:
-        top: 0
-        opacity: 1
-
-    down:
-      from:
-        top: -100
-        opacity: 0
-
-      to:
-        top: 0
-        opacity: 1
-
-    left:
-      from:
-        left: 100
-        opacity: 0
-
-      to:
-        left: 0
-        opacity: 1
-
-    right:
-      from:
-        left: -100
-        opacity: 0
-
-      to:
-        left: 0
-        opacity: 1
-
-    zoomIn:
-      from:
-        transform: "scale(0)"
-        opacity: 0
-
-      to:
-        transform: "scale(1)"
-        opacity: 1
-
-    zoomOut:
-      from:
-        transform: "scale(2)"
-        opacity: 0
-
-      to:
-        transform: "scale(1)"
-        opacity: 1
-
 
   ###*
    * Initializrs the page 
   ###
   init = ->
     buildUI()
+    buildAnimations()
     stepsPosition()
     spotsPosition()
     bindUI()    
@@ -134,6 +71,42 @@
     $(window).keydown keyboardNav
     $(window).resize resize
     $(window).hashchange readStepFromHash
+
+
+  ###*
+   * Builds the animations array dynamicly to allow relative computation 
+   * @return {Array} List of animations
+  ###
+  buildAnimations = ->
+    # Entrance animations patterns
+    @entrance =
+      fadeIn:
+        from: { opacity: 0 }
+        to:   { opacity: 1 }
+
+      up:
+        from: { top: $ui.width() }
+        to:   { top: 0 }
+
+      down:
+        from: { top: -1 * $ui.width() }
+        to:   { top: 0 }
+
+      left:
+        from: { left: $ui.width() }
+        to:   { left: 0 }
+
+      right:
+        from: { left: -1 * $ui.width() }
+        to:   { left: 0 }
+
+      zoomIn:
+        from: { transform: "scale(0)" }
+        to:   { transform: "scale(1)" }
+
+      zoomOut:
+        from: { transform: "scale(2)" }
+        to:   { transform: "scale(1)" }
 
   ###*
    * Position every steps in the container
@@ -258,26 +231,46 @@
     # Find spots with animated entrance
     $step.find(".spot[data-entrance]").each (i, elem) ->
       $elem = $(elem)      
+      # Get tge data from the element
+      data = $elem.data()
       # Works on an animation wrapper
       $wrapper = $elem.find(".js-animation-wrapper")      
-      # Get the animation key of the given element
-      animationKey = $elem.data("entrance")
-      animation = entrance[animationKey]      
-
-      # If the animation exist
-      unless animation is `undefined`        
-        # Set the original style with visible element
-        $wrapper.stop().css(animation.from).removeClass "hidden"        
-        # Take the default delay or the current animation one
-        delay = animation.delay or defaultAnimationDelay        
+      # Get the animation keys of the given element
+      animationKeys = data.entrance.split(" ")
+      # Clear existing timeout
+      clearTimeout $wrapper.t  if $wrapper.t  
+      # Initial layout
+      from = to = {}
+      # For each animation key
+      $.each animationKeys, (i, animationKey)->        
+        # Get the animation
+        animation = entrance[animationKey]      
+        # If the animation exist
+        if animation?
+          # Merge the layout object recursively
+          from = $.extend true, animation.from, from
+          to   = $.extend true, animation.to, to
+      console.log from, to
+          
+      # Stop every current animations and show the element
+      # Also, set the original style if needed
+      $wrapper.stop().css(from).removeClass "hidden" 
+      # Only if a "to" layout exists
+      if to?  
+        # Take the element entrance delay 
+        # or default delay
+        delay = data.entranceDelay or defaultAnimationDelay        
         # If there is a queue
-        queue++  if $elem.data("queue")        
-        # Clear existing timeout
-        clearTimeout $wrapper.t  if $wrapper.t        
+        queue++  if $elem.data("queue")             
         # Wait a delay...
-        $wrapper.t = setTimeout(->          
-          # ...before animate the wrapper
-          $wrapper.animate animation.to, delay        
+        $wrapper.t = setTimeout( 
+          # Closure function to transmit "to"
+          (
+            (to)->
+              ->          
+                # ...before animate the wrapper
+                $wrapper.animate to, delay       
+          )(to)
         # ...and increase the queue
         , delay * queue)
 
