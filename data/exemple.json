@@ -32,7 +32,7 @@
                 "left": 0,
                 "style": "opacity:0.25;",
                 "entrance": "down right",
-                "entrance-delay": 1000
+                "entrance-duration": 1000
             },
             {
                 "class": "green",
@@ -42,7 +42,7 @@
                 "left": 0,
                 "style": "opacity:0.25;",
                 "entrance": "down left",
-                "entrance-delay": 1000
+                "entrance-duration": 1000
             },
             {
                 "class": "yellow",
@@ -52,7 +52,7 @@
                 "left": 0,
                 "style": "opacity:0.25;",
                 "entrance": "up right",
-                "entrance-delay": 1000
+                "entrance-duration": 1000
             },
             {
                 "class": "pink",
@@ -62,7 +62,7 @@
                 "left": 0,
                 "style": "opacity:0.25;",
                 "entrance": "up left",
-                "entrance-delay": 1000
+                "entrance-duration": 1000
             },
             {
                 "width": "104px",

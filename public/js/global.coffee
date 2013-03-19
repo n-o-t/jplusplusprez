@@ -28,7 +28,7 @@
   $ui = $uis = null
   currentStep = 0
   scrollDuration = 300
-  defaultAnimationDelay = 300
+  defaultEntranceDuration = 300
 
   ###*
    * Initializrs the page 
@@ -250,16 +250,15 @@
           # Merge the layout object recursively
           from = $.extend true, animation.from, from
           to   = $.extend true, animation.to, to
-      console.log from, to
           
       # Stop every current animations and show the element
       # Also, set the original style if needed
       $wrapper.stop().css(from).removeClass "hidden" 
       # Only if a "to" layout exists
       if to?  
-        # Take the element entrance delay 
-        # or default delay
-        delay = data.entranceDelay or defaultAnimationDelay        
+        # Take the element entrance duration 
+        # or default duration
+        delay = data.entranceDuration or defaultEntranceDuration        
         # If there is a queue
         queue++  if $elem.data("queue")             
         # Wait a delay...
