@@ -25,6 +25,46 @@
                 "origin": "center"
             },
             {
+                "class": "red",
+                "width": "100%",
+                "height": "100%",
+                "top": 0,
+                "left": 0,
+                "style": "opacity:0.25;",
+                "entrance": "down right",
+                "entrance-delay": 1000
+            },
+            {
+                "class": "green",
+                "width": "100%",
+                "height": "100%",
+                "top": 0,
+                "left": 0,
+                "style": "opacity:0.25;",
+                "entrance": "down left",
+                "entrance-delay": 1000
+            },
+            {
+                "class": "yellow",
+                "width": "100%",
+                "height": "100%",
+                "top": 0,
+                "left": 0,
+                "style": "opacity:0.25;",
+                "entrance": "up right",
+                "entrance-delay": 1000
+            },
+            {
+                "class": "pink",
+                "width": "100%",
+                "height": "100%",
+                "top": 0,
+                "left": 0,
+                "style": "opacity:0.25;",
+                "entrance": "up left",
+                "entrance-delay": 1000
+            },
+            {
                 "width": "104px",
                 "height": "150PX",
                 "top": "37.3333%",
@@ -47,36 +87,36 @@
                 "width": "100px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "red",
-                "entrance": "left",
+                "entrance": "fadeIn left",
                 "origin": "center"
             },
             {
-                "top": "35%",
-                "left": "70.9166%",
+                "top": "35.8333%",
+                "left": "68.9361%",
                 "width": "50px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "red",
-                "entrance": "right",
+                "entrance": "fadeIn right",
                 "queue": true,
                 "origin": "center"
             },
             {
-                "top": "25.2%",
-                "left": "74.9166%",
+                "top": "27.5%",
+                "left": "74.0425%",
                 "width": "20px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "yellow",
-                "entrance": "down",
+                "entrance": "fadeIn down",
                 "queue": true,
                 "origin": "center"
             },
             {
-                "top": "20.4%",
-                "left": "70%",
+                "top": "23.5%",
+                "left": "67.8723%",
                 "width": "70px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "yellow",
-                "entrance": "zoomIn",
+                "entrance": "fadeIn zoomIn",
                 "queue": true,
                 "origin": "center"
             }
@@ -92,7 +132,7 @@
                 "width": "400px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "red",
-                "entrance": "zoomOut",
+                "entrance": "fadeIn zoomOut",
                 "origin": "center"
             },
             {
@@ -101,7 +141,7 @@
                 "width": "300px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "pink",
-                "entrance": "zoomOut",
+                "entrance": "fadeIn zoomOut",
                 "queue": true,
                 "origin": "center"
             },
@@ -111,7 +151,7 @@
                 "width": "200px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "green",
-                "entrance": "zoomOut",
+                "entrance": "fadeIn zoomOut",
                 "queue": true,
                 "origin": "center"
             },
@@ -121,7 +161,7 @@
                 "width": "100px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "yellow",
-                "entrance": "zoomOut",
+                "entrance": "fadeIn zoomOut",
                 "queue": true,
                 "origin": "center"
             }
@@ -132,44 +172,53 @@
         "name": "YOLO1",
         "spots": [
             {
+                "top": "33.5%",
+                "left": "51.8085%",
+                "width": "70px",
+                "html": "Lorem ipsum dolor si amet",
+                "class": "yellow",
+                "origin": "center",
+                "entrance": "down",
+                "queue": true
+            },
+            {
                 "top": "50.8%",
                 "left": "51.4166%",
                 "width": "100px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "red",
-                "origin": "center"
+                "origin": "center",
+                "entrance": "down",
+                "queue": true
             },
             {
-                "top": "51.4%",
-                "left": "51.3333%",
-                "width": "50px",
-                "html": "Lorem ipsum dolor si amet",
-                "style": "border:1px solid white;",
-                "class": "red",
-                "origin": "center"
-            },
-            {
-                "top": "51.8%",
-                "left": "51.25%",
-                "width": "20px",
+                "top": "66.3333%",
+                "left": "51.3829%",
+                "width": "60px",
                 "html": "Lorem ipsum dolor si amet",
                 "class": "yellow",
-                "origin": "center"
+                "origin": "center",
+                "entrance": "down",
+                "queue": true
             },
             {
                 "top": "70.2%",
                 "left": "63.8333%",
                 "width": "20px",
                 "html": "Lorem ipsum dolor si amet",
-                "origin": "center"
+                "origin": "center",
+                "entrance": "down",
+                "queue": true
             },
             {
-                "top": "31.8%",
-                "left": "51.4166%",
-                "width": "70px",
+                "top": "77.8333%",
+                "left": "51.2765%",
+                "width": "50px",
                 "html": "Lorem ipsum dolor si amet",
-                "class": "yellow",
-                "origin": "center"
+                "class": "red",
+                "origin": "center",
+                "entrance": "down",
+                "queue": true
             }
         ]
     }
