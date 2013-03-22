@@ -106,7 +106,14 @@
 
       zoomOut:
         from: { transform: "scale(2)" }
-        to:   { transform: "scale(1)" }
+
+      clockWise:
+        from: { transform: "rotate(0deg)" }
+        to:   { transform: "rotate(360deg)" }
+
+      counterClockWise:
+        from: { transform: "rotate(0deg)" }
+        to:   { transform: "rotate(-360deg)" }
 
   ###*
    * Position every steps in the container
