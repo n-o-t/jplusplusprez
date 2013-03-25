@@ -42,8 +42,8 @@
                 "height": 275,
                 "class": "launcher",
                 "href": "#step=1",
-                "top": "50%",
-                "left": "50%",
+                "top": "49.5%",
+                "left": "50.1063%",
                 "origin": "center"
             },
             {
@@ -91,6 +91,155 @@
                 "left": "2.1276%"
             },
             {
+                "class": "tr",
+                "content": "<strong>Communauté urbaine<br />de Nouakchott</strong> (Mauritanie)",
+                "top": "19%",
+                "left": "23.1914%",
+                "entrance": "stepRight fadeIn"
+            },
+            {
+                "class": "tr",
+                "content": "<strong>Ville de Montréal<br />et province du Québec</strong><br />(Canada)",
+                "top": "26.1666%",
+                "left": "7.3404%",
+                "entrance": "stepRight fadeIn"
+            },
+            {
+                "class": "tr",
+                "content": "<strong>Ville et état de<br />Sao Paulo</strong> (Brésil)",
+                "top": "44%",
+                "left": "11.3829%",
+                "entrance": "stepRight fadeIn"
+            },
+            {
+                "class": "tr",
+                "content": "<strong>Région métropolitaine de<br />Santiago du Chili</strong> (Chili)",
+                "top": "58.1666%",
+                "left": "5.7446%",
+                "entrance": "stepRight fadeIn"
+            },
+            {
+                "content": "<strong>Région de Dakar</strong> (Sénégal)",
+                "top": "71.8333%",
+                "left": "4.7872%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<strong>Ville de Beyrouth</strong> (Liban)",
+                "top": "10.3333%",
+                "left": "58.7234%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<strong>Ville de Jérusalem-Est</strong>",
+                "top": "19.5%",
+                "left": "77.1276%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<strong>Ville dErevan</strong> (Arménie)",
+                "top": "30.6666%",
+                "left": "77.234%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<strong>Ville de Hanoi</strong> (Vietnam)",
+                "top": "41.3333%",
+                "left": "77.4468%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<strong>Commune urbaine<br />d'Antananarivo</strong> (Madagascar)",
+                "top": "51.1666%",
+                "left": "77.3404%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<strong>Province du Gauteng</strong><br />(Afrique du sud)",
+                "top": "62.5%",
+                "left": "77.234%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<strong>Région de Kayes</strong> (Mali)",
+                "top": "72.3333%",
+                "left": "50.6382%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-10.png\" alt=\"formation\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" /><img src=\"/img/international/graph_1-7.png\" alt=\"institutionnel\" />",
+                "top": "24.8333%",
+                "left": "29.468%",
+                "entrance": "stepRight fadeIn",
+                "queue": true
+            },
+            {
+                "content": "<img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" /><img src=\"/img/international/graph_1-7.png\" alt=\"institutionnel\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" />",
+                "top": "35%",
+                "left": "13.2978%",
+                "entrance": "stepRight fadeIn"
+            },
+            {
+                "content": "<img src=\"/img/international/graph_1-6.png\" alt=\"recherche\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" />",
+                "top": "50%",
+                "left": "15.9574%",
+                "entrance": "stepRight fadeIn"
+            },
+            {
+                "content": "<img src=\"/img/international/graph_1-13.png\" alt=\"aménagement du territoire\" /><img src=\"/img/international/graph_1-4.png\" alt=\"transport\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" />",
+                "top": "64.3333%",
+                "left": "13.2978%",
+                "entrance": "stepRight fadeIn"
+            },
+            {
+                "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-12.png\" alt=\"solidarité\" /><img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" />",
+                "top": "75.1666%",
+                "left": "13.1914%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-10.png\" alt=\"formation\" /><img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" />",
+                "top": "13.3333%",
+                "left": "58.617%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" />",
+                "top": "22%",
+                "left": "77.0212%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" />",
+                "top": "33.6666%",
+                "left": "77.1276%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<img src=\"/img/international/graph_1-4.png\" alt=\"transport\" /><img src=\"/img/international/graph_1-10.png\" alt=\"formation\" />",
+                "top": "44.3333%",
+                "left": "77.234%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" /><img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" /><img src=\"/img/international/graph_1-4.png\" alt=\"transport\" />",
+                "top": "56.8333%",
+                "left": "77.0212%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" /><img src=\"/img/international/graph_1-4.png\" alt=\"transport\" /><img src=\"/img/international/graph_1-6.png\" alt=\"recherche\" /><img src=\"/img/international/graph_1-11.png\" alt=\"tourisme\" />",
+                "top": "69.5%",
+                "left": "77.1276%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
+                "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" /><img src=\"/img/international/graph_1-7.png\" alt=\"institutionnel\" />",
+                "top": "75.3333%",
+                "left": "50.4255%",
+                "entrance": "stepLeft fadeIn"
+            },
+            {
                 "picture": {
                     "src": "/img/international/graph_1-15.png"
                 },
@@ -99,7 +248,8 @@
                 "width": 880,
                 "height": 80,
                 "origin": "center",
-                "entrance": "stepUp fadeIn"
+                "entrance": "stepUp fadeIn",
+                "queue": true
             }
         ]
     },
@@ -241,8 +391,8 @@
                 "picture": {
                     "src": "/img/international/graph_4-1.png"
                 },
-                "top": "5.5%",
-                "left": "21.0638%",
+                "top": "5.8333%",
+                "left": "21.4893%",
                 "entrance": "zoomIn"
             },
             {
