@@ -237,38 +237,6 @@ body {
             &.focus {
                 .box-shadow(red 0 0 20px)
             }
-            
-            .js-animation-wrapper {
-                background:transparent repeat;            
-                width:100%;
-                height:100%;
-                position:relative;
-                &.hidden { display:none; }
-            }
-            
-            &.circle .js-animation-wrapper {                
-                .border-radius(50%);
-            }
-
-            &.shadow .js-animation-wrapper {  
-                .box-shadow(0 5px 5px 0 fade(@black, 50%) );
-            }
-            
-            &.red .js-animation-wrapper {
-                background:lighten(@red, 20%);
-            }
-
-            &.yellow .js-animation-wrapper {
-                background:lighten(@yellow, 20%);
-            }
-
-            &.pink .js-animation-wrapper {
-                background:lighten(@pink, 20%);
-            }
-            
-            &.green .js-animation-wrapper {
-                background:lighten(@green, 20%);
-            }
 
             &.launcher {
                 background:url("/img/common/btn_lancez.png") no-repeat 0 0;                
@@ -320,6 +288,19 @@ body {
                 margin-bottom:0.2em;
                 font-weight:normal;
             }
+
+            small {
+                color:#999;
+            }
+
+            .js-animation-wrapper {
+                background:transparent repeat;            
+                width:100%;
+                height:100%;
+                position:relative;
+                &.hidden { display:none; }
+            }
+            
         }
 
     }

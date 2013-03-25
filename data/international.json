@@ -442,7 +442,7 @@
             },
             {
                 "content": "www.europeidf.fr",
-                "href": "http://www.europeidf.fr",                
+                "href": "http://www.europeidf.fr",
                 "top": "23.8333%",
                 "left": "2.1276%"
             },
@@ -489,6 +489,16 @@
     {
         "name": "Terre <strong>d'attractivité internationale</strong>",
         "spots": [
+            {
+                "title": "Île-de-France, <strong>1re région d'installation</strong> des entreprises étrangères",
+                "top": "14.3333%",
+                "left": "11.3829%"
+            },
+            {
+                "content": "<small>Top 10 des pays ayant localisé des projets en Île-de-France en 2011</small>",
+                "top": "15.5%",
+                "left": "11.4893%"
+            },
             {
                 "picture": {
                     "src": "/img/international/graph_5-1.png"
