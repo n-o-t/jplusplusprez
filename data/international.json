@@ -436,6 +436,17 @@
         "name": "En lien direct avec<br /><strong>l'Union européenne</strong>",
         "spots": [
             {
+                "title": "La Région reçoit trois sortes de<br /><strong>Fonds européens</strong> (2007-2013)",
+                "top": "19.3333%",
+                "left": "2.0212%"
+            },
+            {
+                "content": "www.europeidf.fr",
+                "href": "http://www.europeidf.fr",                
+                "top": "23.8333%",
+                "left": "2.1276%"
+            },
+            {
                 "picture": {
                     "src": "/img/international/graph_4-1.png"
                 },

@@ -71,6 +71,9 @@
     $(window).keydown keyboardNav
     $(window).resize resize
     $(window).hashchange readStepFromHash
+    # Open links begining by http in a new window
+    $("a[href^='http://']").attr "target", "_blank"
+
 
 
   ###*
