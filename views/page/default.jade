@@ -8,31 +8,36 @@ block content
             class=step.class, 
             data-step=stepKey, 
             data-page=page)
+            unless step["no-title"] 
+                h2!=step.name
             if step.picture
-                unless step["no-title"] 
-                    h2!=step.name
                 img(src=step.picture).step-background
-            each spot, spotKey in step.spots
-                a.spot(
-                    style=spotStyle(spot), 
-                    class=spotClass(spot), 
-                    href=spot.href, 
-                    data-html=spot.html, 
-                    data-spot=spotKey, 
-                    data-step=stepKey, 
-                    data-origin=spot.origin, 
-                    data-entrance=spot.entrance, 
-                    data-entrance-duration=spot["entrance-duration"], 
-                    data-background=spot.background, 
-                    data-background-direction=spot["background-direction"], 
-                    data-background-speed=spot["background-speed"],
-                    data-background-frequency=spot["background-frequency"],
-                    data-queue=1*spot.queue)
-                    .js-animation-wrapper
-                        if spot["title"]
-                            h3=spot["title"]
-                        if spot["sub-title"]
-                            h4=spot["sub-title"]                      
-                        if spot["picture"]
-                            img(src=spot["picture"]["src"], alt=spot["picture"]["alt"]).spot-background
-                
+            if step.spots
+                each spot, spotKey in step.spots
+                    a.spot(
+                        style=spotStyle(spot), 
+                        class=spotClass(spot), 
+                        href=spot.href, 
+                        data-html=spot.html, 
+                        data-spot=spotKey, 
+                        data-step=stepKey, 
+                        data-origin=spot.origin, 
+                        data-entrance=spot.entrance, 
+                        data-entrance-duration=spot["entrance-duration"], 
+                        data-background=spot.background, 
+                        data-background-direction=spot["background-direction"], 
+                        data-background-speed=spot["background-speed"],
+                        data-background-frequency=spot["background-frequency"],
+                        data-queue=1*spot.queue)
+                        .js-animation-wrapper(
+                            style=spotWrapperStyle(spot)
+                            )
+                            if spot["title"]
+                                h3!=spot["title"]
+                            if spot["sub-title"]
+                                h4!=spot["sub-title"]    
+                            if spot["content"]
+                                p!=spot["content"]                   
+                            if spot["picture"]
+                                img(src=spot["picture"]["src"], alt=spot["picture"]["alt"]).spot-background
+                    

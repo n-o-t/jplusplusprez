@@ -22,8 +22,8 @@ body {
     background:@grayLighter;
     color:#404040;    
     
-    a {
-      color: #00B7FF;
+    .spot a {
+      color: #E63200;
     }
 }
 
@@ -90,7 +90,7 @@ body {
                 a {                                                            
                     padding:0;
                     padding-right:10px;
-                    margin-bottom:10px;
+                    margin-bottom:5px;
                     background:rgba(102,102,102, 0.7);
                     .no-rgba & { background:rgb(102,102,102); }
                     color:white;
@@ -155,13 +155,13 @@ body {
 
             .previous {
                 left:-1px;
-                background-image:url("/img/btn_prev.png");
+                background-image:url("/img/common/btn_prev.png");
                 .js-first &, .js-first &:hover { background-position:0 0; }
             }
 
             .next {
                 right:0;
-                background-image:url("/img/btn_next.png");
+                background-image:url("/img/common/btn_next.png");
                 .js-last &, .js-last &:hover { background-position:0 0; }
             }
 
@@ -177,13 +177,15 @@ body {
     width:100%;
     height:100%;    
     
+    background:#e2e6e7 url("/img/common/bg.png") bottom center no-repeat;
+    
     .step {
         position:absolute;
         top:0; 
         left:0;
         width:100%;
         min-height:100%;
-        background:fade(@black, 60%);
+        
         
         h2 {
             position:absolute;
@@ -195,6 +197,7 @@ body {
             letter-spacing: -2px;
             line-height: 40px;
             margin: 20px;
+            margin-top:28px;
             
             strong {
                 color:@red;
@@ -203,11 +206,14 @@ body {
         
         .spot-background, .step-background {
             min-width:100%;
-            max-width:100%;
+            max-width:none;
             min-height:none;
             max-height:none;
             position:relative;
             z-index:@zIndexPicture;
+            &.spot-background {
+                z-index:@zIndexSpot;                
+            }
         }
         
         .exemple & {
@@ -223,11 +229,16 @@ body {
         }
         
         .spot {
-            background:transparent;
+
             position:absolute; 
             z-index:@zIndexSpot;
             
+            &.focus {
+                .box-shadow(red 0 0 20px)
+            }
+            
             .js-animation-wrapper {
+                background:transparent repeat;            
                 width:100%;
                 height:100%;
                 position:relative;
@@ -256,6 +267,51 @@ body {
             
             &.green .js-animation-wrapper {
                 background:lighten(@green, 20%);
+            }
+
+            &.launcher {
+                background:url("/img/common/btn_lancez.png") no-repeat 0 0;                
+                top:50%;
+                left:50%;
+                margin-left:-270px/2px;
+                margin-top:-275px/2px;
+                
+                &:hover {
+                    background-position:0 -280px;
+                }
+            }
+
+            &.app-title {
+                
+                h3 {                    
+                    font-weight: 100;
+                    font-size: 32px;
+                    text-shadow: -1px 0 #FFF, 0 1px #FFF, 1px 0 #FFF, 0 -1px #FFF;
+                    margin:0;
+                }
+                
+                h4 {                    
+                    font-weight: bold;
+                    font-size: 48px;
+                    line-height: 50px;
+                    text-shadow: -1px 0 #FFF, 0 1px #FFF, 1px 0 #FFF, 0 -1px #FFF
+                }
+
+            }
+
+            &.legend {                
+                font-size: 14px;
+                font-weight: 100px;
+                line-height: 16px;
+                color: #808080;
+                width:auto;
+                display:table;
+                .js-animation-wrapper {
+                    padding-left:25px;
+                    background-repeat:no-repeat;
+                    display:table-cell;
+                    vertical-align:middle;
+                }
             }
 
             h3, h4 {

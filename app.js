@@ -47,21 +47,34 @@ app.configure(function(){
       return style.join(";");
     },
     spotStyle: function(spot) {
+
+      var toPx = function(val) {
+        return isNaN(val) ? val : val + "px";
+      };
       
       var style = [];
       // Add position
-      style.push("top:"    + (spot.top  || 0) );
-      style.push("left:"   + (spot.left || 0) );
+      style.push("top:"  + toPx(spot.top  || 0) );
+      style.push("left:" + toPx(spot.left || 0) );
+
       // Add size
-      style.push("width:"  + (spot.width  || "auto") );      
-      style.push("height:" + (spot.height || spot.width || "auto") ); // Square by default      
-      // Add background
-      if(spot.background) {
-        style.push("background-image: url(" + spot.background + ")");
-        style.push("background-repeat: repeat");
-      }      
+      style.push("width:"  + toPx(spot.width) );      
+      style.push("height:" + toPx(spot.height || spot.width) ); // Square by default      
+      
       // Add style
       if(spot.style) style.push(spot.style)
+
+      return style.join(";");
+    },
+    spotWrapperStyle: function(spot) {
+
+      var style = [];
+      // Add background
+      if(spot.background) {
+        style.push("background-image: url(" + spot.background + ")");        
+      }
+      // Add style
+      if(spot.wrapperStyle) style.push(spot.wrapperStyle)
 
       return style.join(";");
     },

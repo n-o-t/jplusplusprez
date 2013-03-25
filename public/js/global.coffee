@@ -23,7 +23,6 @@
 # Patch the requestAnimationFrame function for better compatibility
 #= require vendor/rAF.js
 
-
 (($, window) ->
   $ui = $uis = null
   currentStep = 0
@@ -37,6 +36,7 @@
     buildUI()
     buildAnimations()
     stepsPosition()
+    spotsSize()
     spotsPosition()
     bindUI()    
     # Remove loading overlay
@@ -85,19 +85,35 @@
         to:   { opacity: 1 }
 
       up:
-        from: { top: $ui.width() }
+        from: { top: $ui.width(), left: 0 }
         to:   { top: 0 }
 
       down:
-        from: { top: -1 * $ui.width() }
+        from: { top: -1 * $ui.width(), left: 0 }
         to:   { top: 0 }
 
       left:
-        from: { left: $ui.width() }
+        from: { left: $ui.width(), top: 0  }
         to:   { left: 0 }
 
       right:
-        from: { left: -1 * $ui.width() }
+        from: { left: -1 * $ui.width(), top: 0 }
+        to:   { left: 0 }
+
+      stepUp:
+        from: { top: 100, left: 0}
+        to:   { top: 0 }
+
+      stepDown:
+        from: { top: -100, left: 0}
+        to:   { top: 0 }
+
+      stepLeft:
+        from: { left: 100, top: 0}
+        to:   { left: 0 }
+
+      stepRight:
+        from: { left: -100, top: 0}
         to:   { left: 0 }
 
       zoomIn:
@@ -106,6 +122,7 @@
 
       zoomOut:
         from: { transform: "scale(2)" }
+        to:   { transform: "scale(1)" }
 
       clockWise:
         from: { transform: "rotate(0deg)" }
@@ -127,6 +144,17 @@
       if i > 0
         $previousStep = $uis.steps.eq(i - 1)
         $step.css "left", $previousStep.position().left + $previousStep.width()
+
+  ###*
+   * Resize every spots according its wrapper
+   * @return {Array} Spots list
+  ###
+  spotsSize = ->    
+    $uis.spots.each (i, spot) ->
+      $spot = $(this)
+      $spot.css "width",  $spot.find("js-animation-wrapper").outerWidth()
+      $spot.css "height", $spot.find("js-animation-wrapper").outerHeight()
+
 
   ###*
    * Position every spots in each steps
@@ -250,8 +278,8 @@
       from = to = {}
       # For each animation key
       $.each animationKeys, (i, animationKey)->        
-        # Get the animation
-        animation = entrance[animationKey]      
+        # Get the animation (and create a clone object)
+        animation = $.extend true, {}, entrance[animationKey]      
         # If the animation exist
         if animation?
           # Merge the layout object recursively
