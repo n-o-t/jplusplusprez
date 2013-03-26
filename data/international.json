@@ -94,6 +94,7 @@
             {
                 "class": "tr",
                 "content": "<strong>Communauté urbaine<br />de Nouakchott</strong> (Mauritanie)",
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Nouakchott.7.10.pdf",
                 "top": "19%",
                 "left": "23.1914%",
                 "entrance": "stepRight fadeIn"
@@ -101,6 +102,7 @@
             {
                 "class": "tr",
                 "content": "<strong>Ville de Montréal<br />et province du Québec</strong><br />(Canada)",
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Montreal-Quebec.7.10.pdf",
                 "top": "26.1666%",
                 "left": "7.3404%",
                 "entrance": "stepRight fadeIn"
@@ -108,6 +110,7 @@
             {
                 "class": "tr",
                 "content": "<strong>Ville et état de<br />Sao Paulo</strong> (Brésil)",
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Sao_Paulo.7.10.pdf",
                 "top": "44%",
                 "left": "11.3829%",
                 "entrance": "stepRight fadeIn"
@@ -115,18 +118,21 @@
             {
                 "class": "tr",
                 "content": "<strong>Région métropolitaine de<br />Santiago du Chili</strong> (Chili)",
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Santiago.7.10.pdf",
                 "top": "58.1666%",
                 "left": "5.7446%",
                 "entrance": "stepRight fadeIn"
             },
             {
                 "content": "<strong>Région de Dakar</strong> (Sénégal)",
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Dakar.7.10.pdf",
                 "top": "71.8333%",
                 "left": "4.7872%",
                 "entrance": "stepLeft fadeIn"
             },
             {
                 "content": "<strong>Ville de Beyrouth</strong> (Liban)",
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Beyrouth.7.10.pdf",
                 "top": "10.3333%",
                 "left": "58.7234%",
                 "entrance": "stepLeft fadeIn"
@@ -145,24 +151,28 @@
             },
             {
                 "content": "<strong>Ville de Hanoi</strong> (Vietnam)",
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Hanoi.7.10.pdf",
                 "top": "41.3333%",
                 "left": "77.4468%",
                 "entrance": "stepLeft fadeIn"
             },
             {
                 "content": "<strong>Commune urbaine<br />d'Antananarivo</strong> (Madagascar)",
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Antananarivo.07.10.pdf",
                 "top": "51.1666%",
                 "left": "77.3404%",
                 "entrance": "stepLeft fadeIn"
             },
             {
                 "content": "<strong>Province du Gauteng</strong><br />(Afrique du sud)",
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Gauteng.7.10.pdf",
                 "top": "62.5%",
                 "left": "77.234%",
                 "entrance": "stepLeft fadeIn"
             },
             {
                 "content": "<strong>Région de Kayes</strong> (Mali)",
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Kayes912.pdf",
                 "top": "72.3333%",
                 "left": "50.6382%",
                 "entrance": "stepLeft fadeIn"
