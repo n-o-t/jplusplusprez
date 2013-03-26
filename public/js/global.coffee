@@ -2,6 +2,9 @@
 # Well, it's jQuery! 
 #= require vendor/jquery-1.7.1.min.js
 
+# The great Modernizr to monitor feature support
+#= require vendor/modernizr.custom.js
+
 # Improve the touch experience by removing the tap delay
 #= require vendor/fastclick.js
 
@@ -84,8 +87,8 @@
     # Entrance animations patterns
     @entrance =
       fadeIn:
-        from: { opacity: 0 }
-        to:   { opacity: 1 }
+        from: { opacity: '0' }
+        to:   { opacity: '1' }
 
       up:
         from: { top: $ui.width(), left: 0 }

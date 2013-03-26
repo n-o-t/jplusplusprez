@@ -12,7 +12,8 @@
                 "top": "50%",
                 "origin": "center",
                 "entrance": "zoomIn",
-                "entrance-duration": 2000
+                "entrance-duration": 2000,
+                "class": "ie-opacity"
             },
             {
                 "background": "/img/international/graph_0-1.png",
@@ -167,6 +168,7 @@
                 "entrance": "stepLeft fadeIn"
             },
             {
+                "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-10.png\" alt=\"formation\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" /><img src=\"/img/international/graph_1-7.png\" alt=\"institutionnel\" />",
                 "top": "24.8333%",
                 "left": "29.468%",
@@ -174,66 +176,77 @@
                 "queue": true
             },
             {
+                "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" /><img src=\"/img/international/graph_1-7.png\" alt=\"institutionnel\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" />",
                 "top": "35%",
                 "left": "13.2978%",
                 "entrance": "stepRight fadeIn"
             },
             {
+                "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-6.png\" alt=\"recherche\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" />",
                 "top": "50%",
                 "left": "15.9574%",
                 "entrance": "stepRight fadeIn"
             },
             {
+                "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-13.png\" alt=\"aménagement du territoire\" /><img src=\"/img/international/graph_1-4.png\" alt=\"transport\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" />",
                 "top": "64.3333%",
                 "left": "13.2978%",
                 "entrance": "stepRight fadeIn"
             },
             {
+                "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-12.png\" alt=\"solidarité\" /><img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" />",
                 "top": "75.1666%",
                 "left": "13.1914%",
                 "entrance": "stepLeft fadeIn"
             },
             {
+                "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-10.png\" alt=\"formation\" /><img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" />",
                 "top": "13.3333%",
                 "left": "58.617%",
                 "entrance": "stepLeft fadeIn"
             },
             {
+                "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" />",
                 "top": "22%",
                 "left": "77.0212%",
                 "entrance": "stepLeft fadeIn"
             },
             {
+                "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" />",
                 "top": "33.6666%",
                 "left": "77.1276%",
                 "entrance": "stepLeft fadeIn"
             },
             {
+                "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-4.png\" alt=\"transport\" /><img src=\"/img/international/graph_1-10.png\" alt=\"formation\" />",
                 "top": "44.3333%",
                 "left": "77.234%",
                 "entrance": "stepLeft fadeIn"
             },
             {
+                "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" /><img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" /><img src=\"/img/international/graph_1-4.png\" alt=\"transport\" />",
                 "top": "56.8333%",
                 "left": "77.0212%",
                 "entrance": "stepLeft fadeIn"
             },
             {
+                "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" /><img src=\"/img/international/graph_1-4.png\" alt=\"transport\" /><img src=\"/img/international/graph_1-6.png\" alt=\"recherche\" /><img src=\"/img/international/graph_1-11.png\" alt=\"tourisme\" />",
                 "top": "69.5%",
                 "left": "77.1276%",
                 "entrance": "stepLeft fadeIn"
             },
             {
+                "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" /><img src=\"/img/international/graph_1-7.png\" alt=\"institutionnel\" />",
                 "top": "75.3333%",
                 "left": "50.4255%",
@@ -263,7 +276,8 @@
                 "top": "48.3333%",
                 "left": "10.3191%",
                 "entrance": "stepUp fadeIn",
-                "queue": true
+                "queue": true,
+                "class": "ie-opacity"
             },
             {
                 "picture": {
@@ -272,7 +286,8 @@
                 "top": "49%",
                 "left": "32.234%",
                 "entrance": "stepUp fadeIn",
-                "queue": true
+                "queue": true,
+                "class": "ie-opacity"
             },
             {
                 "picture": {
@@ -281,7 +296,8 @@
                 "top": "45.8333%",
                 "left": "56.0638%",
                 "entrance": "stepUp fadeIn",
-                "queue": true
+                "queue": true,
+                "class": "ie-opacity"
             },
             {
                 "picture": {
@@ -290,7 +306,8 @@
                 "top": "50.8333%",
                 "left": "71.8085%",
                 "entrance": "stepUp fadeIn",
-                "queue": true
+                "queue": true,
+                "class": "ie-opacity"
             },
             {
                 "picture": {
@@ -420,7 +437,8 @@
                 "top": "15.8333%",
                 "left": "71.0638%",
                 "entrance": "stepLeft fadeIn",
-                "queue": true
+                "queue": true,
+                "class": "ie-opacity"
             },
             {
                 "content": "Études",
@@ -468,7 +486,8 @@
                 },
                 "top": "5.8333%",
                 "left": "21.4893%",
-                "entrance": "zoomIn"
+                "entrance": "zoomIn fadeIn",
+                "class": "ie-opacity"
             },
             {
                 "picture": {
@@ -549,7 +568,8 @@
                 "top": "19.6666%",
                 "left": "57.234%",
                 "entrance": "fadeIn stepLeft",
-                "queue": true
+                "queue": true,
+                "class": "ie-opacity"
             },
             {
                 "picture": {
@@ -559,7 +579,8 @@
                 "top": "65.1666%",
                 "left": "7.234%",
                 "entrance": "stepRight fadeIn",
-                "queue": true
+                "queue": true,
+                "class": "ie-opacity"
             },
             {
                 "picture": {
@@ -569,7 +590,8 @@
                 "top": "68.3333%",
                 "left": "39.7872%",
                 "entrance": "zoomOut fadeIn",
-                "queue": true
+                "queue": true,
+                "class": "ie-opacity"
             },
             {
                 "picture": {
@@ -579,7 +601,8 @@
                 "top": "68.1666%",
                 "left": "56.5957%",
                 "entrance": "zoomOut fadeIn",
-                "queue": true
+                "queue": true,
+                "class": "ie-opacity"
             },
             {
                 "picture": {
@@ -589,7 +612,8 @@
                 "top": "68.3333%",
                 "left": "73.1914%",
                 "entrance": "zoomOut fadeIn",
-                "queue": true
+                "queue": true,
+                "class": "ie-opacity"
             },
             {
                 "picture": {

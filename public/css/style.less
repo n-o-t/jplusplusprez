@@ -242,6 +242,19 @@ body {
             position:absolute; 
             z-index:@zIndexSpot;
             
+            &.pictos {
+                width:200px; /* IE8 FIX */                
+            }
+
+            .ie &.ie-opacity .js-animation-wrapper {
+                background:#e2e6e7;
+                .opacity(100);
+                * {
+                    background:#e2e6e7;
+                    filter: inherit;
+                }
+            }
+
             &.focus {
                 .box-shadow(red 0 0 20px)
             }
