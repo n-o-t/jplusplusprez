@@ -53,7 +53,7 @@
                 "height": 20,
                 "left": "2%",
                 "top": "3%",
-                "sub-title": "Lancer l'application"
+                "sub-title": "Lancez l'application"
             },
             {
                 "class": "legend",
@@ -61,7 +61,7 @@
                 "height": 20,
                 "left": "2%",
                 "top": "8%",
-                "sub-title": "Passer d'une page à l'autre"
+                "sub-title": "Passez d'une page à l'autre"
             },
             {
                 "class": "legend",
@@ -69,7 +69,7 @@
                 "height": 45,
                 "left": "2%",
                 "top": "13%",
-                "sub-title": "Sélectionner directement<br />un chapitre"
+                "sub-title": "Sélectionnez directement<br />un chapitre"
             }
         ]
     },
@@ -89,7 +89,8 @@
             {
                 "content": "Villes ou Etats ayant signé des accords<br />de coopération avec la région<Br />Île-de-France",
                 "top": "10.5%",
-                "left": "2.1276%"
+                "left": "2.1276%",
+                "class": "gray-dark"
             },
             {
                 "class": "tr",
@@ -97,7 +98,8 @@
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Nouakchott.7.10.pdf",
                 "top": "19%",
                 "left": "23.1914%",
-                "entrance": "stepRight fadeIn"
+                "entrance": "stepRight fadeIn",
+                "queue": true
             },
             {
                 "class": "tr",
@@ -105,15 +107,17 @@
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Montreal-Quebec.7.10.pdf",
                 "top": "26.1666%",
                 "left": "7.3404%",
-                "entrance": "stepRight fadeIn"
+                "entrance": "stepRight fadeIn",
+                "queue": true
             },
             {
                 "class": "tr",
-                "content": "<strong>Ville et état de<br />Sao Paulo</strong> (Brésil)",
+                "content": "<strong>Ville et État de<br />São Paulo</strong> (Brésil)",
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Sao_Paulo.7.10.pdf",
                 "top": "44%",
                 "left": "11.3829%",
-                "entrance": "stepRight fadeIn"
+                "entrance": "stepRight fadeIn",
+                "queue": true
             },
             {
                 "class": "tr",
@@ -121,61 +125,70 @@
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Santiago.7.10.pdf",
                 "top": "58.1666%",
                 "left": "5.7446%",
-                "entrance": "stepRight fadeIn"
+                "entrance": "stepRight fadeIn",
+                "queue": true
             },
             {
                 "content": "<strong>Région de Dakar</strong> (Sénégal)",
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Dakar.7.10.pdf",
                 "top": "71.8333%",
                 "left": "4.7872%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "content": "<strong>Ville de Beyrouth</strong> (Liban)",
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Beyrouth.7.10.pdf",
                 "top": "10.3333%",
                 "left": "58.7234%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "content": "<strong>Ville de Jérusalem-Est</strong>",
                 "top": "19.5%",
                 "left": "77.1276%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
-                "content": "<strong>Ville dErevan</strong> (Arménie)",
+                "content": "<strong>Ville d'Erevan</strong> (Arménie)",
                 "top": "30.6666%",
                 "left": "77.234%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "content": "<strong>Ville de Hanoi</strong> (Vietnam)",
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Hanoi.7.10.pdf",
                 "top": "41.3333%",
                 "left": "77.4468%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "content": "<strong>Commune urbaine<br />d'Antananarivo</strong> (Madagascar)",
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Antananarivo.07.10.pdf",
                 "top": "51.1666%",
                 "left": "77.3404%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "content": "<strong>Province du Gauteng</strong><br />(Afrique du sud)",
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Gauteng.7.10.pdf",
                 "top": "62.5%",
                 "left": "77.234%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "content": "<strong>Région de Kayes</strong> (Mali)",
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Kayes912.pdf",
                 "top": "72.3333%",
                 "left": "50.6382%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "class": "pictos",
@@ -190,77 +203,88 @@
                 "content": "<img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" /><img src=\"/img/international/graph_1-7.png\" alt=\"institutionnel\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" />",
                 "top": "35%",
                 "left": "13.2978%",
-                "entrance": "stepRight fadeIn"
+                "entrance": "stepRight fadeIn",
+                "queue": true
             },
             {
                 "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-6.png\" alt=\"recherche\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" />",
                 "top": "50%",
                 "left": "15.9574%",
-                "entrance": "stepRight fadeIn"
+                "entrance": "stepRight fadeIn",
+                "queue": true
             },
             {
                 "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-13.png\" alt=\"aménagement du territoire\" /><img src=\"/img/international/graph_1-4.png\" alt=\"transport\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" />",
                 "top": "64.3333%",
                 "left": "13.2978%",
-                "entrance": "stepRight fadeIn"
+                "entrance": "stepRight fadeIn",
+                "queue": true
             },
             {
                 "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-12.png\" alt=\"solidarité\" /><img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" />",
                 "top": "75.1666%",
                 "left": "13.1914%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-10.png\" alt=\"formation\" /><img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" />",
                 "top": "13.3333%",
                 "left": "58.617%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" />",
                 "top": "22%",
                 "left": "77.0212%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" /><img src=\"/img/international/graph_1-5.png\" alt=\"culture\" />",
                 "top": "33.6666%",
                 "left": "77.1276%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-4.png\" alt=\"transport\" /><img src=\"/img/international/graph_1-10.png\" alt=\"formation\" />",
                 "top": "44.3333%",
                 "left": "77.234%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" /><img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" /><img src=\"/img/international/graph_1-4.png\" alt=\"transport\" />",
                 "top": "56.8333%",
                 "left": "77.0212%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-8.png\" alt=\"développement économique\" /><img src=\"/img/international/graph_1-4.png\" alt=\"transport\" /><img src=\"/img/international/graph_1-6.png\" alt=\"recherche\" /><img src=\"/img/international/graph_1-11.png\" alt=\"tourisme\" />",
                 "top": "69.5%",
                 "left": "77.1276%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "class": "pictos",
                 "content": "<img src=\"/img/international/graph_1-2.png\" alt=\"environnement\" /><img src=\"/img/international/graph_1-3.png\" alt=\"santé\" /><img src=\"/img/international/graph_1-9.png\" alt=\"éducation\" /><img src=\"/img/international/graph_1-7.png\" alt=\"institutionnel\" />",
                 "top": "75.3333%",
                 "left": "50.4255%",
-                "entrance": "stepLeft fadeIn"
+                "entrance": "stepLeft fadeIn",
+                "queue": true
             },
             {
                 "picture": {
@@ -373,19 +397,19 @@
         "name": "Les aides à <strong>la mobilité internationale</strong>",
         "spots": [
             {
-                "class": "caps",
+                "class": "caps gray-darker bold",
                 "content": "Qui part ?",
                 "top": "12%",
                 "left": "6.1702%"
             },
             {
-                "class": "caps",
+                "class": "caps gray-darker",
                 "content": "Nombre de bénéficiaires / an ",
                 "top": "12%",
                 "left": "20.4255%"
             },
             {
-                "class": "caps",
+                "class": "caps gray-darker",
                 "content": "Budget 2013",
                 "top": "12%",
                 "left": "50.9574%"
@@ -450,8 +474,8 @@
                 "height": 90
             },
             {
-                "class": "caps",
-                "content": "<strong>Pour quoi faire ?</strong>",
+                "class": "caps gray-darker bold",
+                "content": "Pour quoi faire ?",
                 "top": "11.5%",
                 "left": "77.8723%"
             },
@@ -498,11 +522,13 @@
         "spots": [
             {
                 "title": "La Région reçoit trois sortes de<br /><strong>Fonds européens</strong> (2007-2013)",
+                "class": "gray-darker",
                 "top": "19.3333%",
                 "left": "2.0212%"
             },
             {
                 "content": "www.europeidf.fr",
+                "class": "gray-darker",
                 "href": "http://www.europeidf.fr",
                 "top": "23.8333%",
                 "left": "2.1276%"
@@ -565,6 +591,7 @@
         "spots": [
             {
                 "title": "Île-de-France, <strong>1re région d'installation</strong> des entreprises étrangères",
+                "class": "gray-darker",
                 "top": "14.3333%",
                 "left": "11.3829%"
             },

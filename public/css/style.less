@@ -244,10 +244,15 @@ body {
             position:absolute; 
             z-index:@zIndexSpot;
             
+
+            &.focus {
+                .box-shadow(red 0 0 20px)
+            }
+
             &.pictos {
                 width:200px; /* IE8 FIX */                
             }
-
+            
             .ie &.ie-opacity .js-animation-wrapper {
                 background:#e2e6e7;
                 .opacity(100);
@@ -257,9 +262,6 @@ body {
                 }
             }
 
-            &.focus {
-                .box-shadow(red 0 0 20px)
-            }
 
             &.launcher {
                 background:url("/img/common/btn_lancez.png") no-repeat 0 0;                
