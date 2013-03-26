@@ -327,6 +327,13 @@
                 "left": "70.851%",
                 "top": "13.5%",
                 "width": 190
+            },
+            {
+                "picture": {
+                    "src": "/img/international/graph_2-9.png"
+                },
+                "top": "91%",
+                "left": "2.8723%"
             }
         ]
     },
@@ -495,6 +502,13 @@
                 "entrance": "stepLeft fadeIn",
                 "queue": true,
                 "width": 205
+            },
+            {
+                "picture": {
+                    "src": "/img/international/graph_4-sources.png"
+                },
+                "top": "91.3333%",
+                "left": "2.6595%"
             }
         ]
     },
@@ -576,6 +590,14 @@
                 "left": "73.1914%",
                 "entrance": "zoomOut fadeIn",
                 "queue": true
+            },
+            {
+                "picture": {
+                    "src": "/img/international/graph_5-sources.png",
+                    "alt": "Source: Agence régionale de développement"
+                },
+                "top": "58.1666%",
+                "left": "97.9787%"
             }
         ]
     }

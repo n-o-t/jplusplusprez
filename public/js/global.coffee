@@ -243,11 +243,11 @@
       # Add a class to the body
       $body = $("body")      
       # Is this the first step ?
-      $body.toggleClass "js-first", currentStep is 0      
+      $body.toggleClass "js-first", currentStep is 0   
       # Is this the last step ?
       $body.toggleClass "js-last", currentStep is $uis.steps.length - 1
       # Update the menu
-      $uis.navitem.removeClass("active").eq(currentStep).addClass("active")
+      $uis.navitem.removeClass("active").filter("[data-step=#{currentStep}]").addClass("active")
       # Hides element with entrance
       $uis.steps.eq(currentStep).find(".spot[data-entrance] .js-animation-wrapper").addClass "hidden"      
       # Clear all spot animations
