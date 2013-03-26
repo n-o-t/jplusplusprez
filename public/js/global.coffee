@@ -296,23 +296,31 @@
       # Also, set the original style if needed
       $wrapper.stop().css(from).removeClass "hidden" 
       # Only if a "to" layout exists
-      if to?  
+      if to?     
+        # If there is a queue
+        queue++  if $elem.data("queue")?
         # Take the element entrance duration 
         # or default duration
-        delay = data.entranceDuration or defaultEntranceDuration        
-        # If there is a queue
-        queue++  if $elem.data("queue")             
-        # Wait a delay...
+        duration = data.entranceDuration or defaultEntranceDuration  
+
+        # explicite duration
+        if $elem.data("queue") > 1
+          entranceDelay = $elem.data("queue")
+        else
+          # calculate the entrance duration according the number of element before   
+          entranceDelay = duration * queue
+
+        # Wait a duration...
         $wrapper.t = setTimeout( 
           # Closure function to transmit "to"
           (
             (to)->
               ->          
                 # ...before animate the wrapper
-                $wrapper.animate to, delay       
+                $wrapper.animate to, duration       
           )(to)
         # ...and increase the queue
-        , delay * queue)
+        , entranceDelay)
 
 
   ###*
