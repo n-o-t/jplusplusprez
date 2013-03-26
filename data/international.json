@@ -294,7 +294,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_2-1.png"
+                    "src": "/img/international/graph_2-1.png",
+                    "alt": "Solidarité internationale :\n Budget: 540000€\n Objectif: Priorité au renforcement des institutions des pays du sud qui sont souvent les premières victimes des dérèglements mondiaux.\n Bénéficiaires: Organisations non gouvernementales, fondations u groupements d'intérêt public.\n"
                 },
                 "left": "8.617%",
                 "top": "13.5%",
@@ -302,7 +303,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_2-2.png"
+                    "src": "/img/international/graph_2-2.png",
+                    "alt": "Aramis (Aide Régionale aux Associations pour les Microprojets Internationaux de Solidarité) :\n Budget: 400000€\n Objectif: Opérations d'investissement en lien avec les objectifs du millénaire pour le développement.\n Bénéficiaires: Petites et moyennes associations franciliennes de solidarité internationale de plus d'un an d'existence.\n"
                 },
                 "left": "29.3617%",
                 "top": "13.5%",
@@ -310,7 +312,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_2-3.png"
+                    "src": "/img/international/graph_2-3.png",
+                    "alt": "Chantiers solidarité :\n Budget: 85000€\n Objectif: Projets déchantes interculturels\n Bénéficiaires: Jeunes Franciliens situés en territoire classé \"politique de la ville\"\n"
                 },
                 "left": "50.2127%",
                 "top": "13.5%",
@@ -318,7 +321,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_2-4.png"
+                    "src": "/img/international/graph_2-4.png",
+                    "alt": "Aide à la reconstruction (et au service des populations sinistrées) :\n Budget: 340000€\n Objectif: Interventions de \"post-urgence\" auprès des populations victimes de catastrophes naturelles ou de conflits armés\n Bénéficiaires: Sites et pays victimes de catastrophes.\n"
                 },
                 "left": "70.851%",
                 "top": "13.5%",
@@ -348,14 +352,9 @@
                 "left": "50.9574%"
             },
             {
-                "class": "caps",
-                "content": "<strong>Pour quoi faire ?</strong>",
-                "top": "11.5%",
-                "left": "77.8723%"
-            },
-            {
                 "picture": {
-                    "src": "/img/international/graph_3-1.png"
+                    "src": "/img/international/graph_3-1.png",
+                    "alt": "9220 Apprentis par an en 2013 avec un budget de 3,5 millions d'euros."
                 },
                 "top": "17.5%",
                 "left": "4.468%",
@@ -363,7 +362,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_3-2.png"
+                    "src": "/img/international/graph_3-2.png",
+                    "alt": "1015 Demandeurs d'emplois par an en 2013 avec un budget de 1,7 millions d'euros."
                 },
                 "top": "33.1666%",
                 "left": "4.468%",
@@ -372,7 +372,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_3-3.png"
+                    "src": "/img/international/graph_3-3.png",
+                    "alt": "4134 Étudiants par an en 2013 avec un budget de 8,4 millions d'euros."
                 },
                 "top": "47.8333%",
                 "left": "4.5744%",
@@ -381,7 +382,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_3-4.png"
+                    "src": "/img/international/graph_3-4.png",
+                    "alt": "1288 Lycéens par an en 2013 avec un budget de 1,2 millions d'euros."
                 },
                 "top": "64%",
                 "left": "4.468%",
@@ -390,12 +392,19 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_3-5.png"
+                    "src": "/img/international/graph_3-5.png",
+                    "alt": "6426 chercheurs par an en 2013"
                 },
                 "top": "79.5%",
                 "left": "4.5744%",
                 "entrance": "right",
                 "queue": true
+            },
+            {
+                "class": "caps",
+                "content": "<strong>Pour quoi faire ?</strong>",
+                "top": "11.5%",
+                "left": "77.8723%"
             },
             {
                 "picture": {
@@ -456,7 +465,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_4-2.png"
+                    "src": "/img/international/graph_4-2.png",
+                    "alt": "Fonds social européen (FSE) :\n535 millions d'euros dont 76 millions gérés en direct par la région.\nexemples: Espaces dynamiques insertion pour les jeunes Franciliens sortis du système scolaire sans qualification, aides à la mobilité des apprentis, formation des personnels de centre de formation d'apprentis"
                 },
                 "top": "7.1666%",
                 "left": "52.3404%",
@@ -466,7 +476,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_4-3.png"
+                    "src": "/img/international/graph_4-3.png",
+                    "alt": "Fonds européen agricole pour le développement rural (feader) :\n38 millions d'euros (feeder et reader ne sont pas gérés directement par la région, mais elle est cofinancer de projets menés dans le cadre de ces fonds)\n exemple: Aider les acteurs locaux des zones rurales ou périurbaines à s'organiser à l'échelle intercommunale sous forme de partenariats public-privé."
                 },
                 "top": "54.1666%",
                 "left": "3.1914%",
@@ -476,7 +487,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_4-4.png"
+                    "src": "/img/international/graph_4-4.png",
+                    "alt": "Fonds européen de développement régional (feder) :\n151 millions d'euros.\n exemples: fonds régional de co-investissement de la région Île-de-France (FRCI) à destination des jeunes PME innovantes), Amélioration de l'efficacité énergétique dans le logement social."
                 },
                 "top": "51.5%",
                 "left": "73.9361%",
@@ -517,7 +529,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_5-2.png"
+                    "src": "/img/international/graph_5-2.png",
+                    "alt": "États-Unis, avec 26,6% de part dans le total des projets\nAllemagne, avec 14,2% de part dans le total des projets\nRoyaume-Uni, avec 8,2% de part dans le total des projets\nItalie, avec 7,3% de part dans le total des projets\nJapon, avec 5,2% de part dans le total des projets\nSuisse, avec 3,9% de part dans le total des projets\nChine, avec 3,4% de part dans le total des projets\nSuède, avec 3,4% de part dans le total des projets\nBelgique, avec 3% de part dans le total des projets\nEspagne, avec 3% de part dans le total des projets"
                 },
                 "top": "19.6666%",
                 "left": "57.234%",
@@ -526,7 +539,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_5-4.png"
+                    "src": "/img/international/graph_5-4.png",
+                    "alt": "L'accueil de milliers de chercheurs:\n6413 chercheurs accueillis en 2012."
                 },
                 "top": "65.1666%",
                 "left": "7.234%",
@@ -535,7 +549,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_5-5.png"
+                    "src": "/img/international/graph_5-5.png",
+                    "alt": "Accueil des chercheurs étrangers= 700000 euros (budget 2013)."
                 },
                 "top": "68.3333%",
                 "left": "39.7872%",
@@ -544,7 +559,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_5-6.png"
+                    "src": "/img/international/graph_5-6.png",
+                    "alt": "L'Île-de-France représente la première concentration européenne de recherche et développement."
                 },
                 "top": "68.1666%",
                 "left": "56.5957%",
@@ -553,7 +569,8 @@
             },
             {
                 "picture": {
-                    "src": "/img/international/graph_5-7.png"
+                    "src": "/img/international/graph_5-7.png",
+                    "alt": "73 scientifiques étrangers de très haut niveau, accueillis aux chaires Blaise Pascal depuis 1996."
                 },
                 "top": "68.3333%",
                 "left": "73.1914%",
