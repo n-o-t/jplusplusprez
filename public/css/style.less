@@ -196,7 +196,11 @@ body {
         left:0;
         width:@containerWidth;
         height:@containerHeight;
+        overflow:hidden;
         
+        &.js-current {
+            overflow:visible;
+        }
         
         h2 {
             position:absolute;
@@ -216,7 +220,7 @@ body {
         }
         
         .spot-background, .step-background {
-            min-width:100%;
+            min-width:none;
             max-width:none;
             min-height:none;
             max-height:none;
@@ -242,17 +246,20 @@ body {
         .spot {
 
             position:absolute; 
-            z-index:@zIndexSpot;
-            
+            z-index:@zIndexSpot;                    
 
             &.focus {
                 .box-shadow(red 0 0 20px)
             }
 
             &.pictos {
-                width:200px; /* IE8 FIX */                
+                width:200px; /* IE8 FIX */   
             }
-            
+
+            &.fg {
+              z-index:@zIndexSpot + 5;      
+            }
+
             .ie &.ie-opacity .js-animation-wrapper {
                 background:#e2e6e7;
                 .opacity(100);

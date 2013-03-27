@@ -417,7 +417,9 @@
   ###*
    * Bind the windows rezie event
   ###
-  resize = -> stepsPosition()
+  resize = -> 
+    # stepsPosition()
+    # spotsPosition()
 
   ###*
    * Read the parameters into the location hash using the following format:
