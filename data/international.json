@@ -173,7 +173,8 @@
                 "top": "10.3333%",
                 "left": "58.7234%",
                 "entrance": "stepLeft fadeIn",
-                "queue": true
+                "queue": true,
+                "class": "fg"
             },
             {
                 "class": "pictos",
