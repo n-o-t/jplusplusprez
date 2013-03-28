@@ -515,13 +515,13 @@
         "spots": [
             {
                 "title": "La Région reçoit trois sortes de<br /><strong>Fonds européens</strong> (2007-2013)",
-                "class": "gray-darker",
+                "class": "gray-darker fg",
                 "top": "19.3333%",
                 "left": "2.0212%"
             },
             {
                 "content": "www.europeidf.fr",
-                "class": "gray-darker",
+                "class": "gray-darker fg",
                 "href": "http://www.europeidf.fr",
                 "top": "23.8333%",
                 "left": "2.1276%"

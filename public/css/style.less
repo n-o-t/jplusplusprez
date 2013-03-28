@@ -55,7 +55,8 @@ body {
     left:50%;    
     
     margin-left:@containerWidth/-2px;
-    margin-top:@containerHeight/-2px;        
+    margin-top:@containerHeight/-2px;  
+    
     
 
     .js-loading &:after {
@@ -197,7 +198,10 @@ body {
     width:@containerWidth;
     height:@containerHeight;
     
-    background:#e2e6e7 url("/img/common/bg.png") bottom center no-repeat;
+    background:#e2e6e7 url("/img/common/bg.png") repeat-x !important;
+    background-position: 0 bottom  !important;
+    background:#e2e6e7;
+    
     
     .step {
         position:absolute;
@@ -255,7 +259,8 @@ body {
         .spot {
 
             position:absolute; 
-            z-index:@zIndexSpot;                    
+            z-index:@zIndexSpot;   
+            background:none;                 
 
             &.focus {
                 .box-shadow(red 0 0 20px)
