@@ -160,7 +160,8 @@ body {
                 background:white; 
                 cursor:pointer;  
                 background:no-repeat center -80px;
-                .hide-text();              
+                .hide-text();  
+                .transition(~"left 0.7s, right 0.7s");          
                                
                 &:hover { background-position:center -160px; }
             }
@@ -168,13 +169,19 @@ body {
             .previous {
                 left:-1px;
                 background-image:url("/img/common/btn_prev.png");
-                .js-first &, .js-first &:hover { background-position:0 0; }
+                // .js-first &, .js-first &:hover { background-position:0 0; }
+                .js-first & {
+                    left:-65px;
+                }
             }
 
             .next {
                 right:0;
                 background-image:url("/img/common/btn_next.png");
-                .js-last &, .js-last &:hover { background-position:0 0; }
+                // .js-last &, .js-last &:hover { background-position:0 0; }
+                .js-last & {
+                    right:-65px;
+                }
             }
 
         }

@@ -34,7 +34,7 @@
             {
                 "class": "app-title",
                 "title": "Île-de-France",
-                "sub-title": "s'ouvrir<br />à l'international",
+                "sub-title": "S’ouvrir<br />à l’international",
                 "top": "76%",
                 "left": "1.2765%"
             },
@@ -50,10 +50,10 @@
             {
                 "class": "legend",
                 "background": "/img/common/howto_pic_lancez.png",
-                "height": 20,
+                "height": 22,
                 "left": "2%",
                 "top": "3%",
-                "sub-title": "Lancez l'application"
+                "sub-title": "Lancez l’application"
             },
             {
                 "class": "legend",
@@ -61,7 +61,7 @@
                 "height": 20,
                 "left": "2%",
                 "top": "8%",
-                "sub-title": "Passez d'une page à l'autre"
+                "sub-title": "Passez d’une page à l’autre"
             },
             {
                 "class": "legend",
@@ -234,7 +234,7 @@
             },
             {
                 "class": "fg",
-                "content": "<strong>Ville d'Erevan</strong> (Arménie)",
+                "content": "<strong>Ville d’Erevan</strong> (Arménie)",
                 "top": "30.6666%",
                 "left": "77.234%",
                 "entrance": "stepLeft fadeIn"
@@ -249,7 +249,7 @@
             },
             {
                 "class": "fg",
-                "content": "<strong>Commune urbaine<br />d'Antananarivo</strong> (Madagascar)",
+                "content": "<strong>Commune urbaine<br />d’Antananarivo</strong> (Madagascar)",
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Antananarivo.07.10.pdf",
                 "top": "51.1666%",
                 "left": "77.3404%",
@@ -294,8 +294,7 @@
                 },
                 "top": "48.3333%",
                 "left": "10.3191%",
-                "entrance": "stepUp fadeIn",
-                "queue": true,
+                "entrance": "stepUp fadeIn",                
                 "class": "ie-opacity",
                 "width": 160
             },
@@ -306,7 +305,7 @@
                 "top": "49%",
                 "left": "32.234%",
                 "entrance": "stepUp fadeIn",
-                "queue": true,
+                "queue": 300,
                 "class": "ie-opacity",
                 "width": 130
             },
@@ -317,7 +316,7 @@
                 "top": "45.8333%",
                 "left": "56.0638%",
                 "entrance": "stepUp fadeIn",
-                "queue": true,
+                "queue": 600,
                 "class": "ie-opacity",
                 "width": 80,
                 "height": 150
@@ -329,14 +328,14 @@
                 "top": "50.8333%",
                 "left": "71.8085%",
                 "entrance": "stepUp fadeIn",
-                "queue": true,
+                "queue": 900,
                 "class": "ie-opacity",
                 "width": 160
             },
             {
                 "picture": {
                     "src": "/img/international/graph_2-1.png",
-                    "alt": "Solidarité internationale :\n Budget: 540000€\n Objectif: Priorité au renforcement des institutions des pays du sud qui sont souvent les premières victimes des dérèglements mondiaux.\n Bénéficiaires: Organisations non gouvernementales, fondations u groupements d'intérêt public.\n"
+                    "alt": "Solidarité internationale :\n Budget: 540000€\n Objectif: Priorité au renforcement des institutions des pays du sud qui sont souvent les premières victimes des dérèglements mondiaux.\n Bénéficiaires: Organisations non gouvernementales, fondations u groupements d’intérêt public.\n"
                 },
                 "left": "8.617%",
                 "top": "13.5%",
@@ -345,7 +344,7 @@
             {
                 "picture": {
                     "src": "/img/international/graph_2-2.png",
-                    "alt": "Aramis (Aide Régionale aux Associations pour les Microprojets Internationaux de Solidarité) :\n Budget: 400000€\n Objectif: Opérations d'investissement en lien avec les objectifs du millénaire pour le développement.\n Bénéficiaires: Petites et moyennes associations franciliennes de solidarité internationale de plus d'un an d'existence.\n"
+                    "alt": "Aramis (Aide Régionale aux Associations pour les Microprojets Internationaux de Solidarité) :\n Budget: 400000€\n Objectif: Opérations d’investissement en lien avec les objectifs du millénaire pour le développement.\n Bénéficiaires: Petites et moyennes associations franciliennes de solidarité internationale de plus d’un an d’existence.\n"
                 },
                 "left": "29.3617%",
                 "top": "13.5%",
@@ -402,47 +401,51 @@
             {
                 "picture": {
                     "src": "/img/international/graph_3-1.png",
-                    "alt": "9220 Apprentis par an en 2013 avec un budget de 3,5 millions d'euros."
+                    "alt": "9220 Apprentis par an en 2013 avec un budget de 3,5 millions d’euros."
                 },
                 "top": "17.5%",
                 "left": "4.468%",
                 "entrance": "right",
+                "entrance-duration": 1000,
                 "width": 620,
                 "height": 90
             },
             {
                 "picture": {
                     "src": "/img/international/graph_3-2.png",
-                    "alt": "1015 Demandeurs d'emplois par an en 2013 avec un budget de 1,7 millions d'euros."
+                    "alt": "1015 Demandeurs d’emplois par an en 2013 avec un budget de 1,7 millions d’euros."
                 },
                 "top": "33.1666%",
                 "left": "4.468%",
                 "entrance": "right",
-                "queue": 200,
-                "width": 620,
-                "height": 90
-            },
-            {
-                "picture": {
-                    "src": "/img/international/graph_3-3.png",
-                    "alt": "4134 Étudiants par an en 2013 avec un budget de 8,4 millions d'euros."
-                },
-                "top": "47.8333%",
-                "left": "4.5744%",
-                "entrance": "right",
+                "entrance-duration": 1000,
                 "queue": 300,
                 "width": 620,
                 "height": 90
             },
             {
                 "picture": {
+                    "src": "/img/international/graph_3-3.png",
+                    "alt": "4134 Étudiants par an en 2013 avec un budget de 8,4 millions d’euros."
+                },
+                "top": "47.8333%",
+                "left": "4.5744%",
+                "entrance": "right",
+                "entrance-duration": 1000,
+                "queue": 600,
+                "width": 620,
+                "height": 90
+            },
+            {
+                "picture": {
                     "src": "/img/international/graph_3-4.png",
-                    "alt": "1288 Lycéens par an en 2013 avec un budget de 1,2 millions d'euros."
+                    "alt": "1288 Lycéens par an en 2013 avec un budget de 1,2 millions d’euros."
                 },
                 "top": "64%",
                 "left": "4.468%",
                 "entrance": "right",
-                "queue": 400,
+                "entrance-duration": 1000,
+                "queue": 900,
                 "width": 620,
                 "height": 90
             },
@@ -454,7 +457,8 @@
                 "top": "79.5%",
                 "left": "4.5744%",
                 "entrance": "right",
-                "queue": 500,
+                "entrance-duration": 1000,
+                "queue": 1200,
                 "width": 620,
                 "height": 90
             },
@@ -471,7 +475,7 @@
                 "top": "15.8333%",
                 "left": "71.0638%",
                 "entrance": "stepLeft fadeIn",
-                "queue": 800,
+                "queue": 2100,
                 "class": "ie-opacity",
                 "width": 230,
                 "height": 490
@@ -479,31 +483,35 @@
             {
                 "content": "Études",
                 "entrance": "stepRight fadeIn",
+                "queue": 2100,
                 "top": "19.5%",
                 "left": "77.9787%"
             },
             {
                 "content": "Séjours<br />linguistiques",
                 "entrance": "stepRight fadeIn",
+                "queue": 2100,
                 "top": "43.6666%",
                 "left": "84.2553%"
             },
             {
                 "content": "Stages",
                 "entrance": "stepRight fadeIn",
+                "queue": 2100,
                 "top": "58.3333%",
                 "left": "75.4255%"
             },
             {
                 "content": "Chantiers<br />Solidarité",
                 "entrance": "stepRight fadeIn",
+                "queue": 2100,
                 "top": "74.6666%",
                 "left": "84.6808%"
             }
         ]
     },
     {
-        "name": "En lien direct avec<br /><strong>l'Union européenne</strong>",
+        "name": "En lien direct avec <br /><strong>l’Union européenne</strong>",
         "spots": [
             {
                 "title": "La Région reçoit trois sortes de<br /><strong>Fonds européens</strong> (2007-2013)",
@@ -532,7 +540,7 @@
             {
                 "picture": {
                     "src": "/img/international/graph_4-2.png",
-                    "alt": "Fonds social européen (FSE) :\n535 millions d'euros dont 76 millions gérés en direct par la région.\nexemples: Espaces dynamiques insertion pour les jeunes Franciliens sortis du système scolaire sans qualification, aides à la mobilité des apprentis, formation des personnels de centre de formation d'apprentis"
+                    "alt": "Fonds social européen (FSE) :\n535 millions d’euros dont 76 millions gérés en direct par la région.\nexemples: Espaces dynamiques insertion pour les jeunes Franciliens sortis du système scolaire sans qualification, aides à la mobilité des apprentis, formation des personnels de centre de formation d’apprentis"
                 },
                 "top": "7.1666%",
                 "left": "52.3404%",
@@ -543,7 +551,7 @@
             {
                 "picture": {
                     "src": "/img/international/graph_4-3.png",
-                    "alt": "Fonds européen agricole pour le développement rural (feader) :\n38 millions d'euros (feeder et reader ne sont pas gérés directement par la région, mais elle est cofinancer de projets menés dans le cadre de ces fonds)\n exemple: Aider les acteurs locaux des zones rurales ou périurbaines à s'organiser à l'échelle intercommunale sous forme de partenariats public-privé."
+                    "alt": "Fonds européen agricole pour le développement rural (feader) :\n38 millions d’euros (feeder et reader ne sont pas gérés directement par la région, mais elle est cofinancer de projets menés dans le cadre de ces fonds)\n exemple: Aider les acteurs locaux des zones rurales ou périurbaines à s'organiser à l’échelle intercommunale sous forme de partenariats public-privé."
                 },
                 "top": "54.1666%",
                 "left": "3.1914%",
@@ -554,7 +562,7 @@
             {
                 "picture": {
                     "src": "/img/international/graph_4-4.png",
-                    "alt": "Fonds européen de développement régional (feder) :\n151 millions d'euros.\n exemples: fonds régional de co-investissement de la région Île-de-France (FRCI) à destination des jeunes PME innovantes), Amélioration de l'efficacité énergétique dans le logement social."
+                    "alt": "Fonds européen de développement régional (feder) :\n151 millions d’euros.\n exemples: fonds régional de co-investissement de la région Île-de-France (FRCI) à destination des jeunes PME innovantes), Amélioration de l’efficacité énergétique dans le logement social."
                 },
                 "top": "51.5%",
                 "left": "73.9361%",
@@ -572,10 +580,10 @@
         ]
     },
     {
-        "name": "Terre <strong>d'attractivité internationale</strong>",
+        "name": "Terre <strong>d’attractivité internationale</strong>",
         "spots": [
             {
-                "title": "Île-de-France, <strong>1re région d'installation</strong> des entreprises étrangères",
+                "title": "Île-de-France, <strong>1<sup>re</sup> région d’installation</strong> des entreprises étrangères",
                 "class": "gray-darker",
                 "top": "14.3333%",
                 "left": "11.3829%"
@@ -601,7 +609,6 @@
                 "top": "21%",
                 "left": "1.8085%",
                 "entrance": "fadeIn zoomOut",
-                "queue": true,
                 "width": 550,
                 "height": 300
             },
@@ -620,7 +627,7 @@
             {
                 "picture": {
                     "src": "/img/international/graph_5-4.png",
-                    "alt": "L'accueil de milliers de chercheurs:\n6413 chercheurs accueillis en 2012."
+                    "alt": "L’accueil de milliers de chercheurs:\n6413 chercheurs accueillis en 2012."
                 },
                 "top": "65.1666%",
                 "left": "7.234%",
@@ -637,19 +644,21 @@
                 "top": "68.3333%",
                 "left": "39.7872%",
                 "entrance": "zoomOut fadeIn",
-                "queue": true,
+                "entrance-duration": 400,
+                "queue": 1800,
                 "class": "ie-opacity",
                 "width": 150
             },
             {
                 "picture": {
                     "src": "/img/international/graph_5-6.png",
-                    "alt": "L'Île-de-France représente la première concentration européenne de recherche et développement."
+                    "alt": "L’Île-de-France représente la première concentration européenne de recherche et développement."
                 },
                 "top": "68.1666%",
                 "left": "56.5957%",
                 "entrance": "zoomOut fadeIn",
-                "queue": true,
+                "entrance-duration": 400,
+                "queue": 2200,
                 "class": "ie-opacity",
                 "width": 150
             },
@@ -661,7 +670,8 @@
                 "top": "68.3333%",
                 "left": "73.1914%",
                 "entrance": "zoomOut fadeIn",
-                "queue": true,
+                "entrance-duration": 400,
+                "queue": 2600,
                 "class": "ie-opacity",
                 "width": 150
             },
