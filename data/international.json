@@ -87,7 +87,97 @@
                 "origin": "center"
             },
             {
-                "content": "Villes ou Etats ayant signé des accords<br />de coopération avec la région<Br />Île-de-France",
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Nouakchott.7.10.pdf",
+                "top": "50%",
+                "left": "44.0425%",
+                "class": "fg",
+                "style": "z-index:9999999",
+                "width": 10,
+                "height": 10
+            },
+            {
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Montreal-Quebec.7.10.pdf",
+                "top": "37.8333%",
+                "left": "33.2978%",
+                "class": "fg",
+                "style": "z-index:9999999",
+                "width": 10,
+                "height": 10
+            },
+            {
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Sao_Paulo.7.10.pdf",
+                "top": "66.1666%",
+                "left": "37.9787%",
+                "class": "fg",
+                "style": "z-index:9999999",
+                "width": 10,
+                "height": 10
+            },
+            {
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Santiago.7.10.pdf",
+                "top": "70.3333%",
+                "left": "32.234%",
+                "class": "fg",
+                "style": "z-index:9999999",
+                "width": 10,
+                "height": 10
+            },
+            {
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Dakar.7.10.pdf",
+                "top": "53.1666%",
+                "left": "44.1489%",
+                "class": "fg",
+                "style": "z-index:9999999",
+                "width": 10,
+                "height": 10
+            },
+            {
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Beyrouth.7.10.pdf",
+                "top": "47.1666%",
+                "left": "55.3191%",
+                "class": "fg",
+                "style": "z-index:9999999",
+                "width": 10,
+                "height": 10
+            },
+            {
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Hanoi.7.10.pdf",
+                "top": "50.6666%",
+                "left": "71.0638%",
+                "class": "fg",
+                "style": "z-index:9999999",
+                "width": 10,
+                "height": 10
+            },
+            {
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Antananarivo.07.10.pdf",
+                "top": "65.1666%",
+                "left": "57.9787%",
+                "class": "fg",
+                "style": "z-index:9999999",
+                "width": 10,
+                "height": 10
+            },
+            {
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Gauteng.7.10.pdf",
+                "top": "68.6666%",
+                "left": "53.0851%",
+                "class": "fg",
+                "style": "z-index:9999999",
+                "width": 10,
+                "height": 10
+            },
+            {
+                "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Kayes912.pdf",
+                "top": "50.8333%",
+                "left": "45.2127%",
+                "class": "fg",
+                "style": "z-index:9999999",
+                "width": 10,
+                "height": 10
+            },
+            {
+                "content": "Villes ou États ayant signé des accords<br />de coopération avec la Région<Br />Île-de-France",
                 "top": "10.5%",
                 "left": "2.1276%",
                 "class": "gray-dark"
@@ -294,7 +384,7 @@
                 },
                 "top": "48.3333%",
                 "left": "10.3191%",
-                "entrance": "stepUp fadeIn",                
+                "entrance": "stepUp fadeIn",
                 "class": "ie-opacity",
                 "width": 160
             },
