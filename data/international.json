@@ -191,7 +191,7 @@
                 "entrance": "stepRight fadeIn"
             },
             {
-                "class": "fg",
+                "class": "fg tr",
                 "content": "<strong>Ville de Montréal<br />et province du Québec</strong><br />(Canada)",
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Montreal-Quebec.7.10.pdf",
                 "top": "26.1666%",
@@ -199,7 +199,7 @@
                 "entrance": "stepRight fadeIn"
             },
             {
-                "class": "fg",
+                "class": "fg tr",
                 "content": "<strong>Ville et État de<br />São Paulo</strong> (Brésil)",
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Sao_Paulo.7.10.pdf",
                 "top": "44%",
@@ -207,7 +207,7 @@
                 "entrance": "stepRight fadeIn"
             },
             {
-                "class": "fg",
+                "class": "fg tr",
                 "content": "<strong>Région métropolitaine de<br />Santiago du Chili</strong> (Chili)",
                 "href": "http://www.iledefrance.fr/fileadmin/contrib_folder/Rubriques/Europe-International/Santiago.7.10.pdf",
                 "top": "58.1666%",
@@ -573,6 +573,7 @@
             {
                 "content": "Études",
                 "entrance": "stepRight fadeIn",
+                "style": "font-size:13px",
                 "queue": 2100,
                 "top": "19.5%",
                 "left": "77.9787%"
@@ -580,6 +581,7 @@
             {
                 "content": "Séjours<br />linguistiques",
                 "entrance": "stepRight fadeIn",
+                "style": "font-size:13px",
                 "queue": 2100,
                 "top": "43.6666%",
                 "left": "84.2553%"
@@ -587,6 +589,7 @@
             {
                 "content": "Stages",
                 "entrance": "stepRight fadeIn",
+                "style": "font-size:13px",
                 "queue": 2100,
                 "top": "58.3333%",
                 "left": "75.4255%"
@@ -594,6 +597,7 @@
             {
                 "content": "Chantiers<br />Solidarité",
                 "entrance": "stepRight fadeIn",
+                "style": "font-size:13px",
                 "queue": 2100,
                 "top": "74.6666%",
                 "left": "84.6808%"
