@@ -35,7 +35,7 @@
                 "title" : "Journalism++",
                 "entrance" : "fadeIn",
                 "origin": "center",
-                "top" : "50%",
+                "top" : "40%",
                 "left" : "50%",
                 "queue" : true
             },
@@ -44,7 +44,7 @@
                 "entrance": "fadeIn",
                 "queue" : true,
                 "origin": "center",
-                "top" : "53%",
+                "top" : "43%",
                 "left" : "50%"
             },
             {
@@ -53,7 +53,7 @@
                 "entrance": "fadeIn",
                 "queue" : true,
                 "origin": "center",
-                "top" : "58%",
+                "top" : "48%",
                 "left" : "40%"
             },
             {
@@ -61,7 +61,7 @@
                 "entrance": "fadeIn",
                 "queue" : true,
                 "origin": "center",
-                "top" : "58%",
+                "top" : "48%",
                 "left" : "55%"
             },
             {
@@ -69,24 +69,49 @@
                 "entrance": "fadeIn",
                 "queue" : true,
                 "origin": "center",
-                "top" : "58%",
+                "top" : "48%",
                 "left" : "65%"
             },
             {
-                "picture": {
-                    "src": "/img/jplusplus/nkb.jpeg",
-                    "alt" : "Nicolas Kayser-Bril"
-                },
+                "title" : "coucou ! on est juste dessous !",
                 "entrance": "fadeIn",
                 "queue" : true,
                 "origin": "center",
-                "top" : "70%",
-                "left" : "55%"
+                "top" : "60%",
+                "left" : "50%"
             },
             {
-                "title" : "Nicolas Kayser-Bril<br />CEO • Data-journaliste",
-                
-            }   
+                "content" : "<img src=\"/img/jplusplus/nkb.jpg\" class=\"pp\"/><br />Nicolas<br />Kayser-Bril<br />CEO • Data-journaliste<br />@nicolaskb",
+                "entrance": "fadeIn",
+                "queue" : true,
+                "origin": "center",
+                "top" : "80%",
+                "left" : "20%"
+            },
+            {
+                "content" : "<img src=\"/img/jplusplus/pr.jpg\" class=\"pp\"/><br />Pierre<br />Romera<br />CTO • Développeur<br />@pirhoo",
+                "entrance": "fadeIn",
+                "queue" : true,
+                "origin": "center",
+                "top" : "80%",
+                "left" : "40%"
+            },
+            {
+                "content" : "<img src=\"/img/jplusplus/alb.jpg\" class=\"pp\"/><br />Anne-Lise<br />Bouyer<br />Chef de projet<br />@annelisebouyer",
+                "entrance": "fadeIn",
+                "queue" : true,
+                "origin": "center",
+                "top" : "80%",
+                "left" : "60%"
+            },
+            {
+                "content" : "<img src=\"/img/jplusplus/ed.jpg\" class=\"pp\"/><br />Edouard<br />Richard<br />Développeur<br />@vied12",
+                "entrance": "fadeIn",
+                "queue" : true,
+                "origin": "center",
+                "top" : "80%",
+                "left" : "80%"
+            }
         ]
     }
 ]

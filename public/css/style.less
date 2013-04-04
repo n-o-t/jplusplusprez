@@ -2,6 +2,7 @@
 @import "./vendor/bootstrap/variables.less";
 @import "./vendor/bootstrap/mixins.less";
 @import "./tools.less";
+@import "http://jplusplus.org/stylesheets/fonts/dinl.css";
 
 @zIndexPicture : 10;
 @zIndexTail    : @zIndexPicture+10;
@@ -18,7 +19,7 @@ body {
     margin:0;
     padding:0;
     overflow:hidden;
-    font: 14px arial, "Lucida Grande", Helvetica, sans-serif;
+    font: 14px "Dinl", "Lucida Grande", Helvetica, sans-serif;
     background:@white;
     color:#404040;    
     
@@ -357,3 +358,17 @@ body {
 
     }
 }
+/******************************/
+/* begin jplusplus custom css */
+/* autor : fabien martin 
+/* date  : 2013 04 04
+/******************************/
+.pp {
+    @ppsize : 100px;
+    width: @ppsize;
+    height: @ppsize;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+    border: 5px solid rgba(255, 255, 255,0);
+}
+
