@@ -105,5 +105,5 @@ fadeIn | Fading entrance
 
 <a name="debug" />
 ### Debug and spots positionning
-To set spots at a precise position, you can activate the debug mode by adding the debug parameter to your url
-```?debug ```
+To set spots at a precise position, you can activate the debug mode by adding ```?debug ``` to your url
+
