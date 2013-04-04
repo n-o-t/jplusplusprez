@@ -18,7 +18,7 @@
         ]
     },
     {
-        "name": "comment ça travaille chez J++",
+        "name": "comment ça travaille chez J++ ?",
         "spots": [
             {
                 "background": "/img/jplusplus/logo-jplusplus400x335.png",
@@ -32,20 +32,61 @@
                 "class": "ie-opacity"
             },
             {
-                "title" : "Journalism++"
+                "title" : "Journalism++",
+                "entrance" : "fadeIn",
+                "origin": "center",
+                "top" : "50%",
+                "left" : "50%",
+                "queue" : true
             },
             {
-                "title" : "="
+                "title" : "=",
+                "entrance": "fadeIn",
+                "queue" : true,
+                "origin": "center",
+                "top" : "53%",
+                "left" : "50%"
             },
             {
-                "title" : "Open source services"
+                "title" : "Open source services",
+                "href"  : "http://fr.wikipedia.org/wiki/Open_source",
+                "entrance": "fadeIn",
+                "queue" : true,
+                "origin": "center",
+                "top" : "58%",
+                "left" : "40%"
             },
             {
-                "title" : "datavisualization"
+                "title" : "datavisualization",
+                "entrance": "fadeIn",
+                "queue" : true,
+                "origin": "center",
+                "top" : "58%",
+                "left" : "55%"
             },
             {
-                "title" : "training"
-            }
+                "title" : "training",
+                "entrance": "fadeIn",
+                "queue" : true,
+                "origin": "center",
+                "top" : "58%",
+                "left" : "65%"
+            },
+            {
+                "picture": {
+                    "src": "/img/jplusplus/nkb.jpeg",
+                    "alt" : "Nicolas Kayser-Bril"
+                },
+                "entrance": "fadeIn",
+                "queue" : true,
+                "origin": "center",
+                "top" : "70%",
+                "left" : "55%"
+            },
+            {
+                "title" : "Nicolas Kayser-Bril<br />CEO • Data-journaliste",
+                
+            }   
         ]
     }
 ]
