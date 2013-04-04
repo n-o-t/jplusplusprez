@@ -182,5 +182,53 @@
             }
 
         ]
+    },
+    {
+        "name"  : "où ?",
+        "spots": [
+            {
+                "background" : "img/jplusplus/map.jpg",
+                "width" : "940",
+                "height" : "600",
+                "entrance"   : "fadeIn"
+            },
+            {
+               "title" : "Paris", 
+               "href"  : "http://paris.jplusplus.org/",
+               "entrance": "fadeIn",
+               "queue" : true,
+               "origin": "left",
+               "top" : "50%",
+               "left" : "50%"
+            },
+            {
+               "title" : "Berlin", 
+               "href"  : "http://berlin.jplusplus.org/",
+               "entrance": "fadeIn",
+               "queue" : true,
+               "origin": "left",
+               "top" : "36%",
+               "left" : "62%"
+            },
+            {
+               "title" : "Europe/Afrique",
+               "entrance": "fadeIn",
+               "queue" : true,
+               "origin": "left",
+               "top" : "80%",
+               "left" : "20%",
+               "content" : "Avec des avions et des trains qui bougent!"
+            },
+            {
+               "title" : "Les Internets",
+               "entrance": "fadeIn",
+               "queue" : true,
+               "origin": "left",
+               "top" : "80%",
+               "left" : "60%",
+               "href"  : "http://www.jplusplus.org/",
+               "content" : " http://jplusplus.org/"
+            }
+        ]
     }
 ]
