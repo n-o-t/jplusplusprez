@@ -94,7 +94,7 @@
                 "queue" : true,
                 "origin": "center",
                 "top" : "80%",
-                "left" : "40%"
+                "left" : "35%"
             },
             {
                 "content" : "<img src=\"/img/jplusplus/alb.jpg\" class=\"pp\"/><br />Anne-Lise<br />Bouyer<br />Chef de projet<br />@annelisebouyer",
@@ -102,7 +102,7 @@
                 "queue" : true,
                 "origin": "center",
                 "top" : "80%",
-                "left" : "60%"
+                "left" : "50%"
             },
             {
                 "content" : "<img src=\"/img/jplusplus/ed.jpg\" class=\"pp\"/><br />Edouard<br />Richard<br />Développeur<br />@vied12",
@@ -110,8 +110,77 @@
                 "queue" : true,
                 "origin": "center",
                 "top" : "80%",
+                "left" : "65%"
+            },
+            {
+                "content" : "<img src=\"/img/jplusplus/pb.jpg\" class=\"pp\"/><br />Pierre<br />Bellon<br />Développeur<br />@Toutenrab",
+                "entrance": "fadeIn",
+                "queue" : true,
+                "origin": "center",
+                "top" : "80%",
                 "left" : "80%"
             }
+        ]
+    },
+    {
+        "name": "avec quoi ?",
+        "spots": [
+            {
+                "background" : "img/jplusplus/pony.png",
+                "width" : "940",
+                "height" : "600"
+            },
+            {
+                "title" : "Django / Python",
+                "content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "entrance": "fadeIn",
+                "origin": "left",
+                "top" : "15%",
+                "left" : "10%",
+                "width"  :"700px",
+                "height" : "auto"
+            },
+            {
+                "title" : "Coffeescript",
+                "content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "entrance": "fadeIn",
+                "origin": "left",
+                "top" : "35%",
+                "left" : "10%",
+                "width"  :"700px",
+                "height" : "auto"
+            },
+            {
+                "title" : "Less",
+                "content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "entrance": "fadeIn",
+                "origin": "left",
+                "top" : "55%",
+                "left" : "10%",
+                "width"  :"700px",
+                "height" : "auto"
+            },
+            {
+                "title" : "ice tea",
+                "content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "entrance": "fadeIn",
+                "origin": "left",
+                "top" : "75%",
+                "left" : "10%",
+                "width"  :"320px",
+                "height" : "auto"
+            },
+            {
+                "title" : "jamón y cerveza",
+                "content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                "entrance": "fadeIn",
+                "origin": "left",
+                "top" : "75%",
+                "left" : "50%",
+                "width"  :"320px",
+                "height" : "auto"
+            }
+
         ]
     }
 ]
