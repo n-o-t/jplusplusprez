@@ -1,0 +1,51 @@
+[
+    {
+        "name": "launcher",
+        "no-index": true,
+        "no-title": true,
+        "spots": [
+            {
+                "background": "/img/jplusplus/logo-jplusplus400x335.png",
+                "width": 400,
+                "height": 335,
+                "left": "50%",
+                "top": "50%",
+                "origin": "center",
+                "entrance": "fadeIn",
+                "entrance-duration": 1000,
+                "class": "ie-opacity"
+            }
+        ]
+    },
+    {
+        "name": "comment ça travaille chez J++",
+        "spots": [
+            {
+                "background": "/img/jplusplus/logo-jplusplus400x335.png",
+                "width": 400,
+                "height": 335,
+                "left": "50%",
+                "top": "50%",
+                "origin": "center",
+                "entrance": "fadeIn",
+                "entrance-duration": 1000,
+                "class": "ie-opacity"
+            },
+            {
+                "title" : "Journalism++"
+            },
+            {
+                "title" : "="
+            },
+            {
+                "title" : "Open source services"
+            },
+            {
+                "title" : "datavisualization"
+            },
+            {
+                "title" : "training"
+            }
+        ]
+    }
+]
