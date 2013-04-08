@@ -252,17 +252,41 @@
         "spots": [
             {
                 "title" : "Des médias",
+                "href" : "http://datawrapper.de/",
                 "entrance"  : "fadeIn",
                 "origin" : "left",
                 "left"   : "10%",
                 "top"    : "20%"
             },
             {
-                "title" : "Datawrapper",
-                "href" : "http://datawrapper.de/",
-                "origin" : "left",
-                "left"   : "10%",
-                "top"    : "30%"
+                "content"   : "The Guardian",
+                "href"      : "http://www.guardian.co.uk/politics/datablog/2013/apr/08/britain-changed-margaret-thatcher-charts",
+                "origin"    : "left",
+                "top"       : "25%",
+                "left"      : "10%"
+            },
+            {
+                "content"   : "Le Monde",
+                "href"      : "http://www.lemonde.fr/societe/article/2013/03/21/manif-pour-tous-la-grande-illusion_1850515_3224.html",
+                "origin"    : "left",
+                "top"       : "30%",
+                "left"      : "10%"
+            },
+             {
+                "content"   : "L'Équipe",
+                "href"      : "http://www.lequipe.fr/Football/Actualites/Test/359190",
+                "origin"    : "left",
+                "top"       : "35%",
+                "left"      : "10%"
+            },
+            {
+                "content"   : "<span class=\"hidden\"><img src=\"img/jplusplus/cases/dw-the-guardian.jpg\" /></span>"
+            },
+            {
+                "content"   : "<span class=\"hidden\"><img src=\"img/jplusplus/cases/dw-le-monde.jpg\" /></span>"
+            },
+            {
+                "content"   : "<span class=\"hidden\"><img src=\"img/jplusplus/cases/dw-l-equipe.jpg\" /></span>"
             }
 
         ]
