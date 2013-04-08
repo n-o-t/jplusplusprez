@@ -107,7 +107,7 @@
                 "href"  : "https://twitter.com/Pirhoo"
             },
             {
-                "content" : "<img src=\"/img/jplusplus/alb.jpg\" class=\"pp\"/><br /><div class=\"w-130p center\">Anne-Lise<br />Bouyer<br />Chef de projet<br /><span class=\"twt\">@annelisebouye</span>r</div>",
+                "content" : "<img src=\"/img/jplusplus/alb.jpg\" class=\"pp\"/><br /><div class=\"w-130p center\">Anne-Lise<br />Bouyer<br />Chef de projet<br /><span class=\"twt\">@annelisebouyer</span></div>",
                 "entrance": "fadeIn",
                 "queue" : true,
                 "entrance-duration": 300,
@@ -252,7 +252,6 @@
         "spots": [
             {
                 "title" : "Des médias",
-                "href" : "http://datawrapper.de/",
                 "entrance"  : "fadeIn",
                 "origin" : "left",
                 "left"   : "10%",
@@ -287,6 +286,45 @@
             },
             {
                 "content"   : "<span class=\"hidden\"><img src=\"img/jplusplus/cases/dw-l-equipe.jpg\" /></span>"
+            },
+            {
+                "title" : "Des institutions",
+                "entrance"  : "fadeIn",
+                "origin" : "left",
+                "left"   : "10%",
+                "top"    : "50%"
+            },
+            {
+                "content"   : "Ile de France",
+                "href"      : "http://cartolycees.iledefrance.fr/",
+                "origin"    : "left",
+                "top"       : "55%",
+                "left"      : "10%"
+            },
+            {
+                "content"   : "Sciences Po Paris",
+                "origin"    : "left",
+                "top"       : "60%",
+                "left"      : "10%"
+            },
+             {
+                "content"   : "ESJ Lille",
+                "origin"    : "left",
+                "top"       : "65%",
+                "left"      : "10%"
+            },
+            {
+                "title" : "Des journalistes",
+                "entrance"  : "fadeIn",
+                "origin" : "left",
+                "left"   : "10%",
+                "top"    : "80%"
+            },
+            {
+                "content"   : "<a href=\"http://desdonneespourlautisme.herokuapp.com\">Des Données pour l'autisme</a>, un projet de <a href=\"https://twitter.com/dbrunon\">Damien Brunon</a>, incubé chez J++",
+                "origin"    : "left",
+                "top"       : "85%",
+                "left"      : "10%"
             }
 
         ]
