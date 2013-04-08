@@ -3,6 +3,7 @@
         "name": "launcher",
         "no-index": true,
         "no-title": true,
+        "title" : "Journalism ++",
         "spots": [
             {
                 "background": "/img/jplusplus/logo-jplusplus400x335.png",
