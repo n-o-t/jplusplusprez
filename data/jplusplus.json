@@ -35,6 +35,7 @@
                 "title" : "Journalism++",
                 "entrance" : "fadeIn",
                 "origin": "center",
+                "entrance-duration": 300,
                 "top" : "40%",
                 "left" : "50%",
                 "queue" : true
@@ -43,82 +44,97 @@
                 "title" : "=",
                 "entrance": "fadeIn",
                 "queue" : true,
+                "entrance-duration": 300,
                 "origin": "center",
                 "top" : "43%",
                 "left" : "50%"
             },
             {
-                "title" : "Open source services",
+                "content" : "<span class=\"fx-txt-shadow\">Open source services</span>",
                 "href"  : "http://fr.wikipedia.org/wiki/Open_source",
                 "entrance": "fadeIn",
                 "queue" : true,
+                "entrance-duration": 300,
                 "origin": "center",
                 "top" : "48%",
                 "left" : "40%"
             },
             {
-                "title" : "datavisualization",
+                "content" : "<span class=\"fx-txt-shadow\">datavisualization</span>",
                 "entrance": "fadeIn",
                 "queue" : true,
+                "entrance-duration": 300,
                 "origin": "center",
                 "top" : "48%",
                 "left" : "55%"
             },
             {
-                "title" : "training",
+                "content" : "<span class=\"fx-txt-shadow\">training</span>",
                 "entrance": "fadeIn",
                 "queue" : true,
+                "entrance-duration": 300,
                 "origin": "center",
                 "top" : "48%",
                 "left" : "65%"
             },
             {
-                "title" : "coucou ! on est juste dessous !",
+                "content" : "<span class=\"fx-txt-shadow\">coucou ! on est juste dessous !</span>",
                 "entrance": "fadeIn",
                 "queue" : true,
+                "entrance-duration": 300,
                 "origin": "center",
                 "top" : "60%",
                 "left" : "50%"
             },
             {
-                "content" : "<img src=\"/img/jplusplus/nkb.jpg\" class=\"pp\"/><br />Nicolas<br />Kayser-Bril<br />CEO • Data-journaliste<br />@nicolaskb",
+                "content" : "<img src=\"/img/jplusplus/nkb.jpg\" class=\"pp\"/><br /><div class=\"w-130p center\">Nicolas<br />Kayser-Bril<br />CEO • Data-journaliste<br /><span class=\"twt\">@nicolaskb</span></div>",
                 "entrance": "fadeIn",
                 "queue" : true,
+                "entrance-duration": 300,
                 "origin": "center",
                 "top" : "80%",
-                "left" : "20%"
+                "left" : "20%",
+                "href"  : "https://twitter.com/nicolaskb"
             },
             {
-                "content" : "<img src=\"/img/jplusplus/pr.jpg\" class=\"pp\"/><br />Pierre<br />Romera<br />CTO • Développeur<br />@pirhoo",
+                "content" : "<img src=\"/img/jplusplus/pr.jpg\" class=\"pp\"/><br /><div class=\"w-130p center\">Pierre<br />Romera<br />CTO • Développeur<br /><span class=\"twt\">@pirhoo</span></div>",
                 "entrance": "fadeIn",
                 "queue" : true,
+                "entrance-duration": 300,
                 "origin": "center",
                 "top" : "80%",
-                "left" : "35%"
+                "left" : "35%",
+                "href"  : "https://twitter.com/Pirhoo"
             },
             {
-                "content" : "<img src=\"/img/jplusplus/alb.jpg\" class=\"pp\"/><br />Anne-Lise<br />Bouyer<br />Chef de projet<br />@annelisebouyer",
+                "content" : "<img src=\"/img/jplusplus/alb.jpg\" class=\"pp\"/><br /><div class=\"w-130p center\">Anne-Lise<br />Bouyer<br />Chef de projet<br /><span class=\"twt\">@annelisebouye</span>r</div>",
                 "entrance": "fadeIn",
                 "queue" : true,
+                "entrance-duration": 300,
                 "origin": "center",
                 "top" : "80%",
-                "left" : "50%"
+                "left" : "50%",
+                "href"  : "https://twitter.com/annelisebouyer"
             },
             {
-                "content" : "<img src=\"/img/jplusplus/ed.jpg\" class=\"pp\"/><br />Edouard<br />Richard<br />Développeur<br />@vied12",
+                "content" : "<img src=\"/img/jplusplus/ed.jpg\" class=\"pp\"/><br /><div class=\"w-130p center\">Edouard<br />Richard<br />Développeur<br /><span class=\"twt\">@vied12</span></div>",
                 "entrance": "fadeIn",
                 "queue" : true,
+                "entrance-duration": 300,
                 "origin": "center",
                 "top" : "80%",
-                "left" : "65%"
+                "left" : "65%",
+                "href"  : "https://twitter.com/vied12"
             },
             {
-                "content" : "<img src=\"/img/jplusplus/pb.jpg\" class=\"pp\"/><br />Pierre<br />Bellon<br />Développeur<br />@Toutenrab",
+                "content" : "<img src=\"/img/jplusplus/pb.jpg\" class=\"pp\"/><br /><div class=\"w-130p center\">Pierre<br />Bellon<br />Développeur<br /><span class=\"twt\">@Toutenrab</span></div>",
                 "entrance": "fadeIn",
                 "queue" : true,
+                "entrance-duration": 300,
                 "origin": "center",
                 "top" : "80%",
-                "left" : "80%"
+                "left" : "80%",
+                "href"  : "https://twitter.com/Toutenrab"
             }
         ]
     },
@@ -230,5 +246,26 @@
                "content" : " http://jplusplus.org/"
             }
         ]
+    },
+    {
+        "name"  : "pour qui ?",
+        "spots": [
+            {
+                "title" : "Des médias",
+                "entrance"  : "fadeIn",
+                "origin" : "left",
+                "left"   : "10%",
+                "top"    : "20%"
+            },
+            {
+                "title" : "Datawrapper",
+                "href" : "http://datawrapper.de/",
+                "origin" : "left",
+                "left"   : "10%",
+                "top"    : "30%"
+            }
+
+        ]
+
     }
 ]

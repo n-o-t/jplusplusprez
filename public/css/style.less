@@ -108,7 +108,7 @@ body {
                     cursor:pointer;
                     text-decoration:none;
                     overflow:hidden;
-                    .border-radius(30px 0 0 30px);
+                   // .border-radius(30px 0 0 30px);
                     
                     &.to-home {
                         width:20px; 
@@ -137,7 +137,7 @@ body {
                     }
 
                     html body &.active {
-                        background:#404040;
+                        background:#b4121d;
                     }
                 }                
             }
@@ -363,6 +363,15 @@ body {
 /* autor : fabien martin 
 /* date  : 2013 04 04
 /******************************/
+
+/* redifine styles */
+h3 {
+    color: #6f0c12;
+    font-weight: bold !important;
+    font-size: 2.1em;
+    text-shadow: 1px 1px 1px #fff;
+}
+/* add custom styles */
 .pp {
     @ppsize : 100px;
     width: @ppsize;
@@ -371,4 +380,30 @@ body {
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
     border: 5px solid rgba(255, 255, 255,0);
 }
+.twt {
+    .red();
+    &:hover {
+        .fx-txt-shadow-red();
+    }
+}
+/* filters */
+.fx-txt-shadow {
+    text-shadow: 1px 1px 1px #fff;
+}
+.fx-txt-shadow-red {
+    text-shadow: 1px 1px 1px #6f0c12;
+}
 
+/* txt utils */
+.center {
+    text-align: center;
+}
+.red {
+    color: #6f0c12;
+}
+
+
+/* div utils */
+.w-130p {
+    width: 130px;
+}
