@@ -33,11 +33,19 @@ block content
                             style=spotWrapperStyle(spot)
                             )
                             if spot["title"]
-                                h3!=spot["title"]
+                                if spot["popover-content"]                                     
+                                    h3(
+                                        data-toggle="popover",
+                                        data-content=spot['popover-content'],
+                                        data-placement=spot['popover-placement'],
+                                        data-original-title=spot['popover-original-title']
+                                    )!=spot["title"]
+                                else
+                                    h3!=spot["title"]
                             if spot["sub-title"]
                                 h4!=spot["sub-title"]    
                             if spot["content"]
                                 p!=spot["content"]                   
                             if spot["picture"]
                                 img(src=spot["picture"]["src"], alt=spot["picture"]["alt"]).spot-background
-                    
+                            

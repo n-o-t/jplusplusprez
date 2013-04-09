@@ -26,6 +26,13 @@
 # Patch the requestAnimationFrame function for better compatibility
 #= require vendor/rAF.js
 
+# Bootstrap tooltip plugin
+#= require vendor/bootstrap/bootstrap-tooltip.js
+
+# Bootstrap popover plugin
+#= require vendor/bootstrap/bootstrap-popover.js
+
+
 (($, window) ->
   $ui = $uis = null
   currentStep = 0
