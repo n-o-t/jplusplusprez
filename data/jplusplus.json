@@ -221,6 +221,9 @@
             {
                "title" : "Berlin", 
                "href"  : "http://berlin.jplusplus.org/",
+               "content" : "",
+               "popover-content" : "le contenu de mon pop",
+               "popover-original-title" : "titre de ma popover",
                "entrance": "fadeIn",
                "queue" : true,
                "origin": "left",
@@ -280,7 +283,11 @@
                 "left"      : "10%"
             },
             {
-                "content"   : "<span class=\"hidden\"><img src=\"img/jplusplus/cases/dw-the-guardian.jpg\" /></span>"
+                "content"   : "<span class=\"\"><img src=\"img/jplusplus/cases/dw-the-guardian.jpg\" /></span>",
+                "origin"    : "left",
+                "top"       : "15%",
+                "left"      : "50%",
+                "width"     : "300px"
             },
             {
                 "content"   : "<span class=\"hidden\"><img src=\"img/jplusplus/cases/dw-le-monde.jpg\" /></span>"
