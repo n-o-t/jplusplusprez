@@ -317,15 +317,30 @@
             {
                 "title" : "Des journalistes",
                 "entrance"  : "fadeIn",
-                "origin" : "left",
+                "origin" : "left",  
                 "left"   : "10%",
                 "top"    : "80%"
             },
-            {
-                "content"   : "<a href=\"http://desdonneespourlautisme.herokuapp.com\">Des Données pour l'autisme</a>, un projet de <a href=\"https://twitter.com/dbrunon\">Damien Brunon</a>, incubé chez J++",
+            {   
+                "content"   : "Des Données pour l'autisme,",
+                "href"   : "http://desdonneespourlautisme.herokuapp.com",
                 "origin"    : "left",
                 "top"       : "85%",
                 "left"      : "10%"
+            },
+            {
+                "content"   : "un projet de Damien Brunon", 
+                "href"      : "https://twitter.com/dbrunon",
+                "origin"    : "left",
+                "top"       : "85%",
+                "left"      : "30%"
+            },
+            {
+                "content"   : ", incubé chez J++",
+                "origin"    : "left",
+                "top"       : "85%",
+                "left"      : "50%"
+
             }
 
         ]
