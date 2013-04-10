@@ -113,12 +113,11 @@ To set spots at a precise position, you can activate the debug mode by adding ``
 <a name="popover"/>
 ### Notes on popover use
 We use bootstrap popover component with some restrictions :
-- the trigger is always set to "hover" in order to allow any href work.
-- animation is not currently working
-- container is set to $container
-- selector is not implemented
+* the trigger is always set to "hover" in order to allow any href work.
+* animation is not currently working
+* container is set to $container
+* selector is not implemented
 //
-Any spot where "popover-content" is declared will show a popover on :hover.
-//
+Any spot where "popover-content" is declared will show a popover on :hover
 Spot parameters working with popover : title, subtitle, content
 
