@@ -1,8 +1,11 @@
-$("h3[data-toggle=popover]")
+$poplink = $("#container").find('*[data-toggle]')
+
+$($poplink)
 	.popover({
     	trigger		: 'hover',
     	placement 	: 'top',
-    	container 	: 'body'
+    	container 	: 'body',
+    	html		: true
   	})
     .click(function(e) {
     	e.preventDefault()

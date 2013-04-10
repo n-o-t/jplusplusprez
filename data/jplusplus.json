@@ -54,7 +54,7 @@
                 "content" : "<span class=\"fx-txt-shadow\">Open source services</span>",
                 "href"  : "http://fr.wikipedia.org/wiki/Open_source",
                 "entrance": "fadeIn",
-                "queue" : true,
+                "queue" : true, 
                 "entrance-duration": 300,
                 "origin": "center",
                 "top" : "48%",
@@ -216,18 +216,32 @@
                "queue" : true,
                "origin": "left",
                "top" : "50%",
-               "left" : "50%"
+               "left" : "50%",
+               "popover-content" : "adresse rue Richer",
+               "popover-original-title" : "@ rue Richer"
             },
             {
                "title" : "Berlin", 
                "href"  : "http://berlin.jplusplus.org/",
                "content" : "",
-               "popover-content" : "le contenu de mon pop",
-               "popover-original-title" : "titre de ma popover",
+               "popover-content" : "betahaus berlin,<br>Prinzessinnenstraße 19-20,<br>10969 Berlin ",
+               "popover-original-title" : "@ betahaus",
                "entrance": "fadeIn",
                "queue" : true,
                "origin": "left",
                "top" : "36%",
+               "left" : "62%"
+            },
+            {
+               "title" : "Stockholm", 
+               "href"  : "http://jplusplus.se/",
+               "content" : "",
+               "popover-content" : "Jens Finnäs - Peter Grensund",
+               "popover-original-title" : "@ Stockholm",
+               "entrance": "fadeIn",
+               "queue" : true,
+               "origin": "left",
+               "top" : "14%",
                "left" : "62%"
             },
             {
@@ -266,21 +280,27 @@
                 "href"      : "http://www.guardian.co.uk/politics/datablog/2013/apr/08/britain-changed-margaret-thatcher-charts",
                 "origin"    : "left",
                 "top"       : "25%",
-                "left"      : "10%"
+                "left"      : "10%",
+                "popover-content" : "The Guardian utilise régulièrement Datawrapper dans son édition en ligne.<br>J++ a réalisé un thème personnalisé pour ce média.",
+                "popover-original-title" : "Datawrapper"
             },
             {
                 "content"   : "Le Monde",
                 "href"      : "http://www.lemonde.fr/societe/article/2013/03/21/manif-pour-tous-la-grande-illusion_1850515_3224.html",
                 "origin"    : "left",
                 "top"       : "30%",
-                "left"      : "10%"
+                "left"      : "10%",
+                "popover-content" : "Le Monde utilise régulièrement Datawrapper dans son édition en ligne",
+                "popover-original-title" : "Datawrapper"
             },
              {
                 "content"   : "L'Équipe",
                 "href"      : "http://www.lequipe.fr/Football/Actualites/Test/359190",
                 "origin"    : "left",
                 "top"       : "35%",
-                "left"      : "10%"
+                "left"      : "10%",
+                "popover-content" : "L'Équipe a utilisé Datawrapper pour la première fois en mars 2013 ! Champagne !",
+                "popover-original-title" : "Datawrapper"
             },
             {
                 "content"   : "<span class=\"\"><img src=\"img/jplusplus/cases/dw-the-guardian.jpg\" /></span>",
