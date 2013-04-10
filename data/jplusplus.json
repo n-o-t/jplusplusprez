@@ -282,7 +282,8 @@
                 "top"       : "25%",
                 "left"      : "10%",
                 "popover-content" : "The Guardian utilise régulièrement Datawrapper dans son édition en ligne.<br>J++ a réalisé un thème personnalisé pour ce média.",
-                "popover-original-title" : "Datawrapper"
+                "popover-original-title" : "Datawrapper",
+                "popover-placement" : "top"
             },
             {
                 "content"   : "Le Monde",
@@ -291,19 +292,21 @@
                 "top"       : "30%",
                 "left"      : "10%",
                 "popover-content" : "Le Monde utilise régulièrement Datawrapper dans son édition en ligne",
-                "popover-original-title" : "Datawrapper"
+                "popover-original-title" : "Datawrapper",
+                "popover-placement" : "top"
             },
              {
-                "content"   : "L'Équipe",
-                "href"      : "http://www.lequipe.fr/Football/Actualites/Test/359190",
+                "content"   : "Neue Zürcher Zeitung",
+                "href"      : "http://www.nzz.ch/",
                 "origin"    : "left",
                 "top"       : "35%",
                 "left"      : "10%",
-                "popover-content" : "L'Équipe a utilisé Datawrapper pour la première fois en mars 2013 ! Champagne !",
-                "popover-original-title" : "Datawrapper"
+                "popover-content" : "Le Neue Zürcher Zeitung utilise régulièrement Datawrapper dans son édition en ligne. Et le dit sur twitter <blockquote class=\"twitter-tweet\" lang=\"fr\"><p>And we are on @<a href=\"https://twitter.com/datawrapper\">datawrapper</a> with customised @<a href=\"https://twitter.com/nzz\">nzz</a> -design! Thank you, merci@<a href=\"https://twitter.com/annelisebouyer\">annelisebouyer</a> @<a href=\"https://twitter.com/mirkolorenz\">mirkolorenz</a> @<a href=\"https://twitter.com/driven_by_data\">driven_by_data</a> @<a href=\"https://twitter.com/nicolaskb\">nicolaskb</a></p>&mdash; Sylke Gruhnwald (@SylkeGruhnwald) <a href=\"https://twitter.com/SylkeGruhnwald/status/321985321065648129\">10 avril 2013</a></blockquote><script async src=\"//platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
+                "popover-original-title" : "Datawrapper",
+                "popover-placement" : "bottom"
             },
             {
-                "content"   : "<span class=\"\"><img src=\"img/jplusplus/cases/dw-the-guardian.jpg\" /></span>",
+                "content"   : "<span class=\"hidden\"><img src=\"img/jplusplus/cases/dw-the-guardian.jpg\" /></span>",
                 "origin"    : "left",
                 "top"       : "15%",
                 "left"      : "50%",
@@ -327,19 +330,29 @@
                 "href"      : "http://cartolycees.iledefrance.fr/",
                 "origin"    : "left",
                 "top"       : "55%",
-                "left"      : "10%"
+                "left"      : "10%",
+                "popover-content" : "Cartographie de lycées d'Île de France,<br /> formation à la manipulation de données",
+                "popover-original-title" : "Applications et formation",
+                "popover-placement" : "top"
+
             },
             {
                 "content"   : "Sciences Po Paris",
                 "origin"    : "left",
                 "top"       : "60%",
-                "left"      : "10%"
+                "left"      : "10%",
+                "popover-content" : "Formation à la manipulation de données et au data-journalisme",
+                "popover-original-title" : "Formation",
+                "popover-placement" : "top"
             },
              {
                 "content"   : "ESJ Lille",
                 "origin"    : "left",
                 "top"       : "65%",
-                "left"      : "10%"
+                "left"      : "10%",
+                "popover-content" : "Formation à la manipulation de données et au data-journalisme",
+                "popover-original-title" : "Formation",
+                "popover-placement" : "top"
             },
             {
                 "title" : "Des journalistes",
@@ -366,7 +379,7 @@
                 "content"   : ", incubé chez J++",
                 "origin"    : "left",
                 "top"       : "85%",
-                "left"      : "50%"
+                "left"      : "49%"
 
             }
 
