@@ -117,6 +117,7 @@ We use bootstrap popover component with some restrictions :
 - animation is not currently working
 - container is set to $container
 - selector is not implemented
+
 Any spot where "popover-content" is declared will show a popover on :hover.
 Spot parameters working with popover : title, subtitle, content
 
