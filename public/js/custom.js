@@ -8,5 +8,5 @@ $($poplink)
     	animation 	: true
   	})
     .click(function(e) {
-    	e.preventDefault()
+    	//e.preventDefault()
     })

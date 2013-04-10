@@ -87,6 +87,9 @@ background | String | URL to an image file to display as background of the step 
 background-direction | String, Number | Animate the background into that direction in a loop. Can be a number to specify a dicrection in degree. | "left", 90, "top left", etc
 background-speed | Number | Distance in pixels to run through at each animation step. 3 by default. | 10
 background-frequency | Number | Animation step frequency in millisecond. 0 by default. | 200
+popover-content | String | Popover content text. Can be escaped html. If not null, displays a popover. Only available for title - sub-title - content. Uses bootstrap popover js component| "All your bases are belong to us."
+popover-placement | String | "top", "right", "bottom", "left". Uses bootstrap popover js component | "top"
+popover-original-title | String | displays title for popoper. No html available. Uses bootstrap popover js component | "The Hitchhiker's Guide to the Galaxy"
 
 
 <a name="entrances"/>

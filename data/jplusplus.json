@@ -289,8 +289,8 @@
                 "content"   : "Le Monde",
                 "href"      : "http://www.lemonde.fr/societe/article/2013/03/21/manif-pour-tous-la-grande-illusion_1850515_3224.html",
                 "origin"    : "left",
-                "top"       : "30%",
-                "left"      : "10%",
+                "top"       : "25%",
+                "left"      : "20%",
                 "popover-content" : "Le Monde utilise régulièrement Datawrapper dans son édition en ligne",
                 "popover-original-title" : "Datawrapper",
                 "popover-placement" : "top"
@@ -299,8 +299,8 @@
                 "content"   : "Neue Zürcher Zeitung",
                 "href"      : "http://www.nzz.ch/",
                 "origin"    : "left",
-                "top"       : "35%",
-                "left"      : "10%",
+                "top"       : "25%",
+                "left"      : "28%",
                 "popover-content" : "Le Neue Zürcher Zeitung utilise régulièrement Datawrapper dans son édition en ligne. Et le dit sur twitter <blockquote class=\"twitter-tweet\" lang=\"fr\"><p>And we are on @<a href=\"https://twitter.com/datawrapper\">datawrapper</a> with customised @<a href=\"https://twitter.com/nzz\">nzz</a> -design! Thank you, merci@<a href=\"https://twitter.com/annelisebouyer\">annelisebouyer</a> @<a href=\"https://twitter.com/mirkolorenz\">mirkolorenz</a> @<a href=\"https://twitter.com/driven_by_data\">driven_by_data</a> @<a href=\"https://twitter.com/nicolaskb\">nicolaskb</a></p>&mdash; Sylke Gruhnwald (@SylkeGruhnwald) <a href=\"https://twitter.com/SylkeGruhnwald/status/321985321065648129\">10 avril 2013</a></blockquote><script async src=\"//platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
                 "popover-original-title" : "Datawrapper",
                 "popover-placement" : "bottom"
@@ -323,13 +323,13 @@
                 "entrance"  : "fadeIn",
                 "origin" : "left",
                 "left"   : "10%",
-                "top"    : "50%"
+                "top"    : "35%"
             },
             {
                 "content"   : "Ile de France",
                 "href"      : "http://cartolycees.iledefrance.fr/",
                 "origin"    : "left",
-                "top"       : "55%",
+                "top"       : "40%",
                 "left"      : "10%",
                 "popover-content" : "Cartographie de lycées d'Île de France,<br /> formation à la manipulation de données",
                 "popover-original-title" : "Applications et formation",
@@ -339,8 +339,8 @@
             {
                 "content"   : "Sciences Po Paris",
                 "origin"    : "left",
-                "top"       : "60%",
-                "left"      : "10%",
+                "top"       : "40%",
+                "left"      : "20%",
                 "popover-content" : "Formation à la manipulation de données et au data-journalisme",
                 "popover-original-title" : "Formation",
                 "popover-placement" : "top"
@@ -348,8 +348,8 @@
              {
                 "content"   : "ESJ Lille",
                 "origin"    : "left",
-                "top"       : "65%",
-                "left"      : "10%",
+                "top"       : "40%",
+                "left"      : "33%",
                 "popover-content" : "Formation à la manipulation de données et au data-journalisme",
                 "popover-original-title" : "Formation",
                 "popover-placement" : "top"
@@ -359,28 +359,41 @@
                 "entrance"  : "fadeIn",
                 "origin" : "left",  
                 "left"   : "10%",
-                "top"    : "80%"
+                "top"    : "50%"
             },
             {   
                 "content"   : "Des Données pour l'autisme,",
                 "href"   : "http://desdonneespourlautisme.herokuapp.com",
                 "origin"    : "left",
-                "top"       : "85%",
-                "left"      : "10%"
+                "top"       : "55%",
+                "left"      : "10%",
+                "popover-content" : "Combien de places sont réservées aux autistes dans l'Education Nationale, quel accès ont-ils aux structures qui leurs sont dédiées, quelles méthodes sont pratiquées dans ces structures, la formation des professionnels qui les accompagnent est-elle adéquate, l'offre de soin et de prise en charge correspond-elle à la demande de la population autiste?",
+                "popover-placement" : "top",
+                "popover-original-title" : "Des Données pour l'autisme"
             },
             {
                 "content"   : "un projet de Damien Brunon", 
                 "href"      : "https://twitter.com/dbrunon",
                 "origin"    : "left",
-                "top"       : "85%",
+                "top"       : "55%",
                 "left"      : "30%"
             },
             {
                 "content"   : ", incubé chez J++",
                 "origin"    : "left",
-                "top"       : "85%",
+                "top"       : "55%",
                 "left"      : "49%"
-
+            },
+            {
+                "title" : "Journalism++ Embedded News Nerds Program",
+                "content"   : "Are you a journalist interested in code or a developer interested in telling stories? Would you like to work together with some of the leading datajournalists in Europe?",
+                "origin"    : "left",
+                "top"       : "70%",
+                "left"      : "10%",
+                "href"      : "http://jplusplus.org/p/journalism-embedded-news-nerds-program/",
+                "popover-content" : "Checkout our internship program and apply !",
+                "popover-placement" : "top",
+                "popover-original-title" : "Journalism++ Embedded News Nerds Program"
             }
 
         ]
