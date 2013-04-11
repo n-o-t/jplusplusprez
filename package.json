@@ -10,10 +10,10 @@
     "jade": "*",
     "less": "*",
     "coffee-script": "*",
-    "connect-assets": "*",
+    "connect-assets": "*"
   },
   "engines": {
-    "node": "0.8.7",
-    "npm": "1.1.32"
+    "node": "0.8.x",
+    "npm" : "1.1.x"
   }
 }
