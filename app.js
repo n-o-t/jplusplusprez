@@ -32,7 +32,7 @@ app.configure(function(){
     next();
   });
 
-
+app.use(express.basicAuth('jplusplus', 'WX2g5h'));
 
   /************************************
    * Views helpers
